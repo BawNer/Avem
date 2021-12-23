@@ -10,7 +10,7 @@
             <q-list>
               <q-item-section>
                 <q-item-label caption>Адрес</q-item-label>
-                <q-item-label class="text-h5">344002, Ростов-на-Дону, ул. Серафимовича, 62</q-item-label>
+                <q-item-label class="text-h4"><b>344002, Ростов-на-Дону, ул. Серафимовича, 62</b></q-item-label>
               </q-item-section>
             </q-list>
           </div>
@@ -18,7 +18,7 @@
             <q-list>
               <q-item-section>
                 <q-item-label caption>ТЕЛЕФОН</q-item-label>
-                <q-item-label class="text-h5">+7 (863) 310-69-60</q-item-label>
+                <q-item-label class="text-h4"><b>+7 (863) 310-69-60</b></q-item-label>
               </q-item-section>
             </q-list>
           </div>
@@ -95,7 +95,7 @@
               </q-item>
               <q-item>
                 <q-item-section>
-                  <q-item-label class="text-h5 text-uppercase">mаil@skf-mtusi.ru</q-item-label>
+                  <q-item-label class="text-h5">mаil@skf-mtusi.ru</q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -107,13 +107,13 @@
               </q-item>
               <q-item>
                   <q-btn flat>
-                    <q-img width="24px" src="tgV.png"></q-img>
+                    <q-img width="24px" src="images/tgV.png"></q-img>
                   </q-btn>
                   <q-btn flat>
-                    <q-img width="24px" src="instV.png"></q-img>
+                    <q-img width="24px" src="images/instV.png"></q-img>
                   </q-btn>
                   <q-btn flat>
-                    <q-img width="24px" src="vkV.png"></q-img>
+                    <q-img width="24px" src="images/vkV.png"></q-img>
                   </q-btn>
               </q-item>
             </q-list>
@@ -121,7 +121,7 @@
         </div>
       </div>
       <div class="col-12 q-mb-xl">
-        <q-img src="map.png"></q-img>
+        <q-img src="images/map.png"></q-img>
       </div>
     </div>
   </q-page>

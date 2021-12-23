@@ -47,16 +47,16 @@
       </q-list>
     </div>
     <div class="col-2 row q-pa-xl">
-      <q-img src="tg.png" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
-      <q-img src="inst.png" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
-      <q-img src="vk.png" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
+      <q-img src="images/tg.png" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
+      <q-img src="images/inst.png" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
+      <q-img src="images/vk.png" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
     </div>
     <div class="col-12 q-my-md q-px-xl">
       <div class="row">
         <div class="col-4">
           <q-list>
             <q-item>
-              <q-img src="rf.png" fit="contain" width="64px" class="q-mr-md"></q-img>
+              <q-img src="images/rf.png" fit="contain" width="64px" class="q-mr-md"></q-img>
               <q-item-section class="text-white text-h6">
                 Министерство науки и высшего образования Российской Федерации
               </q-item-section>
@@ -66,7 +66,7 @@
         <div class="col-offset-1 col-6">
           <q-list>
             <q-item>
-              <q-img src="rf.png" fit="contain" width="64px" class="q-mr-md"></q-img>
+              <q-img src="images/rf.png" fit="contain" width="64px" class="q-mr-md"></q-img>
               <q-item-section class="text-white text-h6">
                МТУСИ является подведомственным вузом Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации
               </q-item-section>

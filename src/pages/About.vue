@@ -61,7 +61,7 @@
           <div class="col-6 q-px-xl">
             <q-list>
               <q-img
-                src="slider.png"
+                src="images/slider.png"
                 :img-style="{ borderRadius: '2rem' }"
               ></q-img>
               <q-item-section class="text-grey-8">Учебный корпус</q-item-section>
@@ -72,7 +72,7 @@
               <div class="col-12 q-mb-md">
                 <q-list>
                   <q-img
-                    src="cab401.png"
+                    src="images/cab401.png"
                     height="300px"
                     :img-style="{ borderRadius: '2rem' }"
                   ></q-img>
@@ -82,7 +82,7 @@
               <div class="col-12">
                 <q-list>
                   <q-img
-                    src="cab402.png"
+                    src="images/cab402.png"
                     height="300px"
                     :img-style="{ borderRadius: '2rem' }"
                   ></q-img>

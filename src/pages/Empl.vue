@@ -24,7 +24,7 @@
             <q-card-section horizontal>
               <q-card-section class="col-3">
                 <q-avatar size="120px">
-                  <q-img src="Zhukov.png"></q-img>
+                  <q-img src="images/Zhukov.png"></q-img>
                 </q-avatar>
               </q-card-section>
               <q-card-section>
