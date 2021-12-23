@@ -25,7 +25,8 @@ const routes = [
       { path: 'infoeducation', component: () => import('src/pages/InfoEducation.vue') },
       { path: 'employee', component: () => import('pages/Empl.vue') },
       { path: 'education', component: () => import('pages/Education.vue') },
-      { path: 'documents', component: () => import('pages/Documents.vue') }
+      { path: 'documents', component: () => import('pages/Documents.vue') },
+      { path: 'abiturient', component: () => import('pages/Abiturient.vue') }
     ]
   },
 

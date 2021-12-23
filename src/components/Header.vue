@@ -81,6 +81,7 @@
         </div>
       </q-carousel-slide>
     </q-carousel>
+
     <div class="row q-mx-xl relative-position" style="top: -150px">
       <div class="col-6 no-gutters">
         <q-card>
@@ -91,25 +92,25 @@
             <q-list>
               <q-item clickable>
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Подать документы онлайн</q-item-section>
               </q-item>
               <q-item clickable>
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Рейтинги абитуриентов</q-item-section>
               </q-item>
               <q-item clickable>
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Порядок приёма документов</q-item-section>
               </q-item>
               <q-item clickable>
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>День открытых дверей</q-item-section>
               </q-item>
@@ -126,25 +127,25 @@
             <q-list>
               <q-item clickable to="/p/about">
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>О вузе</q-item-section>
               </q-item>
               <q-item clickable>
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Вопросы и ответы</q-item-section>
               </q-item>
               <q-item clickable to="/p/infoeducation">
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Сведения об образовательной организации</q-item-section>
               </q-item>
               <q-item clickable>
                 <q-item-section avatar>
-                  <q-icon name="link"></q-icon>
+                  <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Направления подготовки</q-item-section>
               </q-item>

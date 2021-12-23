@@ -7,7 +7,7 @@
       <q-list>
         <q-item to="/">
           <q-item-section avatar >
-            <img src="logo.png" alt="" width="128">
+            <img src="images/logo.png" alt="" width="128">
           </q-item-section>
         </q-item>
       </q-list>
@@ -65,16 +65,16 @@ const linkList = [
     { name: 'Сведения об образовательной организации', route: '/p/infoeducation' }
   ]},
   { name: 'Абитурьенту', menu: [
-    { name: 'Почему СКФ МТУСИ?', route: '' },
-    { name: 'Приемная компания 2021', route: '' },
-    { name: 'Порядок приема документов', route: '' },
-    { name: 'Дни открытых дверей', route: '' },
-    { name: 'Документы', route: '' },
-    { name: 'Стоимость обучения', route: '' },
-    { name: 'Формы обучения', route: '' },
-    { name: 'Довузовская подготовка', route: '' },
-    { name: 'Часто задаваемые вопросы', route: '' },
-    { name: 'Задать вопрос', route: '' }
+    { name: 'Почему СКФ МТУСИ?', route: '/p/abiturient' },
+    { name: 'Приемная компания 2021', route: '/p/abiturient' },
+    { name: 'Порядок приема документов', route: '/p/abiturient' },
+    { name: 'Дни открытых дверей', route: '/p/abiturient' },
+    { name: 'Документы', route: '/p/abiturient' },
+    { name: 'Стоимость обучения', route: '/p/abiturient' },
+    { name: 'Формы обучения', route: '/p/abiturient' },
+    { name: 'Довузовская подготовка', route: '/p/abiturient' },
+    { name: 'Часто задаваемые вопросы', route: '/p/abiturient' },
+    { name: 'Задать вопрос', route: '/p/abiturient' }
   ]},
   { name: 'Студенту', menu: [
     { name: 'Студентам', route: '' },
