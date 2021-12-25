@@ -64,17 +64,10 @@ const linkList = [
     { name: 'Противодействие коррупции', route: '' },
     { name: 'Сведения об образовательной организации', route: '/p/infoeducation' }
   ]},
-  { name: 'Абитурьенту', menu: [
-    { name: 'Почему СКФ МТУСИ?', route: '/p/abiturient' },
-    { name: 'Приемная компания 2021', route: '/p/abiturient' },
-    { name: 'Порядок приема документов', route: '/p/abiturient' },
-    { name: 'Дни открытых дверей', route: '/p/abiturient' },
-    { name: 'Документы', route: '/p/abiturient' },
-    { name: 'Стоимость обучения', route: '/p/abiturient' },
-    { name: 'Формы обучения', route: '/p/abiturient' },
-    { name: 'Довузовская подготовка', route: '/p/abiturient' },
-    { name: 'Часто задаваемые вопросы', route: '/p/abiturient' },
-    { name: 'Задать вопрос', route: '/p/abiturient' }
+  { name: 'Абитуриенту', menu: [
+    { name: 'Общая информация', route: '/p/abiturient' },
+    { name: 'Приемная комиссия', route: '/p/abiturient/join' }
+
   ]},
   { name: 'Студенту', menu: [
     { name: 'Студентам', route: '' },

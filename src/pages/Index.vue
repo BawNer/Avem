@@ -34,7 +34,7 @@
           <span class="text-subtitle1 text-blue">14 июля 2021</span>
         </div>
 
-        <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" @click="setError('Страница в временно недоступна')">Все новости</q-btn>
+        <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" @click="createNotification('Модуль новостей в данный момент недоступен')">Все новости</q-btn>
       </div>
 
       <div class="col-md-3 col-sm-12 row self-start q-pl-md">
@@ -53,7 +53,7 @@
           </q-card-section>
           <q-separator></q-separator>
         </q-card>
-        <q-btn flat color="primary" icon-right="arrow_right" to="/news" class="q-mt-md">Все мероприятия</q-btn>
+        <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" @click="createNotification('Модуль событий в данный момент недоступен')">Все мероприятия</q-btn>
       </div>
 
       <div class="col-md-10 col-sm-12 q-ma-lg">
@@ -134,7 +134,7 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, inject } from 'vue';
 import News from '../components/News.vue'
 
 const events = [
@@ -170,17 +170,18 @@ export default defineComponent({
     // }
   },
   setup() {
+    const $event = inject('$event')
 
-    const tabs = ref('01')
-    const setError = msg => {
-      alert(msg)
+    const createNotification = msg => {
+      $event.$emit('system-alert', { active: true, message: msg })
     }
+    const tabs = ref('01')
 
     return {
       tabs,
       tabsContent,
       events,
-      setError
+      createNotification
     }
   }
 })

@@ -3,7 +3,7 @@
 
       <div class="col-12">
         <div class="row q-pa-xl">
-          <div class="col-4">
+          <div class="col-3">
             <q-btn flat color="grey-1">Университет</q-btn>
             <q-btn flat color="grey-1">Студенту</q-btn>
             <q-btn flat color="grey-1">Атмосфера</q-btn>
