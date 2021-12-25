@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md q-gutter-sm" v-if="sys.active">
+
     <q-dialog v-model="sys.active" seamless position="bottom">
       <q-card style="width: 450px">
         <q-toolbar>
@@ -13,7 +13,7 @@
         </q-card-section>
       </q-card>
     </q-dialog>
-  </div>
+
 </template>
 
 <script>
