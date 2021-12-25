@@ -1,4 +1,3 @@
-export const setSystemMessage = (ctx, {active, message}) => {
-  console.log(message)
+export const setSystemMessage = (ctx, {active, message = ''}) => {
   ctx.commit('setSystemMessage', {active, message})
 }

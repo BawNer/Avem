@@ -5,6 +5,7 @@ export default ({app}) => {
     $on: (...args) => emitter.on(...args),
     $once: (...args) => emitter.once(...args),
     $off: (...args) => emitter.off(...args),
-    $emit: (...args) => emitter.emmit(...args)
+    $emit: (...args) => emitter.emit(...args)
   }
+  app.provide('$event', app.config.globalProperties.$event)
 }
