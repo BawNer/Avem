@@ -22,11 +22,12 @@ const routes = [
       { path: 'structure', component: () => import('pages/Structure.vue') },
       { path: 'about', component: () => import('pages/About.vue') },
       { path: 'contact', component: () => import('pages/Contact.vue') },
-      { path: 'infoeducation', component: () => import('src/pages/InfoEducation.vue') },
+      { path: 'infoeducation', component: () => import('pages/InfoEducation.vue') },
       { path: 'employee', component: () => import('pages/Empl.vue') },
       { path: 'education', component: () => import('pages/Education.vue') },
       { path: 'documents', component: () => import('pages/Documents.vue') },
-      { path: 'abiturient', component: () => import('pages/Abiturient.vue') }
+      { path: 'abiturient', component: () => import('pages/Abiturient.vue') },
+      { path: 'abiturient/join', component: () => import('pages/AbiturientJoin.vue') }
     ]
   },
 
