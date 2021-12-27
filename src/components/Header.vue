@@ -180,7 +180,10 @@ const linkList = [
   ]},
   { name: 'Абитуриенту', menu: [
     { name: 'Общая информация', route: '/p/abiturient' },
-    { name: 'Приемная комиссия', route: '/p/abiturient/join' }
+    { name: 'Приемная комиссия', route: '/p/abiturient/join' },
+    { name: 'Формы обучения: очная и заочная', route: '/p/abiturient/educationForms' },
+    { name: 'Подготовительные курсы', route: '/p/abiturient/additionalCourses' },
+    { name: 'День открытых дверей', route: '/p/abiturient/openDoor' }
   ]},
   { name: 'Студенту', menu: [
     { name: 'Студентам', route: '' },
