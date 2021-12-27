@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="row">
        <div class="col-12 q-my-xl">
-          <span class="text-grey-10 text-h3">Абитурьенту</span>
+          <span class="text-grey-10 text-h3">Абитуриенту</span>
         </div>
         <div class="col-12 q-my-xl">
           <div class="row">
