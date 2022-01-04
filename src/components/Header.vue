@@ -26,6 +26,7 @@
                   :key="menu.name"
                   :to="menu.route"
                   class="col-sm-12 col-md-4"
+                  :disable="!menu.active"
                 >
                   <q-item-section>{{menu.name}}</q-item-section>
                 </q-item>
@@ -161,53 +162,53 @@ import { defineComponent, ref } from 'vue'
 
 const linkList = [
   { name: 'Университет', menu: [
-    { name: 'О вузе', route: '/p/about' },
-    { name: 'Структура', route: '/p/structure' },
-    { name: 'Контакты', route: '/p/contact' },
-    { name: 'Образование', route: '/p/education' },
-    { name: 'Доступная среда', route: '' },
-    { name: 'Документы', route: '/p/documents' },
-    { name: 'Руководство', route: '' },
-    { name: 'Сотрудники', route: '/p/employee' },
-    { name: 'Партнеры', route: '' },
-    { name: 'Оснащенность университета', route: '' },
-    { name: 'Работа в СКФ МТУСИ', route: '' },
-    { name: 'Международное сотрудничество', route: '' },
-    { name: 'Финансовая деятельность', route: '' },
-    { name: 'Платные образовательные услуги', route: '' },
-    { name: 'Противодействие коррупции', route: '' },
-    { name: 'Сведения об образовательной организации', route: '/p/infoeducation' }
+    { name: 'О вузе', route: '/p/about', active: true },
+    { name: 'Структура', route: '/p/structure', active: true },
+    { name: 'Контакты', route: '/p/contact', active: true },
+    { name: 'Образование', route: '/p/education', active: true },
+    { name: 'Доступная среда', route: '', active: false },
+    { name: 'Документы', route: '/p/documents', active: true },
+    { name: 'Руководство', route: '', active: false },
+    { name: 'Сотрудники', route: '/p/employee', active: true },
+    { name: 'Партнеры', route: '', active: false },
+    { name: 'Оснащенность университета', route: '', active: false },
+    { name: 'Работа в СКФ МТУСИ', route: '', active: false },
+    { name: 'Международное сотрудничество', route: '', active: false },
+    { name: 'Финансовая деятельность', route: '', active: false },
+    { name: 'Платные образовательные услуги', route: '', active: false },
+    { name: 'Противодействие коррупции', route: '', active: false },
+    { name: 'Сведения об образовательной организации', route: '/p/infoeducation', active: true }
   ]},
   { name: 'Абитуриенту', menu: [
-    { name: 'Общая информация', route: '/p/abiturient' },
-    { name: 'Приемная комиссия', route: '/p/abiturient/join' }
+    { name: 'Общая информация', route: '/p/abiturient', active: true },
+    { name: 'Приемная комиссия', route: '/p/abiturient/join', active: true }
   ]},
   { name: 'Студенту', menu: [
-    { name: 'Студентам', route: '' },
-    { name: 'Стипендии', route: '' },
-    { name: 'График консультаций', route: '' },
-    { name: 'Работа', route: '' },
-    { name: 'Модульно-рейтинговая система', route: '' },
-    { name: 'Электронное портфолио', route: '' },
-    { name: 'Методические указания по подготовке ВКР', route: '' },
-    { name: 'Расписание занятий', route: '' },
-    { name: 'Внеучебная деятельность', route: '' },
-    { name: 'Вакантные места для перевода', route: '' },
-    { name: 'Электронная образовательная среда', route: '' },
-    { name: 'Документы', route: '' },
-    { name: 'Научная работа', route: '' },
-    { name: 'Оплата обучения', route: '' }
+    { name: 'Студентам', route: '', active: false },
+    { name: 'Стипендии', route: '', active: false },
+    { name: 'График консультаций', route: '', active: false },
+    { name: 'Работа', route: '', active: false },
+    { name: 'Модульно-рейтинговая система', route: '', active: false },
+    { name: 'Электронное портфолио', route: '', active: false },
+    { name: 'Методические указания по подготовке ВКР', route: '', active: false },
+    { name: 'Расписание занятий', route: '', active: false },
+    { name: 'Внеучебная деятельность', route: '', active: false },
+    { name: 'Вакантные места для перевода', route: '', active: false },
+    { name: 'Электронная образовательная среда', route: '', active: false },
+    { name: 'Документы', route: '', active: false },
+    { name: 'Научная работа', route: '', active: false },
+    { name: 'Оплата обучения', route: '', active: false }
   ]},
   { name: 'Медиа', menu: [
-    { name: 'Видео', route: '' },
-    { name: 'Новости', route: '/news' },
-    { name: 'События', route: '' },
-    { name: 'Газета "Спектр"', route: '' }
+    { name: 'Видео', route: '', active: false },
+    { name: 'Новости', route: '/news', active: true },
+    { name: 'События', route: '', active: false },
+    { name: 'Газета "Спектр"', route: '', active: false }
   ]},
   { name: 'Атмосфера', menu: [
-    { name: 'Клуб выпускников', route: '' },
-    { name: 'Музей СКФ МТУСИ', route: '' },
-    { name: 'Внеучебная деятельность', route: '' }
+    { name: 'Клуб выпускников', route: '', active: false },
+    { name: 'Музей СКФ МТУСИ', route: '', active: false },
+    { name: 'Внеучебная деятельность', route: '', active: false }
   ]},
 ]
 
