@@ -7,7 +7,7 @@
             <q-btn flat color="grey-1">Университет</q-btn>
             <q-btn flat color="grey-1">Студенту</q-btn>
             <q-btn flat color="grey-1">Атмосфера</q-btn>
-            <q-btn flat color="grey-1">Абитурьенту</q-btn>
+            <q-btn flat color="grey-1">Абитуриенту</q-btn>
             <q-btn flat color="grey-1">Медиа</q-btn>
             <q-btn flat color="grey-1">Контакты</q-btn>
           </div>
