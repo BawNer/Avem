@@ -27,10 +27,11 @@ const routes = [
       { path: 'education', component: () => import('pages/Education.vue') },
       { path: 'documents', component: () => import('pages/Documents.vue') },
       { path: 'abiturient', component: () => import('pages/Abiturient.vue') },
-      { path: 'abiturient/join', component: () => import('pages/AbiturientJoin.vue') },
-      { path: 'abiturient/educationForms', component: () => import('pages/EducationForms.vue') },
-      { path: 'abiturient/additionalCourses', component: () => import('pages/AdditionalCourses.vue') },
-      { path: 'abiturient/openDoor', component: () => import('pages/OpenDoor.vue') }
+      { path: 'abiturient/join', component: () => import('pages/Abiturient/AbiturientJoin.vue') },
+      { path: 'abiturient/educationForms', component: () => import('pages/Abiturient/EducationForms.vue') },
+      { path: 'abiturient/additionalCourses', component: () => import('pages/Abiturient/AdditionalCourses.vue') },
+      { path: 'abiturient/openDoor', component: () => import('pages/Abiturient/OpenDoor.vue') },
+      { path: 'rulers', component: () => import('pages/Rulers.vue') }
     ]
   },
 
