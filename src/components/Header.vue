@@ -52,7 +52,7 @@
       <template v-slot:control>
         <q-carousel-control
           position="bottom-right"
-          :offset="[128, 200]"
+          :offset="[128, 50]"
           class="q-gutter-xs"
         >
           <q-btn
@@ -83,7 +83,7 @@
       </q-carousel-slide>
     </q-carousel>
 
-    <div class="row q-mx-xl relative-position" style="top: -150px">
+    <div class="row q-mx-xl">
       <div class="col-6 no-gutters">
         <q-card>
           <q-card-section>
@@ -180,16 +180,11 @@ const linkList = [
     { name: 'Сведения об образовательной организации', route: '/p/infoeducation', active: true }
   ]},
   { name: 'Абитуриенту', menu: [
-<<<<<<< HEAD
     { name: 'Общая информация', route: '/p/abiturient', active: true },
-    { name: 'Приемная комиссия', route: '/p/abiturient/join', active: true }
-=======
-    { name: 'Общая информация', route: '/p/abiturient' },
-    { name: 'Приемная комиссия', route: '/p/abiturient/join' },
-    { name: 'Формы обучения: очная и заочная', route: '/p/abiturient/educationForms' },
-    { name: 'Подготовительные курсы', route: '/p/abiturient/additionalCourses' },
-    { name: 'День открытых дверей', route: '/p/abiturient/openDoor' }
->>>>>>> 7b0d8b173463edeacb557c7a8ea0af6d91643642
+    { name: 'Приемная комиссия', route: '/p/abiturient/join', active: true },
+    { name: 'Формы обучения', route: '/p/abiturient/educationForms', active: true },
+    { name: 'Подготовительные курсы', route: '/p/abiturient/additionalCourses', active: true },
+    { name: 'День открытых дверей', route: '/p/abiturient/openDoor', active: true }
   ]},
   { name: 'Студенту', menu: [
     { name: 'Студентам', route: '', active: false },
