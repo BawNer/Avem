@@ -54,7 +54,7 @@ const linkList = [
     { name: 'Образование', route: '/p/education', active: true },
     { name: 'Доступная среда', route: '', active: false },
     { name: 'Документы', route: '/p/documents', active: true },
-    { name: 'Руководство', route: '', active: false },
+    { name: 'Руководство', route: '/p/rulers', active: true },
     { name: 'Сотрудники', route: '/p/employee', active: true },
     { name: 'Партнеры', route: '', active: false },
     { name: 'Оснащенность университета', route: '', active: false },
