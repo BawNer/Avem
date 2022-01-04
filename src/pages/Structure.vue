@@ -5,6 +5,13 @@
         <span class="text-h3 text-grey-9">Структура и органы управления</span><br />
         <span class="text-h3 text-grey-9">образовательной организации</span>
       </div>
+      <div class="col-10 offset-1">
+        <q-img
+          :ratio="16/9"
+          src="/structure.png"
+          fit="contain"
+        ></q-img>
+      </div>
       <div class="col-12">
         <span class="text-h5 text-grey-9">Подразделения</span>
       </div>
