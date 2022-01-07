@@ -14,7 +14,7 @@ export default defineComponent({
   },
   setup() {
     return {
-      ...mapActions('system', ['setSystemMessage'])
+      ...mapActions(['setSystemMessage'])
     }
   },
   mounted() {
