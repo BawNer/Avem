@@ -91,25 +91,25 @@
           </q-card-section>
           <q-card-section>
             <q-list>
-              <q-item clickable>
+              <q-item clickable to="/p/abiturient">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Подать документы онлайн</q-item-section>
               </q-item>
-              <q-item clickable>
+              <q-item clickable to="/p/abiturient">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Рейтинги абитуриентов</q-item-section>
               </q-item>
-              <q-item clickable>
+              <q-item clickable to="/p/abiturient">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Порядок приёма документов</q-item-section>
               </q-item>
-              <q-item clickable>
+              <q-item clickable to="/p/abiturient/openDoor">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
