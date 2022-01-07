@@ -1,66 +1,50 @@
 <template>
-  <div v-if="!preview">
-    <one-image-temp :images="images" v-if="images.length > 0" />
-  </div>
-  <div v-else>
+  <div class="col-12">
     <div class="row">
-      <div class="col-12">
-        <q-img v-if="listImages.path" :src="listImages.path" ratio="16/9"
-          width="340px"
-          height="280px"
-          fit="contain"
-        >
-          <template v-slot:error>
-            <div class="absolute-full flex flex-center bg-negative text-white">
-              Ошибка при загрузке изображения
-            </div>
-          </template>
-        </q-img>
-      </div>
+      <component :is="renderImageComponent" :images="images"></component>
     </div>
   </div>
 </template>
 
 <script>
+  import { ref, onMounted } from 'vue'
+
   import OneImageTemp from './images/OneImage.vue'
+  import TwoImageTemp from './images/TwoImage.vue'
+  import ThrieImageTemp from './images/ThrieImage.vue'
+  import FourImageTemp from './images/FourImage.vue'
+  import MultipleImageTemp from './images/MultipleImage.vue'
 
   export default {
     name: 'ImageLayout',
     components: {
-      OneImageTemp
+      OneImageTemp,
+      TwoImageTemp,
+      ThrieImageTemp,
+      FourImageTemp,
+      MultipleImageTemp
     },
     props: {
-      images: Array,
-      preview: Boolean
+      images: Array
     },
-    computed: {
-      listImages() {
-        const ln = this.images.length
-        if (ln == 1) {
-          return {
-            totalLength: ln,
-            path: this.images[ln - 1].path
-          }
-        } else if (ln > 1) {
-          const list = []
-          this.images.map(v => {
-            list.push(v.path)
-          })
-          return {
-            totalLength: list.length,
-            path: list[0]
-          }
-        } else {
-          return {
-            totalLength: 0,
-            path: 'https://2.bp.blogspot.com/-I21AM6VLeeE/WK7lSab8t6I/AAAAAAAAAE4/Gtvevr-hFnwhfoqqsOr2RMBvxgNm9MEoQCK4B/s1600/x_e7576942.jpg'
-          }
+    setup(props) {
+      const renderImageComponent = ref("miltiple-image-temp")
+
+      const getTemplate = props => {
+        switch(props.images.length) {
+          case 1: return 'one-image-temp'; break;
+          case 2: return 'two-image-temp'; break;
+          case 3: return 'thrie-image-temp'; break;
+          case 4: return 'four-image-temp'; break;
+          default: return 'miltiple-image-temp';
         }
       }
-    },
-    setup() {
-      return {
+      onMounted(() => {
+        renderImageComponent.value = getTemplate(props)
+      })
 
+      return {
+        renderImageComponent
       }
     },
   }

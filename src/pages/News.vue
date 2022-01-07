@@ -5,6 +5,8 @@
       :key="n.id"
       :preview="n.preview"
       :tags="n.tags"
+      :fullText="n.content"
+      :images="n.image"
     >
       <template v-slot:title>{{n.title}}</template>
       <template v-slot:caption>{{n.publishedBy.name}}, {{n.publishAt}}</template>
