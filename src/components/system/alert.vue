@@ -30,7 +30,7 @@ export default ({
     }
     return {
       closeNotification,
-      sys: computed(() => store.getters['system/getSystemMessage'])
+      sys: computed(() => store.getters['getSystemMessage'])
     }
   },
 })

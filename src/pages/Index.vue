@@ -34,7 +34,7 @@
           <span class="text-subtitle1 text-blue">14 июля 2021</span>
         </div>
 
-        <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" @click="createNotification('Модуль новостей в данный момент недоступен')">Все новости</q-btn>
+        <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" to="/news">Все новости</q-btn>
       </div>
 
       <div class="col-md-3 col-sm-12 row self-start q-pl-md">
