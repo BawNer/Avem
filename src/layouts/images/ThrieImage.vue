@@ -1,12 +1,12 @@
 <template>
-  <div class="col-6">
+  <div class="col-6 q-pa-xs">
     <q-img
       :src="images[0]"
       fit="cover"
       height="320px"
     ></q-img>
   </div>
-  <div class="col-6">
+  <div class="col-6 q-pa-xs">
     <div class="row">
       <div class="col-12">
         <q-img
@@ -15,7 +15,7 @@
           fit="cover"
         ></q-img>
       </div>
-      <div class="col-12">
+      <div class="col-12 q-pa-xs">
         <q-img
           :src="images[2]"
           height="160px"
