@@ -4,34 +4,21 @@
       <div class="col-md-6 col-sm-12 row">
         <div class="col-12 text-h3 q-mb-xl">Новости</div>
 
-        <div class="col-12">
+        <div
+          v-for="(n, i) in news"
+          :key="i"
+          :class="i > 0 ? 'col-6' : 'col-12'"
+          class="shadow-4 q-pa-sm"
+        >
           <q-img
-            src="news/covid.png"
+            :src="n.preview"
             :ratio="16/9"
             fit="cover"
           ></q-img>
-          <span class="text-h5">В вузе пройдет плановая вакцинация студентов и преподавателей</span><br/>
-          <span class="text-subtitle1 text-blue">28 июля 2021</span>
-        </div>
-
-        <div class="col-6">
-          <q-img
-            src="news/abiturient.png"
-            :ratio="16/9"
-            fit="cover"
-          ></q-img>
-          <span class="text-h5">Опубликованы ранжированные списки</span><br/>
-          <span class="text-subtitle1 text-blue">22 июля 2021</span>
-        </div>
-
-        <div class="col-6">
-          <q-img
-            src="news/olimpiada.png"
-            :ratio="16/9"
-            fit="cover"
-          ></q-img>
-          <span class="text-h5">Областная олимпиада на базе СКФ МТУСИ</span><br/>
-          <span class="text-subtitle1 text-blue">14 июля 2021</span>
+          <span class="text-h5">{{n.title}}</span><br/>
+          <span class="text-subtitle1 text-blue">
+            {{ n.publishedAt }}
+          </span>
         </div>
 
         <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" to="/news">Все новости</q-btn>
@@ -134,7 +121,8 @@
 </template>
 
 <script>
-import { defineComponent, ref, inject } from 'vue';
+import { ref, inject, computed, onMounted } from 'vue';
+import { useStore } from 'vuex'
 import News from '../components/News.vue'
 
 const events = [
@@ -159,30 +147,29 @@ const tabsContent = [
   }
 ]
 
-export default defineComponent({
+export default {
   name: 'PageIndex',
   components: {
     News
   },
-  computed: {
-    // lastNews() {
-    //   return this.$store.getters['news/getNewsByCount'](3).news
-    // }
-  },
   setup() {
     const $event = inject('$event')
+    const store = useStore()
+    onMounted(() => store.dispatch('fetchAllNews') )
 
-    const createNotification = msg => {
-      $event.$emit('system-alert', { active: true, message: msg })
-    }
+    const createNotification = msg => $event.$emit('system-alert', { active: true, message: msg })
+
     const tabs = ref('01')
+    
+    const news = computed(() => store.getters.getNews(3))
 
     return {
       tabs,
       tabsContent,
       events,
-      createNotification
+      createNotification,
+      news
     }
   }
-})
+}
 </script>

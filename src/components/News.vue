@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import ImageLayout from '../layouts/ImageLayout.vue'
 
 export default ({
@@ -54,23 +54,16 @@ export default ({
   props: {
     preview: [Boolean, String],
     images: [Boolean, Array],
-    options: Object
+    options: Object,
+    publishedAt: String
   },
-  setup(props) {
+  setup() {
     const errorLoadImage = ref(false)
     const isFullContent = ref(false)
-    const publishedAt = computed(() => {
-      const date = new Date(props.options.publishedAt)
-      return date.toLocaleString("ru", {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric'
-      })
-    })
+
     return {
       errorLoadImage,
-      isFullContent,
-      publishedAt
+      isFullContent
     }
   }
 }) 

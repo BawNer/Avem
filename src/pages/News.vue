@@ -7,6 +7,7 @@
         :preview="n.preview"
         :images="n.image"
         :options="n.options"
+        :publishedAt="n.publishedAt"
       >
         <template v-slot:title>{{n.title}}</template>
         <template v-slot:annotation>{{n.annotation}}</template>
@@ -29,10 +30,8 @@
     },
     setup() {
       const store = useStore()
+      onMounted(() => store.dispatch('fetchAllNews'))
 
-      onMounted(() => {
-        store.dispatch('fetchAllNews')
-      })
       const news = computed(() => store.getters.getNews())
       return {
         news
