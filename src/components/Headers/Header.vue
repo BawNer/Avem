@@ -5,12 +5,12 @@
         <q-list>
           <q-item>
             <q-item-section avatar >
-              <img src="icons/logo_light.png" alt="" width="128">
+              <img src="icons/logo_light.svg" alt="" width="128">
             </q-item-section>
           </q-item>
         </q-list>
 
-        <div class="desktop-only">
+        <div v-if="!$q.screen.lt.sm">
           <q-btn 
             flat 
             color="text-white"
@@ -33,11 +33,12 @@
               </q-list>
           </q-menu>
           </q-btn>
-          <q-btn flat color="text-white" to="/">Контакты</q-btn>
+          <q-btn flat color="text-white" to="/p/contact">Контакты</q-btn>
         </div>
-        <q-btn flat icon="menu" class="q-gutter-sm mobile-only"></q-btn>
-        <q-btn flat icon="search" to="/404" class="q-gutter-sm"></q-btn>
-        <q-btn flat icon="visibility" to="/404" class="q-gutter-sm"></q-btn>
+        <q-btn v-else flat icon="menu" class="q-gutter-sm" @click="setStateDrawer(true)"></q-btn>
+        <drawer-navigation></drawer-navigation>
+        <q-btn flat icon="search" class="q-gutter-sm" @click="createNotification('Модуль временно недоступен')"></q-btn>
+        <q-btn flat icon="visibility" class="q-gutter-sm" @click="createNotification('Модуль временно недоступен')"></q-btn>
       </q-toolbar>
     </q-header>
     <q-carousel
@@ -52,7 +53,7 @@
       <template v-slot:control>
         <q-carousel-control
           position="bottom-right"
-          :offset="[128, 50]"
+          :offset="$q.screen.lt.sm ? [40, 40] : [128, 150]"
           class="q-gutter-xs"
         >
           <q-btn
@@ -74,8 +75,8 @@
         :img-src="slide.src"
         style="background-blend-mode: overlay; background-color: rgba(0,0,0,.5)"
       >
-        <div class="offset-lg-2 col-md-5 col-12">
-          <p class="text-h2">
+        <div class="offset-lg-2 col-md-offset-2 col-md-8 col-lg-5 col-12">
+          <p :class="$q.screen.lt.md ? 'text-h4' : 'text-h2'">
             {{slide.text}}
           </p>
 
@@ -83,11 +84,12 @@
       </q-carousel-slide>
     </q-carousel>
 
-    <div class="row q-mx-xl">
-      <div class="col-6 no-gutters">
+    <div class="row q-mx-xl floating-banner">
+      <div class="col-12 col-md-6 no-gutters">
         <q-card>
           <q-card-section>
-            <div class="text-h3 text-grey-10">Примемная кампания 2021</div>
+            <div class="text-h3 text-grey-10" v-if="!$q.screen.lt.lg">Примемная кампания 2021</div>
+            <div class="text-h5 text-grey-10" v-else>Примемная кампания 2021</div>
           </q-card-section>
           <q-card-section>
             <q-list>
@@ -119,10 +121,11 @@
           </q-card-section>
         </q-card>
       </div>
-      <div class="col-6 no-gutters">
+      <div class="col-12 col-md-6 no-gutters">
         <q-card class="bg-primary text-white">
           <q-card-section>
-            <div class="text-h3">Важная информация</div>
+            <div class="text-h3" v-if="!$q.screen.lt.lg">Важная информация</div>
+            <div class="text-h5" v-else>Важная информация</div>
           </q-card-section>
           <q-card-section>
             <q-list>
@@ -158,62 +161,10 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { ref, inject } from 'vue'
 
-const linkList = [
-  { name: 'Университет', menu: [
-    { name: 'О вузе', route: '/p/about', active: true },
-    { name: 'Структура', route: '/p/structure', active: true },
-    { name: 'Контакты', route: '/p/contact', active: true },
-    { name: 'Образование', route: '/p/education', active: true },
-    { name: 'Доступная среда', route: '', active: false },
-    { name: 'Документы', route: '/p/documents', active: true },
-    { name: 'Руководство', route: '/p/rulers', active: true },
-    { name: 'Сотрудники', route: '/p/employee', active: true },
-    { name: 'Партнеры', route: '', active: false },
-    { name: 'Оснащенность университета', route: '', active: false },
-    { name: 'Работа в СКФ МТУСИ', route: '', active: false },
-    { name: 'Международное сотрудничество', route: '', active: false },
-    { name: 'Финансовая деятельность', route: '', active: false },
-    { name: 'Платные образовательные услуги', route: '', active: false },
-    { name: 'Противодействие коррупции', route: '', active: false },
-    { name: 'Сведения об образовательной организации', route: '/p/infoeducation', active: true }
-  ]},
-  { name: 'Абитуриенту', menu: [
-    { name: 'Общая информация', route: '/p/abiturient', active: true },
-    { name: 'Приемная комиссия', route: '/p/abiturient/join', active: true },
-    { name: 'Формы обучения', route: '/p/abiturient/educationForms', active: true },
-    { name: 'Подготовительные курсы', route: '/p/abiturient/additionalCourses', active: true },
-    { name: 'День открытых дверей', route: '/p/abiturient/openDoor', active: true }
-  ]},
-  { name: 'Студенту', menu: [
-    { name: 'Студентам', route: '', active: false },
-    { name: 'Стипендии', route: '', active: false },
-    { name: 'График консультаций', route: '', active: false },
-    { name: 'Работа', route: '', active: false },
-    { name: 'Модульно-рейтинговая система', route: '', active: false },
-    { name: 'Электронное портфолио', route: '', active: false },
-    { name: 'Методические указания по подготовке ВКР', route: '', active: false },
-    { name: 'Расписание занятий', route: '', active: false },
-    { name: 'Внеучебная деятельность', route: '', active: false },
-    { name: 'Вакантные места для перевода', route: '', active: false },
-    { name: 'Электронная образовательная среда', route: '', active: false },
-    { name: 'Документы', route: '', active: false },
-    { name: 'Научная работа', route: '', active: false },
-    { name: 'Оплата обучения', route: '', active: false }
-  ]},
-  { name: 'Медиа', menu: [
-    { name: 'Видео', route: '', active: false },
-    { name: 'Новости', route: '/news', active: true },
-    { name: 'События', route: '', active: false },
-    { name: 'Газета "Спектр"', route: '', active: false }
-  ]},
-  { name: 'Атмосфера', menu: [
-    { name: 'Клуб выпускников', route: '', active: false },
-    { name: 'Музей СКФ МТУСИ', route: '', active: false },
-    { name: 'Внеучебная деятельность', route: '', active: false }
-  ]},
-]
+import linkList from './links'
+import drawerNavigation from './DrawerNavigation.vue'
 
 const slides = [
   { id: 0, src: 'slider/1.png', text: 'Почему я выбираю СКФ МТУСИ' },
@@ -225,20 +176,57 @@ const slides = [
   { id: 6, src: 'slider/7.png', text: 'Huawei' }
 ]
 
-
-export default defineComponent({
+export default ({
   name: 'HeaderComponent',
+  components: {
+    drawerNavigation
+  },
   computed: {
     getHeight() {
-      return this.$q.screen.lt.md ? '400px' : '600px'
+      return this.$q.screen.lt.md ? '500px' : '700px'
     }
   },
   setup () {
+    const $event = inject('$event')
+    const createNotification = msg => $event.$emit('set-notification', msg)
+    const setStateDrawer = prop => $event.$emit('set-drawer-state', prop)
     return {
+      createNotification,
       linkList,
       slide: ref(0),
-      slides
+      slides,
+      setStateDrawer
     }
   }
 })
 </script>
+
+
+<style scoped>
+  .floating-banner {
+    position: absolute;
+    top: 550px;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 1400px;
+  }
+
+  @media screen and (min-width: 728px) and (max-width: 1367px) {
+    .floating-banner {
+      position: absolute;
+      top: 550px;
+      left: 45%;
+      transform: translateX(-50%);
+      width: 1100px;
+    }
+  }
+  
+  @media screen and (min-width: 1px) and (max-width: 450px) {
+    .floating-banner {
+      position: absolute;
+      top: 480px;
+      left: 37%;
+      width: 95%;
+    }
+  }
+</style>
