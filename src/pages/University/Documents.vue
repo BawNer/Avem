@@ -1,18 +1,20 @@
 <template>
-  <div class="row q-mx-xl">
-    <div class="col-12 q-my-xl">
-      <span class="text-grey-10 text-h3">Документы</span>
+  <q-page padding>
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
+      <div class="col-12 q-my-xl">
+        <span class="text-grey-10 text-h3">Документы</span>
+      </div>
+      <div class="col-12 q-mt-md">
+        <ul>
+          <li
+            v-for="(doc, i) in docs"
+            :key="i"
+            class="q-my-md text-primary"
+          >{{doc.name}}</li>
+        </ul>
+      </div>
     </div>
-    <div class="col-12 q-mt-md">
-      <ul>
-        <li
-          v-for="(doc, i) in docs"
-          :key="i"
-          class="q-my-md text-primary"
-        >{{doc.name}}</li>
-      </ul>
-    </div>
-  </div>
+  </q-page>
 </template>
 
 <script>

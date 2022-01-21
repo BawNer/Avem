@@ -1,6 +1,6 @@
 <template>
   <div class="row justify-center">
-    <div class="col-6 q-my-md shadow-6">
+    <div class="col-md-6 col-11 q-my-md shadow-6">
       <q-card flat bordered>
         <div class="col-12 text-right">
           <q-badge

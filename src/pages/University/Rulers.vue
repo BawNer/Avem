@@ -1,12 +1,12 @@
 <template>
   <q-page padding>
-    <div class="row q-mx-xl">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12 q-my-xl">
         <span class="text-h3 text-grey-10">Руководство</span>
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-4 q-px-md">
+          <div class="col-lg-4 col-md-6 q-px-md q-mb-md col-12">
             <q-card flat bordered>
               <q-card-section horizontal>
                 <q-card-section class="col-7">
@@ -33,7 +33,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4 q-px-md">
+          <div class="col-lg-4 col-md-6 q-px-md q-mb-md col-12">
             <q-card flat bordered>
               <q-card-section horizontal>
                 <q-card-section class="col-7">
@@ -59,7 +59,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4 q-px-md">
+          <div class="col-lg-4 col-md-6 q-px-md q-mb-md col-12">
             <q-card flat bordered>
               <q-card-section horizontal>
                 <q-card-section class="col-7">

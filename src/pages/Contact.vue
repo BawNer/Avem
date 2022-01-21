@@ -6,7 +6,7 @@
       </div>
       <div class="col-12 q-my-xl">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12 q-mb-md">
             <q-list>
               <q-item-section>
                 <q-item-label caption>Адрес</q-item-label>
@@ -14,7 +14,7 @@
               </q-item-section>
             </q-list>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12 q-mb-md">
             <q-list>
               <q-item-section>
                 <q-item-label caption>ТЕЛЕФОН</q-item-label>
@@ -26,7 +26,7 @@
       </div>
       <div class="col-12 q-my-xl">
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>
@@ -59,7 +59,7 @@
               </q-item>
             </q-list>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>
@@ -86,7 +86,7 @@
               </q-item>
             </q-list>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>

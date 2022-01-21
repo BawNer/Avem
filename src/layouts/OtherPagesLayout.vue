@@ -3,7 +3,27 @@
     <header-simple />
 
     <q-page-container>
-      <router-view />
+
+      <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl q-mt-xl' : 'q-ma-sm' ">
+        <div class="col-10">
+          <q-breadcrumbs separator=">">
+            <q-breadcrumbs-el
+              tag="a"
+              v-for="breadcrumb  in $route.meta.breadcrumbs" :key="breadcrumb.name"
+              :label="breadcrumb.name"
+              @click="() => breadcrumb.link ? $router.push(breadcrumb.link) : null"
+              :class="{ 'text-grey-6': !!breadcrumb.link }"
+              :style="{ cursor: 'pointer' }"
+            />
+          </q-breadcrumbs>
+        </div>
+      </div>
+
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
     </q-page-container>
     
     <Footer />
@@ -11,7 +31,7 @@
 </template>
 
 <script>
-import HeaderSimple from '../components/HeaderSimple.vue'
+import HeaderSimple from '../components/Headers/HeaderSimple.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
@@ -22,3 +42,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s ease;
+  }
+
+  .fade-enter-from, .fade-leave-to {
+    opacity: 0;
+  }
+</style>

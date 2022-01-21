@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Header from '../components/HeaderSimple.vue'
+import Header from '../components/Headers/HeaderSimple.vue'
 export default {
   name: 'NewsLayout',
   components: {

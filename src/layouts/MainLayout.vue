@@ -4,7 +4,11 @@
     <Header />
 
     <q-page-container>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
     </q-page-container>
     
     <Footer />
@@ -13,7 +17,7 @@
 
 <script>
 import { defineComponent } from 'vue'
-import Header from '../components/Header'
+import Header from '../components/Headers/Header'
 import Footer from '../components/Footer'
 
 export default defineComponent({

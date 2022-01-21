@@ -1,14 +1,14 @@
 <template>
-  <q-page padding>
-    <div class="row q-mx-xl justify-center">
+  <q-page padding class="dinamic-margin">
+    <div class="row justify-center" :class="!$q.screen.lt.sm ? 'q-mx-xl': 'q-mx-xs'">
       <div class="col-md-6 col-sm-12 row">
         <div class="col-12 text-h3 q-mb-xl">Новости</div>
 
         <div
           v-for="(n, i) in news"
           :key="i"
-          :class="i > 0 ? 'col-6' : 'col-12'"
-          class="shadow-4 q-pa-sm"
+          :class="!$q.screen.lt.sm ? i > 0 ? 'col-6' : 'col-12' : 'col-12'"
+          class="q-pa-sm"
         >
           <q-img
             :src="n.preview"
@@ -43,40 +43,10 @@
         <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" @click="createNotification('Модуль событий в данный момент недоступен')">Все мероприятия</q-btn>
       </div>
 
-      <div class="col-md-10 col-sm-12 q-ma-lg">
+      <div class="col-md-12 col-lg-10 col-12 q-ma-lg">
         <div class="row">
           <div class="col-12 text-h3">Направления подготовки</div>
           <div class="col-12 q-mt-xl">
-            <!-- <q-list bordered class="rounded-borders shadow-10">
-              <q-expansion-item v-for="l in expansionsList" :key="l.id"
-                @show="() => l.isOpen = !l.isOpen"
-                @hide="() => l.isOpen = !l.isOpen"
-              >
-                <template v-slot:header>
-                  <div class="col-11 q-px-md">
-                    <div class="row text-h6">
-                      <div class="col-1" :class="!l.isOpen ? 'text-grey-4': 'text-primary'">{{l.id}}</div>
-                      <div class="col-11" v-show="!l.isOpen">{{l.title}}</div>
-                    </div>
-                  </div>
-                  
-                </template>
-                <q-card>
-                  <q-card-section class="q-ma-xl shadow-10">
-                    <div class="row q-mb-md">
-                      <div class="col-8 text-h3 q-mb-xl">
-                        {{l.title}}
-                      </div>
-                      <div class="col-md-6 text-h5">
-                        {{l.description}}
-                      </div>
-                    </div>
-                    <q-btn rounded color="primary">Подробнее</q-btn>
-                  </q-card-section>
-                  <q-separator></q-separator>
-                </q-card>
-              </q-expansion-item>
-            </q-list> -->
             <q-tabs
               v-model="tabs"
               align="justify"
@@ -89,7 +59,10 @@
                 v-for="tabContent in tabsContent"
                 :key="tabContent.id"
                 :name="tabContent.id"
-              ><div><span class="text-h2 q-mr-xl">{{tabContent.id}}</span><span>{{tabContent.title}}</span></div></q-tab>
+              >
+                <div v-if="!$q.screen.lt.sm"><span class="text-h2 q-mr-xl">{{tabContent.id}}</span><span>{{tabContent.title}}</span></div>
+                <div v-else><span class="text-subtitle2 q-mr-xs">{{tabContent.id}}</span><br/><span>{{tabContent.title}}</span></div>
+              </q-tab>
             </q-tabs>
             <q-separator></q-separator>
             <q-card>
@@ -99,13 +72,13 @@
                   :key="tabContent.id"
                   :name="tabContent.id">
                   <div class="row justify-center">
-                    <div class="col-6 q-pa-xl text-h6">{{tabContent.description}}</div>
+                    <div class="col-6" :class="!$q.screen.lt.sm ? 'q-pa-xl text-h6' : ''">{{tabContent.description}}</div>
                     <div class="col-6 text-center">
                       <q-img
                         :src="tabContent.images"
                         :ratio="16/9"
-                        width="460px"
-                        height="410px"
+                        :width="!$q.screen.lt.sm ? '460px' : '170px'"
+                        :height="!$q.screen.lt.sm ? '410px' : '140px'"
                       ></q-img>
                     </div>
                   </div>
@@ -157,7 +130,7 @@ export default {
     const store = useStore()
     onMounted(() => store.dispatch('fetchAllNews') )
 
-    const createNotification = msg => $event.$emit('system-alert', { active: true, message: msg })
+    const createNotification = msg => $event.$emit('set-notification', msg)
 
     const tabs = ref('01')
     
@@ -173,3 +146,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .dinamic-margin {
+    margin-top: 150px;
+  }
+
+  @media screen and (min-width: 1px) and (max-width: 400px) {
+    .dinamic-margin {
+      margin-top: 550px;
+    }
+  }
+</style>

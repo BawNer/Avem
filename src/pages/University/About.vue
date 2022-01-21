@@ -4,7 +4,7 @@
       <div class="col-12">
         <span class="text-h3 text-grey-10">Северо-Кавказский Филиал МТУСИ</span>
         <div class="row">
-          <div class="col-7 q-mt-md">
+          <div class="col-12 col-md-7 q-mt-md">
             <p class="text-h6 text-grey-9">
               СКФ МТУСИ филиал Московского Технического Университета Связи и Информатики, является единственной на
               Северном Кавказе и Юге
@@ -16,16 +16,16 @@
       </div>
       <div class="col-12 q-my-xl">
         <div class="row justify-center">
-          <div class="col-3 q-px-xl">
+          <div class="col-md-3 col-12 text-center q-px-xl">
             <span class="text-h1 text-primary text-weight-bold">1</span>
             <p class="text-h4">профильный вуз
               в регионе</p>
           </div>
-          <div class="col-3">
+          <div class="col-md-3 col-12 text-center">
             <span class="text-h1 text-primary text-weight-bold">54</span>
             <p class="text-h4">года истории</p>
           </div>
-          <div class="col-3">
+          <div class="col-md-3 col-12 text-center">
             <span class="text-h1 text-primary text-weight-bold">2500</span>
             <p class="text-h4">студентов</p>
           </div>
@@ -56,7 +56,7 @@
       <div class="col-12 q-my-xl">
        <span class="text-h3 text-grey-10">Основные сведения</span>
       </div>
-      <div class="col-8 q-pr-xl">
+      <div class="col-md-8 col-12 q-pr-xl">
 
         <p class="text-h6 q-my-md">В июне 1967 года <b>Приказом Министерства связи СССР от 03.06.1967 г.
             № 403 «О состоянии заочной подготовки инженерно-технических работников
@@ -108,7 +108,7 @@
           <span class="text-h6">Суббота:  </span>с 10.00 до 12.00
         </p>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-12">
         <p class="text-h4 text-grey-10 q-mb-xl">Сведения об учредителе</p>
         <p class="text-h6 q-md-sm">Министерство цифрового развития, связи и массовых коммуникаций РФ.</p>
         <p class="text-h6">ФИО руководителя учредителя образовательной организации:</p>
@@ -130,7 +130,7 @@
         <p class="q-mb-sm">(863) 310-69-60</p>
         <p class="text-h6">Факс:</p>
         <p class="q-mb-sm">(863) 310-69-68</p>
-        <p class="text-h6">Телекс::</p>
+        <p class="text-h6">Телекс:</p>
         <p class="q-mb-sm">123432 VOLT RU</p>
         <p class="text-h6">Приёмная комиссия:	</p>
         <p class="q-mb-sm">(863) 310-69-70</p>
@@ -145,7 +145,7 @@
       </div>
       <div class="col-12">
         <div class="row items-center">
-          <div class="col-6 q-px-xl">
+          <div class="col-md-6 col-12 q-px-xl">
             <q-list>
               <q-img
                 src="images/slider.png"
@@ -154,7 +154,7 @@
               <q-item-section class="text-grey-8">Учебный корпус</q-item-section>
             </q-list>
           </div>
-          <div class="col-6 q-px-xl">
+          <div class="col-md-6 col-12 q-px-xl">
             <div class="row">
               <div class="col-12 q-mb-md">
                 <q-list>

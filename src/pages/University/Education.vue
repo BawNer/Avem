@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row q-mx-xl">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12 q-my-xl">
         <span class="text-grey-10 text-h3">Образование</span><br/>
         <span class="text-overline">Информация об общественной аккредитации: «Общественная аккредитация не проводилась»</span>

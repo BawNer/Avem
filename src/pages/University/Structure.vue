@@ -5,7 +5,7 @@
         <span class="text-h3 text-grey-9">Структура и органы управления</span><br />
         <span class="text-h3 text-grey-9">образовательной организации</span>
       </div>
-      <div class="col-10 offset-1">
+      <div class="col-md-10 col-12 offset-md-1">
         <q-img
           :ratio="16/9"
           src="/structure.png"
@@ -17,7 +17,7 @@
       </div>
       <div class="col-12 q-my-md">
         <div class="row">
-          <div class="col-4" v-for="tile in tiles" :key="tile.name">
+          <div class="col-md-4 col-12" v-for="tile in tiles" :key="tile.name">
             <a-tile
               :active="tile.state"
               :to="tile.to"
@@ -32,7 +32,7 @@
       </div>
       <div class="col-12 q-my-xl">
         <div class="row">
-          <div class="col-4" v-for="manage in managment" :key="manage.name">
+          <div class="col-md-4 col-12" v-for="manage in managment" :key="manage.name">
             <q-card flat>
               <q-card-section horizontal>
                 <q-card-section>
@@ -50,7 +50,7 @@
       <div class="col-12 text-h3 text-grey-10 q-my-xl">Ученый совет</div>
       <div class="col-12">
         <div class="row">
-          <div class="col-4 q-my-md" v-for="ruler in rulers" :key="ruler.name">
+          <div class="col-md-4 col-12 q-my-md" v-for="ruler in rulers" :key="ruler.name">
             <q-list>
               <q-item-section>
                 <q-item-label class="text-h6">{{ruler.position}}</q-item-label>
@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import ATile from '../components/ATile.vue'
+import ATile from '../../components/ATile.vue'
 
 const tiles = [
   { name: 'Ученый совет', to: '', state: false },
