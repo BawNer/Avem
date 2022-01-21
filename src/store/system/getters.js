@@ -1,6 +1,1 @@
-export const getSystemMessage = state => {
-  return {
-    active: state.active,
-    message: state.message
-  }
-}
+export const getNotification = state => state.notifications

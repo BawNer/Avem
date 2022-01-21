@@ -1,26 +1,24 @@
 <template>
-  <system-alert />
+  <notification />
   <router-view />
 </template>
 <script>
-import { defineComponent } from 'vue';
-import systemAlert from './components/system/alert.vue'
+import Notification from './components/system/Notification.vue'
 import {  mapActions } from 'vuex'
 
-export default defineComponent({
+export default ({
   name: 'App',
   components: {
-    systemAlert
+    Notification
   },
   setup() {
     return {
-      ...mapActions(['setSystemMessage'])
+      ...mapActions(['setNotification', 'clearNotification'])
     }
   },
   mounted() {
-    this.$event.$on('system-alert', props => {
-      this.setSystemMessage(props)
-    })
+    this.$event.$on('clear-notification', props => this.clearNotification(props))
+    this.$event.$on('set-notification', props => this.setNotification(props))
   }
   // preFetch({store}) {
   //   return store.dispatch('news/getNewsByLimit', { limit: 10, page: 1 })
