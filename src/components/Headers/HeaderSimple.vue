@@ -1,8 +1,9 @@
 <template>
-<q-header 
+<!-- <q-header 
   style="backdrop-filter: blur(7px); background-color: #0000001a;"
   :class="[transparent ? 'transparent' : '', absolute ? 'absolute': '', fixedOnTop ? 'fixed-top': '' ]"
-  >
+  > -->
+  <q-header class="bg-white shadow-4">
     <q-toolbar class="justify-center wrap">
 
       <q-list>

@@ -2,12 +2,12 @@
 
     <q-dialog
       seamless
-      position="bottom"
+      position="right"
       v-for="(notification, i) in sys"
       :key="i"
       v-model="showDialog"
     >
-      <q-card style="width: 450px">
+      <q-card style="width: 450px" dark>
         <q-badge color="red" rounded>{{sys.length}}</q-badge>
         <q-toolbar>
           <q-toolbar-title class="text-subtitle1">

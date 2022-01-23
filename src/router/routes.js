@@ -30,6 +30,15 @@ const routes = [
     component: () => import('layouts/OtherPagesLayout.vue'),
     children: [
       {
+        path: 'works',
+        component: () => import('pages/Works.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Работа' }
+          ]
+        }
+      }, {
         path: 'structure',
         component: () => import('pages/University/Structure.vue'),
         meta: {
@@ -102,6 +111,60 @@ const routes = [
           ]
         }
       }, {
+        path: 'finance',
+        component: () => import('pages/University/Finance.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Финансовая деятельность' }
+          ]
+        }
+      }, {
+        path: 'accessible-environment',
+        component: () => import('pages/University/AccessibleEnvironment.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Доступная среда' }
+          ]
+        }
+      }, {
+        path: 'pay-service',
+        component: () => import('pages/University/PayService.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Платные образовательные услуги' }
+          ]
+        }
+      }, {
+        path: 'partners',
+        component: () => import('pages/University/Partners.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Партнеры' }
+          ]
+        }
+      }, {
+        path: 'international-cooperation',
+        component: () => import('pages/University/InternationalCooperation.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Международное сотрудничество' }
+          ]
+        }
+      }, {
+        path: 'anti-corruption',
+        component: () => import('pages/University/AntiCorruption.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Противодействие коррупции' }
+          ]
+        }
+      }, {
         path: 'abiturient',
         component: () => import('pages/Abiturient/Abiturient.vue'),
         meta: {
@@ -144,15 +207,6 @@ const routes = [
           breadcrumbs: [
             { name: 'Главная', link: '/' },
             { name: 'День открытых дверей' }
-          ]
-        }
-      }, {
-        path: 'students/works',
-        component: () => import('pages/Student/Works.vue'),
-        meta: {
-          breadcrumbs: [
-            { name: 'Главная', link: '/' },
-            { name: 'Работа' }
           ]
         }
       }, {
