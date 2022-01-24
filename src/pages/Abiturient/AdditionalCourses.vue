@@ -1,17 +1,17 @@
 <template>
   <q-page padding>
-    <div class="row q-mx-xl">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12 q-my-xl">
         <span class="text-h3 text-grey-10">Подготовительные курсы</span>
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <q-img
               src="images/additional_coursers.png"
             ></q-img>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <q-card class="text-subtitle1" flat>
               <q-card-section class="q-mb-md">
                 <span class="text-h5">Зачем Вам проходить подготовительные курсы?</span>
@@ -34,7 +34,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row q-px-md">
               <div class="col-2 text-h4 text-primary">01.</div>
               <div class="col-10 text-h4 text-grey-9 q-mb-md">Вечерние подготовительные курсы</div>
@@ -44,7 +44,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row q-px-md">
               <div class="col-2 text-h4 text-primary">02.</div>
               <div class="col-10 text-h4 text-grey-9 q-mb-md">Заочные подготовительные курсы</div>
@@ -72,7 +72,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-4 q-px-md q-mb-xl">
+          <div class="col-md-4 col-12 q-px-md q-mb-xl">
             <q-card class="text-center shadow-8 q-py-xl">
               <q-card-section>
                 <q-img
@@ -92,7 +92,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4 q-px-md q-mb-xl">
+          <div class="col-md-4 col-12 q-px-md q-mb-xl">
             <q-card class="text-center shadow-8 q-py-xl">
               <q-card-section>
                 <q-img
@@ -112,7 +112,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4 q-px-md q-mb-xl">
+          <div class="col-md-4 col-12 q-px-md q-mb-xl">
             <q-card class="text-center shadow-8 q-py-xl">
               <q-card-section>
                 <q-img
@@ -132,7 +132,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4 q-px-md q-mb-md">
+          <div class="col-md-4 col-12 q-px-md q-mb-md">
             <q-card class="text-center shadow-8 q-py-xl">
               <q-card-section>
                 <q-img
@@ -151,7 +151,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4 q-px-md q-mb-md">
+          <div class="col-md-4 col-12 q-px-md q-mb-md">
             <q-card class="text-center shadow-8 q-py-xl">
               <q-card-section>
                 <q-img
@@ -171,7 +171,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4 q-px-md q-mb-md">
+          <div class="col-md-4 col-12 q-px-md q-mb-md">
             <q-card class="text-center shadow-8 q-py-xl">
               <q-card-section>
                 <q-img
@@ -198,7 +198,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <q-list>
               <q-item-section>
                 <q-item-label caption>Адрес</q-item-label>
@@ -206,7 +206,7 @@
               </q-item-section>
             </q-list>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <q-list>
               <q-item-section>
                 <q-item-label caption>ТЕЛЕФОН</q-item-label>
@@ -218,7 +218,7 @@
       </div>
       <div class="col-12 q-my-xl">
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>
@@ -251,7 +251,7 @@
               </q-item>
             </q-list>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>
@@ -278,7 +278,7 @@
               </q-item>
             </q-list>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>

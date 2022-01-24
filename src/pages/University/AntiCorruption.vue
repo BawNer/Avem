@@ -3,7 +3,7 @@
     <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12">
         <div class="row">
-          <div class="col-md-3 col-6 q-pa-md" v-for="(document, index) in documents" :key="index">
+          <div class="col-md-3 col-12 q-pa-md" v-for="(document, index) in documents" :key="index">
             <q-card>
               <q-item>
                 <q-item-section>

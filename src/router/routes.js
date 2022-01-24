@@ -211,14 +211,20 @@ const routes = [
         }
       }, {
         path: 'students/electronic-education',
-        component: () => import('pages/Student/ElectronicEducation.vue')
+        component: () => import('pages/Student/ElectronicEducation.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Электронная образовательная среда' }
+          ]
+        }
       }, {
         path: 'contact',
         component: () => import('pages/Contact.vue'),
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Электронная образовательная среда' }
+            { name: 'Контакты' }
           ]
         }
       }

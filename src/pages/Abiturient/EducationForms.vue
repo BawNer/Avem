@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row q-mx-xl">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12 q-my-xl">
         <span class="text-h3 text-grey-10">Формы обучения: очная и заочная</span>
       </div>

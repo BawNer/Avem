@@ -13,20 +13,18 @@
             <q-btn rounded @click="drawer = false">Х</q-btn>
           </q-item-section>
         </q-item>
-        <q-separator></q-separator>
+
         <template v-for="(menuItem, index) in menuList" :key="index">
-          <q-expansion-item
-            expand-separator
-            :label="menuItem.name"
-            :content-inset-level="1"
-            group="sidenavigation"
-          >
-            <template v-for="(menuList, index) in menuItem.menu" :key="index">
-              <q-item clickable :to="menuList.route" :disable="!menuList.active">
-                {{menuList.name}}
-              </q-item>
-            </template>
-          </q-expansion-item>
+          <q-list padding>
+
+            <q-separator spaced></q-separator>
+            <q-item-label header>{{menuItem.name}}</q-item-label>
+
+            <q-item v-for="(menu, index) in menuItem.menu" :key="index" :to="menu.route" :disable="!menu.active">
+              <q-item-section>{{menu.name}}</q-item-section>
+            </q-item>
+
+          </q-list>
         </template>
       </q-list>
     </q-scroll-area>

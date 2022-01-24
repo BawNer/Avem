@@ -1,17 +1,17 @@
 <template>
   <q-page padding>
-    <div class="row q-ma-xl">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12">
         <span class="text-h3 text-grey-10">Электронная информационно-образовательная среда</span>
       </div>
-      <div class="col-8 q-mt-md">
+      <div class="col-md-8 col-12 q-mt-md">
         <span class="text-subtitle1">
           Электронная информационно-образовательная среда (далее ЭИОС) – совокупность информационных, телекоммуникационных технологий, соответствующих технологических средств, электронных информационных и образовательных ресурсов, обеспечивающих условия освоения обучающимися образовательных программ в полном объеме независимо от места нахождения обучающихся.
         </span>
       </div>
       <div class="col-12 q-my-xl">
         <div class="row">
-          <div class="col-6 q-pa-md">
+          <div class="col-md-6 col-12 q-pa-md">
             <q-card>
               <q-item class="q-pa-xl">
                 <q-item-section>
@@ -21,7 +21,7 @@
               </q-item>
             </q-card>
           </div>
-          <div class="col-6 q-pa-md">
+          <div class="col-md-6 col-12 q-pa-md">
             <q-card>
               <q-item class="q-pa-xl">
                 <q-item-section>
@@ -38,7 +38,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6 q-pa-md q-mb-xl" v-for="r in roadEnjoi" :key="r.id">
+          <div class="col-md-6 col-12 q-pa-md q-mb-xl" v-for="r in roadEnjoi" :key="r.id">
             <div class="row">
               <div class="col-2">
                 <span class="text-h3 text-primary">{{r.id}}</span>

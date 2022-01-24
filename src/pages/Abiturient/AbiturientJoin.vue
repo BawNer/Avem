@@ -27,7 +27,7 @@
       </div>
       <div class="col-12 q-mb-xl">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row q-px-md">
               <div class="col-1 text-h4 text-primary">01.</div>
               <div class="col-11 text-h4">Очная форма обучения</div>
@@ -53,7 +53,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row q-px-md">
               <div class="col-1 text-h4 text-primary">02.</div>
               <div class="col-11 text-h4">Заочная форма обучения</div>
@@ -86,7 +86,7 @@
       </div>
       <div class="col-12 q-mb-xl">
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-card flat>
               <q-card-section>
                 <span class="text-h4">Лично</span>
@@ -105,7 +105,7 @@
               </q-card-actions>
             </q-card>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-card flat>
               <q-card-section>
                 <span class="text-h4">Онлайн</span>
@@ -124,7 +124,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-card flat>
               <q-card-section>
                 <span class="text-h4">Почтой</span>
@@ -144,7 +144,7 @@
       </div>
       <div class="col-12 q-mb-xl">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row q-px-md">
               <div class="col-1 text-h4 text-primary">01.</div>
               <div class="col-11 text-h4">Очная форма обучения</div>
@@ -189,7 +189,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row q-px-md">
               <div class="col-1 text-h4 text-primary">02.</div>
               <div class="col-11 text-h4">Заочная форма обучения</div>

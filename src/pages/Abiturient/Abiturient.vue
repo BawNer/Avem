@@ -1,12 +1,12 @@
 <template>
   <q-page padding>
-    <div class="row">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
        <div class="col-12 q-my-xl">
           <span class="text-grey-10 text-h3">Абитуриенту</span>
         </div>
         <div class="col-12 q-my-xl">
           <div class="row">
-            <div class="col-6 no-gutters">
+            <div class="col-md-6 col-12 no-gutters">
               <q-card square>
                 <q-card-section>
                   <q-list>
@@ -38,7 +38,7 @@
                 </q-card-section>
               </q-card>
             </div>
-            <div class="col-6 no-gutters">
+            <div class="col-md-6 col-12 no-gutters">
               <q-card class="bg-primary text-white" square>
                 <q-card-section>
                   <q-list>
@@ -79,20 +79,22 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6 q-px-sm q-my-xl">
+          <div class="col-md-6 col-12 q-px-sm q-my-xl">
             <div class="row">
               <div class="col-2">
                 <span class="text-h3 text-primary">01.</span>
               </div>
               <div class="col-10"><span class="text-h3">Сдать ЕГЭ</span></div>
               <div class="col-10 offset-2 q-my-xl text-subtitle1">Для поступления на бакалавриат или специалитет сдайте ЕГЭ по общеобразовательным предметам. Перечень вступительных испытаний и минимальные баллы можно посмотреть на страницах образовательных программ и в Правилам приема.</div>
-              <div class="col-10 offset-2">
-                <router-link to="/" class="text-dark q-mr-xl">Баллы прошлых лет</router-link>
-                <router-link to="/" class="text-dark q-mr-xl">Проходные баллы</router-link>
+              <div class="col-md-10 offset-2">
+                <div class="row">
+                  <router-link to="/" class="text-dark q-mr-xl">Баллы прошлых лет</router-link>
+                  <router-link to="/" class="text-dark q-mr-xl">Проходные баллы</router-link>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-6 q-px-sm q-my-xl">
+          <div class="col-md-6 col-12 q-px-sm q-my-xl">
             <div class="row">
               <div class="col-2">
                 <span class="text-h3 text-primary">02.</span>
@@ -110,7 +112,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 q-px-sm q-my-xl">
+          <div class="col-md-6 col-12 q-px-sm q-my-xl">
             <div class="row">
               <div class="col-2">
                 <span class="text-h3 text-primary">03.</span>
@@ -125,7 +127,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 q-px-sm q-my-xl">
+          <div class="col-md-6 col-12 q-px-sm q-my-xl">
             <div class="row">
               <div class="col-2">
                 <span class="text-h3 text-primary">04.</span>
@@ -149,12 +151,12 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6 no-gutters">
-            <q-card class="bg-primary text-white q-pa-xl" square>
+          <div class="col-md-6 col-12 no-gutters">
+            <q-card class="bg-primary text-white" :class="!$q.screen.lt.md ? 'q-pa-xl' : ''" square>
               <q-card-section>
                 <q-card-section>
                   <div class="col-12 text-h3 q-mb-xl">01</div>
-                  <div class="col-12 text-h3 q-mb-xl">
+                  <div class="col-12 q-mb-xl" :class="!$q.screen.lt.md ? ' text-h3' : 'text-h5'">
                     Информатика и вычислительная техника
                   </div>
                 </q-card-section>
@@ -184,12 +186,12 @@
               </q-card-actions>
             </q-card>
           </div>
-          <div class="col-6 no-gutters">
-            <q-card class="q-pa-xl" square>
+          <div class="col-md-6 col-12 no-gutters">
+            <q-card :class="!$q.screen.lt.md ? 'q-pa-xl' : ''" square>
               <q-card-section>
                 <q-card-section>
                   <div class="col-12 text-h3 q-mb-xl">02</div>
-                  <div class="col-12 text-h3 q-mb-xl">
+                  <div class="col-12 q-mb-xl" :class="!$q.screen.lt.md ? ' text-h3' : 'text-h5'">
                     Информатика и вычислительная техника
                   </div>
                 </q-card-section>
@@ -317,7 +319,7 @@
       </div>
        <div class="col-12 q-my-xl">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <q-list>
               <q-item-section>
                 <q-item-label caption>Адрес</q-item-label>
@@ -325,7 +327,7 @@
               </q-item-section>
             </q-list>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <q-list>
               <q-item-section>
                 <q-item-label caption>ТЕЛЕФОН</q-item-label>
@@ -337,7 +339,7 @@
       </div>
       <div class="col-12 q-my-xl">
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>
@@ -370,7 +372,7 @@
               </q-item>
             </q-list>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>
@@ -397,7 +399,7 @@
               </q-item>
             </q-list>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-list>
               <q-item>
                 <q-item-section>

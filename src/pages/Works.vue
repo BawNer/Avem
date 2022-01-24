@@ -1,18 +1,18 @@
 <template>
   <q-page padding>
-    <div class="row q-mx-xl">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12 q-my-xl">
         <span class="text-h3 text-grey-10">Работа</span>
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-8 text-subtitle1 q-pr-xl">
+          <div class="col-md-8 col-12 text-subtitle1 q-pr-xl">
             <span>Несмотря на распространённое мнение, что высшее образование не является показателем каких-либо способностей и навыков, с каждым годом дипломы получают все больше студентов. Совершенно не стоит отрицать, что академические знания вносят лепту в развитие будущего специалиста и этот фактор положительно влияет на решение поступить в университет. Основная причина, по которой выпускникам трудно найти работу, — это явная конкуренция. Каждый год по определенным специальности поступает невероятное количество выпускников. И, безусловно, им придётся приложить усилия, чтобы начать свой профессиональный путь.</span>
             <br><br>
             <span>Почему важна первая работа?<br><br>
             Первая работа выпускника после университета часто оказывает значительное влияние на его дальнейшую карьеру. Например, выпускники, получившие должность, которая мало связана с их областью обучения (или вообще не требует степени), с большей вероятностью останутся либо на этой, либо на связанной должности в течение следующих пяти лет. Людям трудно отклониться от однажды избранного пути, что снижает их шансы получить работу в своей области.</span>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <q-img
               src="/images/stdworks1.svg"
             ></q-img>
@@ -24,7 +24,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-4 q-pa-md" v-for="a in advice" :key="a.title">
+          <div class="col-md-4 col-12 q-pa-md" v-for="a in advice" :key="a.title">
             <q-card class="text-center shadow-10">
               <q-card-section>
                 <q-img :src="a.icon" width="70px"></q-img>
@@ -44,17 +44,17 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row">
               <div class="col-2"><span class="text-h4 text-primary">01.</span></div>
-              <div class="col-10"><span class="text-h4">Nuevoo</span></div>
+              <div class="col-10"><span class="text-h4">Neuvoo</span></div>
               <div class="col-10 offset-2">
                 <span class="text-h5 text-primary">https://neuvoo.ru/</span><br>
                 <span class="text-subtitle1">В помощь студентам и выпускникам! Сайт для поиска работы</span>
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="row">
               <div class="col-2"><span class="text-h4 text-primary">02.</span></div>
               <div class="col-10"><span class="text-h4">Jobsora</span></div>
@@ -71,7 +71,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-6 q-mb-xl" v-for="v in vacancy" :key="v.id">
+          <div class="col-md-6 col-12 q-mb-xl" v-for="v in vacancy" :key="v.id">
             <div class="row q-pa-sm">
               <div class="col-2"><span class="text-h4 text-primary">{{v.id}}</span></div>
               <div class="col-10"><span class="text-h4">{{v.title}}</span></div>

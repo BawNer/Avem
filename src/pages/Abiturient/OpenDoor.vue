@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row q-mx-xl">
+    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
       <div class="col-12 q-my-xl">
         <span class="text-h3 text-grey-10">День открытых дверей</span>
       </div>
@@ -11,7 +11,7 @@
         <div class="row">
           <div class="col-12 q-mb-xl">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-card flat>
                   <q-card-section>
                     <span class="text-h4">Программа Дня открытых дверей:</span>
@@ -36,7 +36,7 @@
                   </q-card-section>
                 </q-card>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-img
                   src="images/open_door/1.png"
                 ></q-img>
@@ -45,12 +45,12 @@
           </div>
           <div class="col-12 q-mb-xl">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-img
                   src="images/open_door/2.png"
                 ></q-img>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-card flat>
                   <q-card-section>
                     <span class="text-h4">Лучший способ знакомства
@@ -66,7 +66,7 @@
 
           <div class="col-12 q-mb-xl">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-card flat>
                   <q-card-section>
                     <span class="text-h4">Почувствуй себя студентом!</span>
@@ -77,7 +77,7 @@
                   </q-card-section>
                 </q-card>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-img
                   src="images/open_door/3.png"
                 ></q-img>
@@ -86,12 +86,12 @@
           </div>
           <div class="col-12 q-mb-xl">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-img
                   src="images/open_door/4.png"
                 ></q-img>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <q-card flat>
                   <q-card-section>
                     <span class="text-h4">Свыше 8000 специалистов 
