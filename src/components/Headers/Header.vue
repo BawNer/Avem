@@ -88,8 +88,8 @@
       <div class="col-12 col-md-6 no-gutters">
         <q-card>
           <q-card-section>
-            <div class="text-h3 text-grey-10" v-if="!$q.screen.lt.lg">Примемная кампания 2021</div>
-            <div class="text-h5 text-grey-10" v-else>Примемная кампания 2021</div>
+            <div class="text-h3 text-grey-10" v-if="!$q.screen.lt.lg">Приёмная кампания 2021</div>
+            <div class="text-h5 text-grey-10" v-else>Приёмная кампания 2021</div>
           </q-card-section>
           <q-card-section>
             <q-list>
@@ -167,13 +167,13 @@ import linkList from './links'
 import drawerNavigation from './DrawerNavigation.vue'
 
 const slides = [
-  { id: 0, src: 'slider/1.png', text: 'Почему я выбираю СКФ МТУСИ' },
-  { id: 1, src: 'slider/2.png', text: 'На базе вуза организована стевая академия CISCO' },
-  { id: 2, src: 'slider/3.png', text: 'На базе вуза работает учебный центр "Academy for Professional Training Unify Communications"' },
-  { id: 3, src: 'slider/4.png', text: 'Лабаратория цифровых систем коммутации и сетей связи' },
-  { id: 4, src: 'slider/5.png', text: 'Возможность перевода в Москву на тех же условиях с предоставлением общежития' },
-  { id: 5, src: 'slider/6.png', text: 'Лаборатория систем радиосвязи и телевещания' },
-  { id: 6, src: 'slider/7.png', text: 'Huawei' }
+  { id: 0, src: 'slider/1.webp', text: 'Почему я выбираю СКФ МТУСИ' },
+  { id: 1, src: 'slider/3.webp', text: 'На базе вуза организована сетевая академия CISCO' },
+  { id: 2, src: 'slider/2.webp', text: 'На базе вуза работает учебный центр "Academy for Professional Training Unify Communications"' },
+  { id: 3, src: 'slider/5.webp', text: 'Лаборатория цифровых систем коммутации и сетей связи' },
+  { id: 4, src: 'slider/4.webp', text: 'Возможность перевода в Москву на тех же условиях с предоставлением общежития' },
+  { id: 5, src: 'slider/6.webp', text: 'Лаборатория систем радиосвязи и телевещания' },
+  { id: 6, src: 'slider/7.webp', text: 'Huawei' }
 ]
 
 export default ({
