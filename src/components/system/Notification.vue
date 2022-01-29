@@ -7,7 +7,7 @@
       :key="i"
       v-model="showDialog"
     >
-      <q-card style="width: 450px" dark>
+      <q-card style="max-width: 450px; width: 100%" dark>
         <q-badge color="red" rounded>{{sys.length}}</q-badge>
         <q-toolbar>
           <q-toolbar-title class="text-subtitle1">
