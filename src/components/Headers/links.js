@@ -25,7 +25,7 @@ export default [
     { name: 'День открытых дверей', route: '/p/abiturient/openDoor', active: true }
   ]},
   { name: 'Студенту', menu: [
-    { name: 'Студентам', route: '', active: false },
+    { name: 'Студентам', route: '/p/students', active: true },
     { name: 'Стипендии', route: '', active: false },
     { name: 'График консультаций', route: '', active: false },
     { name: 'Работа', route: '/p/works', active: true },
@@ -43,8 +43,7 @@ export default [
   { name: 'Медиа', menu: [
     { name: 'Видео', route: '', active: false },
     { name: 'Новости', route: '/news', active: true },
-    { name: 'События', route: '', active: false },
-    { name: 'Газета "Спектр"', route: '', active: false }
+    { name: 'События', route: '/p/events', active: true }
   ]},
   { name: 'Атмосфера', menu: [
     { name: 'Клуб выпускников', route: '', active: false },

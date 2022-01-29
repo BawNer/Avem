@@ -19,6 +19,7 @@
           <span class="text-subtitle1 text-blue">
             {{ n.publishedAt }}
           </span>
+          <q-btn flat color="primary" to="/news">Подробнее</q-btn>
         </div>
 
         <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" to="/news">Все новости</q-btn>

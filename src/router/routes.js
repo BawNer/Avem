@@ -219,6 +219,15 @@ const routes = [
           ]
         }
       }, {
+        path: 'students',
+        component: () => import('pages/Student/Students.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Студентам' }
+          ]
+        }
+      }, {
         path: 'contact',
         component: () => import('pages/Contact.vue'),
         meta: {
@@ -227,6 +236,15 @@ const routes = [
             { name: 'Контакты' }
           ]
         }
+      }, {
+        path: 'events',
+        component: () => import('pages/Events.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'События' }
+          ]
+        } 
       }
     ]
   },

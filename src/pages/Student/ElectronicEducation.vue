@@ -14,6 +14,11 @@
           <div class="col-md-6 col-12 q-pa-md">
             <q-card>
               <q-item class="q-pa-xl">
+                <q-item-avatar>
+                  <q-avatar size="84px">
+                    <q-icon name="mdi-image-album" color="primary"></q-icon>
+                  </q-avatar>
+                </q-item-avatar>
                 <q-item-section>
                   <q-item-label class="text-h4">Методические материалы</q-item-label>
                   <q-item-label lines="2">Методические издания, содержащие конкретные материалы в помощь преподавателям и учащимся</q-item-label>
@@ -24,6 +29,11 @@
           <div class="col-md-6 col-12 q-pa-md">
             <q-card>
               <q-item class="q-pa-xl">
+                <q-item-avatar>
+                  <q-avatar size="84px">
+                    <q-icon name="mdi-image-album" color="primary"></q-icon>
+                  </q-avatar>
+                </q-item-avatar>
                 <q-item-section>
                   <q-item-label class="text-h4">Библиотека СКФ МТУСИ</q-item-label>
                   <q-item-label lines="2">Список изданий СКФ МТУСИ</q-item-label>
