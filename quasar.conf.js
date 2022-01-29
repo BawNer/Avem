@@ -134,8 +134,8 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Avem project`,
-        short_name: `Avem project`,
+        name: `Северо-Кавказский филиал МТУСИ`,
+        short_name: `СКФ МУСТИ`,
         description: `Avem project for AIS v0.0.1`,
         display: 'standalone',
         orientation: 'portrait',
