@@ -37,7 +37,7 @@
             </q-list>
         </q-menu>
         </q-btn>
-        <q-btn flat color="dark" to="/p/contact">Контакты</q-btn>
+        <q-btn flat color="dark" to="/sveden/contact">Контакты</q-btn>
       </div>
       <q-btn v-else flat color="dark" icon="menu" class="q-gutter-sm" @click="setStateDrawer(true)"></q-btn>
       <q-btn flat color="dark" icon="search" class="q-gutter-sm" @click="createNotification('Модуль временно недоступен')"></q-btn>

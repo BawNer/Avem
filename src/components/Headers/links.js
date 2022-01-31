@@ -1,41 +1,41 @@
 export default [
   { name: 'Университет', menu: [
-    { name: 'О вузе', route: '/p/about', active: true },
-    { name: 'Структура', route: '/p/structure', active: true },
-    { name: 'Контакты', route: '/p/contact', active: true },
-    { name: 'Образование', route: '/p/education', active: true },
-    { name: 'Доступная среда', route: '/p/accessible-environment', active: true },
-    { name: 'Документы', route: '/p/documents', active: true },
-    { name: 'Руководство', route: '/p/rulers', active: true },
-    { name: 'Сотрудники', route: '/p/employee', active: true },
-    { name: 'Партнеры', route: '/p/partners', active: true },
-    { name: 'Оснащенность университета', route: '/p/equipment', active: true },
-    { name: 'Работа в СКФ МТУСИ', route: '/p/works', active: true },
-    { name: 'Международное сотрудничество', route: '/p/international-cooperation', active: true },
-    { name: 'Финансовая деятельность', route: '/p/finance', active: true },
-    { name: 'Платные образовательные услуги', route: '/p/pay-service', active: true },
-    { name: 'Противодействие коррупции', route: '/p/anti-corruption', active: true },
-    { name: 'Сведения об образовательной организации', route: '/p/infoeducation', active: true }
+    { name: 'Основные сведения', route: '/sveden/common', active: true },
+    { name: 'Структура и органы управления', route: '/sveden/struct', active: true },
+    { name: 'Контакты', route: '/sveden/contact', active: true },
+    { name: 'Образование', route: '/sveden/education', active: true },
+    { name: 'Доступная среда', route: '/sveden/ovz', active: true },
+    { name: 'Документы', route: '/sveden/document', active: true },
+    { name: 'Руководство', route: '/sveden/rulers', active: true },
+    { name: 'Сотрудники', route: '/sveden/employees', active: true },
+    { name: 'Партнеры', route: '/sveden/partners', active: true },
+    { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', route: '/sveden/objects', active: true },
+    { name: 'Работа в СКФ МТУСИ', route: '/sveden/works', active: true },
+    { name: 'Международное сотрудничество', route: '/sveden/inter', active: true },
+    { name: 'Финансово-хозяйственная деятельность', route: '/sveden/budget', active: true },
+    { name: 'Платные образовательные услуги', route: '/sveden/paid_edu', active: true },
+    { name: 'Противодействие коррупции', route: '/sveden/anti-corruption', active: true },
+    { name: 'Образовательные стандарты и требования', route: '/sveden/eduStandarts', active: true  }
   ]},
   { name: 'Абитуриенту', menu: [
-    { name: 'Общая информация', route: '/p/abiturient', active: true },
-    { name: 'Приемная комиссия', route: '/p/abiturient/join', active: true },
-    { name: 'Формы обучения', route: '/p/abiturient/educationForms', active: true },
-    { name: 'Подготовительные курсы', route: '/p/abiturient/additionalCourses', active: true },
-    { name: 'День открытых дверей', route: '/p/abiturient/openDoor', active: true }
+    { name: 'Общая информация', route: '/sveden/abiturient', active: true },
+    { name: 'Приемная комиссия', route: '/sveden/abiturient/join', active: true },
+    { name: 'Формы обучения', route: '/sveden/abiturient/educationForms', active: true },
+    { name: 'Подготовительные курсы', route: '/sveden/abiturient/additionalCourses', active: true },
+    { name: 'День открытых дверей', route: '/sveden/abiturient/openDoor', active: true }
   ]},
   { name: 'Студенту', menu: [
-    { name: 'Студентам', route: '/p/students', active: true },
-    { name: 'Стипендии', route: '', active: false },
+    { name: 'Студентам', route: '/sveden/students', active: true },
+    { name: 'Стипендии', route: '/sveden/grants', active: false },
     { name: 'График консультаций', route: '', active: false },
-    { name: 'Работа', route: '/p/works', active: true },
+    { name: 'Работа', route: '/sveden/works', active: true },
     { name: 'Модульно-рейтинговая система', route: '', active: false },
     { name: 'Электронное портфолио', route: '', active: false },
     { name: 'Методические указания по подготовке ВКР', route: '', active: false },
     { name: 'Расписание занятий', route: '', active: false },
     { name: 'Внеучебная деятельность', route: '', active: false },
-    { name: 'Вакантные места для перевода', route: '', active: false },
-    { name: 'Электронная образовательная среда', route: '/p/students/electronic-education', active: true },
+    { name: 'Вакантные места для перевода', route: '/sveden/vacant', active: false },
+    { name: 'Электронная образовательная среда', route: '/sveden/students/electronic-education', active: true },
     { name: 'Документы', route: '', active: false },
     { name: 'Научная работа', route: '', active: false },
     { name: 'Оплата обучения', route: '', active: false }
@@ -43,7 +43,7 @@ export default [
   { name: 'Медиа', menu: [
     { name: 'Видео', route: '', active: false },
     { name: 'Новости', route: '/news', active: true },
-    { name: 'События', route: '/p/events', active: true }
+    { name: 'События', route: '/sveden/events', active: true }
   ]},
   { name: 'Атмосфера', menu: [
     { name: 'Клуб выпускников', route: '', active: false },

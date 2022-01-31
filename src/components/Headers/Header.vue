@@ -33,7 +33,7 @@
               </q-list>
           </q-menu>
           </q-btn>
-          <q-btn flat color="text-white" to="/p/contact">Контакты</q-btn>
+          <q-btn flat color="text-white" to="/sveden/contact">Контакты</q-btn>
         </div>
         <q-btn v-else flat icon="menu" class="q-gutter-sm" @click="setStateDrawer(true)"></q-btn>
         <drawer-navigation></drawer-navigation>

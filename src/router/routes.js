@@ -26,7 +26,7 @@ const routes = [
     ]
   },
   {
-    path: '/p',
+    path: '/sveden',
     component: () => import('layouts/OtherPagesLayout.vue'),
     children: [
       {
@@ -39,7 +39,7 @@ const routes = [
           ]
         }
       }, {
-        path: 'structure',
+        path: 'struct',
         component: () => import('pages/University/Structure.vue'),
         meta: {
           breadcrumbs: [
@@ -48,25 +48,16 @@ const routes = [
           ]
         }
       }, {
-        path: 'about',
+        path: 'common',
         component: () => import('pages/University/About.vue'),
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'О вузе' }
+            { name: 'Основные сведения' }
           ]
         }
       }, {
-        path: 'infoeducation',
-        component: () => import('pages/University/InfoEducation.vue'),
-        meta: {
-          breadcrumbs: [
-            { name: 'Главная', link: '/' },
-            { name: 'Сведения об образовательной оргиназации' }
-          ]
-        }
-      }, {
-        path: 'employee',
+        path: 'employees',
         component: () => import('pages/University/Empl.vue'),
         meta: {
           breadcrumbs: [
@@ -84,7 +75,16 @@ const routes = [
           ]
         }
       }, {
-        path: 'documents',
+        path: 'eduStandarts',
+        component: () => import('pages/University/EduStandarts.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Образовательные стандарты' }
+          ]
+        }
+      }, {
+        path: 'document',
         component: () => import('pages/University/Documents.vue'),
         meta: {
           breadcrumbs: [
@@ -102,25 +102,25 @@ const routes = [
           ]
         }
       }, {
-        path: 'equipment',
+        path: 'objects',
         component: () => import('pages/University/Equipment.vue'),
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Оснащенность университета' }
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса' }
           ]
         }
       }, {
-        path: 'finance',
+        path: 'budget',
         component: () => import('pages/University/Finance.vue'),
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Финансовая деятельность' }
+            { name: 'Финансово-хозяйственная деятельность' }
           ]
         }
       }, {
-        path: 'accessible-environment',
+        path: 'ovz',
         component: () => import('pages/University/AccessibleEnvironment.vue'),
         meta: {
           breadcrumbs: [
@@ -129,7 +129,7 @@ const routes = [
           ]
         }
       }, {
-        path: 'pay-service',
+        path: 'paid_edu',
         component: () => import('pages/University/PayService.vue'),
         meta: {
           breadcrumbs: [
@@ -147,7 +147,7 @@ const routes = [
           ]
         }
       }, {
-        path: 'international-cooperation',
+        path: 'inter',
         component: () => import('pages/University/InternationalCooperation.vue'),
         meta: {
           breadcrumbs: [

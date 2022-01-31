@@ -21,7 +21,7 @@
         </div>
         <div class="col-12 q-mb-xl" v-for="(empl, i) in sameEmpls()" :key="i">
             <span class="text-h3 text-grey-10">{{empl.direction.name}}</span>
-          <div class="row q-my-xl">
+          <div class="row q-my-xl bg-white">
             <div class="col-lg-4 col-md-6 col-12" v-for="structure in empl.direction.structure" :key="structure.name">
               <q-card flat :class="!$q.screen.lt.md ? 'q-pr-xl' : ''">
                 <q-card-section horizontal>
