@@ -1,22 +1,23 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+  <div class="fullscreen text-center q-pa-md flex flex-center">
     <div>
-      <div style="font-size: 30vh">
-        404
-      </div>
+      <q-img
+        src="/icons/logo_dark.svg"
+      ></q-img>
 
-      <div class="text-h2" style="opacity:.4">
-        ОЙ! Вы нашли пирожок с ничем....
+      <div class="text-h4 q-mt-xl" style="opacity:.4">
+        Запрашиваемая страница не найдена <br/>
+        <span class="text-overline">Error code: 404</span>
       </div>
 
       <q-btn
         class="q-mt-xl"
-        color="white"
-        text-color="blue"
         unelevated
         to="/"
         label="На главную"
         no-caps
+        outline
+        color="deep-orange"
       />
     </div>
   </div>
