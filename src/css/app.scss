@@ -6,10 +6,12 @@
   &-track {
     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
     background-color: #f9f9fd;
-    border-radius: 10px;
   }
   &-thumb {
-    border-radius: 10px;
     background: linear-gradient(180deg, #00c6fb, #005bea);
   }
+}
+
+.q-page-container {
+  background: #f5f6fa;
 }
