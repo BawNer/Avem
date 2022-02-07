@@ -30,6 +30,15 @@ const routes = [
     component: () => import('layouts/OtherPagesLayout.vue'),
     children: [
       {
+        path: 'schedule',
+        component: () => import('pages/Schedule.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Расписание занятий' }
+          ]
+        }
+      }, {
         path: 'works',
         component: () => import('pages/Works.vue'),
         meta: {
