@@ -32,7 +32,7 @@ export default [
     { name: 'Модульно-рейтинговая система', route: '', active: false },
     { name: 'Электронное портфолио', route: '', active: false },
     { name: 'Методические указания по подготовке ВКР', route: '', active: false },
-    { name: 'Расписание занятий', route: '', active: false },
+    { name: 'Расписание занятий', route: '/sveden/schedule', active: true },
     { name: 'Внеучебная деятельность', route: '', active: false },
     { name: 'Вакантные места для перевода', route: '/sveden/vacant', active: false },
     { name: 'Электронная образовательная среда', route: '/sveden/students/electronic-education', active: true },
