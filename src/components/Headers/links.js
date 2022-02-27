@@ -1,5 +1,5 @@
 export default [
-  { name: 'Университет', menu: [
+  { name: 'Сведения об образовательной организации', menu: [
     { name: 'Основные сведения', route: '/sveden/common', active: true },
     { name: 'Структура и органы управления', route: '/sveden/struct', active: true },
     { name: 'Контакты', route: '/sveden/contact', active: true },

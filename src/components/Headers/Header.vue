@@ -88,7 +88,7 @@
       <div class="col-12 col-md-6 no-gutters">
         <q-card>
           <q-card-section>
-            <div class="text-h3 text-grey-10" v-if="!$q.screen.lt.lg">Приёмная кампания 2021</div>
+            <div class="text-h3 text-grey-10" v-if="!$q.screen.lt.lg">Приёмная компания 2021</div>
             <div class="text-h5 text-grey-10" v-else>Приёмная кампания 2021</div>
           </q-card-section>
           <q-card-section>

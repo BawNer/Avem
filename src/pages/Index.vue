@@ -14,6 +14,7 @@
             :src="n.preview"
             :ratio="16/9"
             fit="cover"
+            class="q-mb-lg"
           ></q-img>
           <span class="text-h5">{{n.title}}</span><br/>
           <span class="text-subtitle1 text-blue">
