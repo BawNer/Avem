@@ -19,7 +19,7 @@
       </div>
 
   </div>
-  <div class="row" style="background-color: #0D1726">
+  <div class="row q-pa-lg" style="background-color: #0D1726">
     <div class="col-md-6 col-7">
       <q-list class="text-white">
         <q-item>
