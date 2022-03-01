@@ -18,7 +18,7 @@
       <div class="col-12" v-if="groupSchedule">
         <div class="row">
           <template v-for="(schema, index) in groupSchedule.schema" :key="index" >
-            <div class="col-md-3 col-12 q-pa-sm" v-if="new Date().getTime() <= new Date(schema.date)">
+            <div class="col-md-3 col-12 q-pa-sm">
               <q-card>
                 <q-item>
                   <q-item-section>
