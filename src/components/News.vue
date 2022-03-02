@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-center">
-    <div class="col-md-6 col-11 q-my-md shadow-6">
-      <q-card flat bordered>
+    <div class="col-md-5 col-lg-4 col-11 q-my-md">
+      <q-card class=" shadow-6">
         <div class="col-12 text-right">
           <q-badge
             v-for="t in options.tags"
@@ -21,6 +21,8 @@
         <q-separator></q-separator>
         <q-card-section v-if="preview && !isFullContent">
           <q-img
+            height="240px"
+            fit="cover"
             v-if="!errorLoadImage"
             :src="preview"
             @error="err => errorLoadImage = true"
@@ -35,7 +37,7 @@
           <image-layout :images="images"></image-layout>
         </q-card-section>
         <q-card-actions>
-          <q-btn flat color="primary" v-if="!isFullContent" @click="isFullContent = !isFullContent">Чистать полностью</q-btn>
+          <q-btn flat color="primary" v-if="!isFullContent" @click="isFullContent = !isFullContent">Читать полностью</q-btn>
         </q-card-actions>
       </q-card>
     </div>

@@ -3,7 +3,7 @@
   style="backdrop-filter: blur(7px); background-color: #0000001a;"
   :class="[transparent ? 'transparent' : '', absolute ? 'absolute': '', fixedOnTop ? 'fixed-top': '' ]"
   > -->
-  <q-header class="bg-white shadow-4">
+  <q-header class="bg-white shadow-6">
     <q-toolbar class="justify-center wrap">
 
       <q-list>
