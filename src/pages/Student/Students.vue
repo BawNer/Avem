@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="row">
       <div class="col-12">
-        <spna class="text-h3 text-grey-10">Студентам</spna>
+        <span class="text-h3 text-grey-10">Студентам</span>
       </div>
       <div class="col-12">
         <div class="row">

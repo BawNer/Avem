@@ -36,7 +36,7 @@ export default [
     { name: 'Внеучебная деятельность', route: '', active: false },
     { name: 'Вакантные места для перевода', route: '/sveden/vacant', active: false },
     { name: 'Электронная образовательная среда', route: '/sveden/students/electronic-education', active: true },
-    { name: 'Документы', route: '', active: false },
+    { name: 'Документы', route: '/sveden/students/documents', active: true },
     { name: 'Научная работа', route: '', active: false },
     { name: 'Оплата обучения', route: '', active: false }
   ]},

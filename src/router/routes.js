@@ -237,6 +237,15 @@ const routes = [
           ]
         }
       }, {
+        path: 'students/documents',
+        component: () => import('pages/Student/Documents.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Документы' }
+          ]
+        }
+      }, {
         path: 'contact',
         component: () => import('pages/Contact.vue'),
         meta: {
