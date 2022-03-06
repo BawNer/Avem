@@ -246,6 +246,60 @@ const routes = [
           ]
         }
       }, {
+        path: '/sveden/vacant',
+        component: () => import('src/pages/Vacant.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Вакантные места для перевода' }
+          ]
+        }
+      }, {
+        path: '/sveden/grants',
+        component: () => import('src/pages/Grants.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Вакантные места для перевода' }
+          ]
+        }
+      }, {
+        path: '/sveden/students/portfolio',
+        component: () => import('pages/Student/Portfolio.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Электронное портфолио' }
+          ]
+        }
+      }, {
+        path: '/sveden/students/scientific-work',
+        component: () => import('src/pages/Student/ScientificWork.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Научная работа' }
+          ]
+        }
+      }, {
+        path: '/sveden/students/extracurricular',
+        component: () => import('src/pages/Student/Extracurricular.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Внеучебная деятельность' }
+          ]
+        }
+      }, {
+        path: '/sveden/students/consultations',
+        component: () => import('src/pages/Student/Consultations.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'График консультаций' }
+          ]
+        }
+      }, {
         path: 'contact',
         component: () => import('pages/Contact.vue'),
         meta: {
