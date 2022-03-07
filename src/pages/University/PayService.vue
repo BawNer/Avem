@@ -18,11 +18,11 @@
                       <q-icon name="mdi-cash" color="positive"></q-icon>
                     </q-item-section>
                     <q-item-section>{{serv.label}}</q-item-section>
-                    <q-item-section class="col-3 desktop-only"><q-btn flat color="primary" type="a" :href="serv.link">Посмотреть</q-btn></q-item-section>
+                    <q-item-section class="col-3 desktop-only"><q-btn flat color="primary" type="a" :to="serv.link">Посмотреть</q-btn></q-item-section>
                   </q-item>
                   <q-card-actions class="mobile-only">
                     <q-space></q-space>
-                    <q-btn flat color="primary" type="a" :href="serv.link">Подробнее</q-btn>
+                    <q-btn flat color="primary" type="a" :to="serv.link">Подробнее</q-btn>
                   </q-card-actions>
                 </q-card>
               </div>
@@ -47,7 +47,7 @@ export default {
       { type: 'Дополнительная образовательная деятельность', services: [
         { label: 'Дополнительная образовательная деятельность', link: '' },
         { label: 'Курсы повышения квалификации', link: '' },
-        { label: 'Локальная сетевая академия Cisco', link: 'sveden/paid_edu/cisco' },
+        { label: 'Локальная сетевая академия Cisco', link: '/sveden/cisco' },
         { label: 'Учебный центр Unify Communications', link: '' },
         { label: 'Компьютерные курсы', link: '' },
         { label: 'Подготовительные курсы', link: '' }

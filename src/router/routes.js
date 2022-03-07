@@ -145,10 +145,16 @@ const routes = [
             { name: 'Главная', link: '/' },
             { name: 'Платные образовательные услуги' }
           ]
-        },
-        children: [
-          { path: 'cisco', component: () => import('pages/University/Cisco.vue') }
-        ]
+        }
+      }, {
+        path: 'cisco',
+        component: () => import('pages/University/Cisco.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Кися' } /* FIX ME! */
+          ]
+        }
       }, {
         path: 'partners',
         component: () => import('pages/University/Partners.vue'),
@@ -249,7 +255,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/vacant',
+        path: 'vacant',
         component: () => import('src/pages/Vacant.vue'),
         meta: {
           breadcrumbs: [
@@ -258,7 +264,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/grants',
+        path: 'grants',
         component: () => import('src/pages/Grants.vue'),
         meta: {
           breadcrumbs: [
@@ -267,7 +273,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/students/portfolio',
+        path: 'students/portfolio',
         component: () => import('pages/Student/Portfolio.vue'),
         meta: {
           breadcrumbs: [
@@ -276,7 +282,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/students/scientific-work',
+        path: 'students/scientific-work',
         component: () => import('src/pages/Student/ScientificWork.vue'),
         meta: {
           breadcrumbs: [
@@ -285,7 +291,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/students/extracurricular',
+        path: 'students/extracurricular',
         component: () => import('src/pages/Student/Extracurricular.vue'),
         meta: {
           breadcrumbs: [
@@ -294,7 +300,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/students/consultations',
+        path: 'students/consultations',
         component: () => import('src/pages/Student/Consultations.vue'),
         meta: {
           breadcrumbs: [
@@ -303,7 +309,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/students/rating-system',
+        path: 'students/rating-system',
         component: () => import('src/pages/Student/RatingSystem.vue'),
         meta: {
           breadcrumbs: [
@@ -312,7 +318,7 @@ const routes = [
           ]
         }
       }, {
-        path: '/sveden/students/qualifying-works',
+        path: 'students/qualifying-works',
         component: () => import('src/pages/Student/QualifyingWorks.vue'),
         meta: {
           breadcrumbs: [
