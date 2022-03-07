@@ -27,18 +27,18 @@ export default [
   { name: 'Студенту', menu: [
     { name: 'Студентам', route: '/sveden/students', active: true },
     { name: 'Стипендии', route: '/sveden/grants', active: true },
-    { name: 'График консультаций', route: '/sveden/students/consultations', active: false },
+    { name: 'График консультаций', route: '/sveden/students/consultations', active: true },
     { name: 'Работа', route: '/sveden/works', active: true },
-    { name: 'Модульно-рейтинговая система', route: '', active: false },
+    { name: 'Модульно-рейтинговая система', route: '/sveden/students/rating-system', active: true },
     { name: 'Электронное портфолио', route: '/sveden/students/portfolio', active: true },
-    { name: 'Методические указания по подготовке ВКР', route: '', active: false },
+    { name: 'Методические указания по подготовке ВКР', route: '/sveden/students/qualifying-works', active: true },
     { name: 'Расписание занятий', route: '/sveden/schedule', active: true },
     { name: 'Внеучебная деятельность', route: '/sveden/students/extracurricular', active: true },
     { name: 'Вакантные места для перевода', route: '/sveden/vacant', active: true },
     { name: 'Электронная образовательная среда', route: '/sveden/students/electronic-education', active: true },
     { name: 'Документы', route: '/sveden/students/documents', active: true },
     { name: 'Научная работа', route: '/sveden/students/scientific-work', active: true },
-    { name: 'Оплата обучения', route: '', active: false }
+    { name: 'Оплата обучения', route: '/sveden/paid_edu', active: true }
   ]},
   { name: 'Медиа', menu: [
     { name: 'Видео', route: '', active: false },

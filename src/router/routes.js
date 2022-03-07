@@ -145,7 +145,10 @@ const routes = [
             { name: 'Главная', link: '/' },
             { name: 'Платные образовательные услуги' }
           ]
-        }
+        },
+        children: [
+          { path: 'cisco', component: () => import('pages/University/Cisco.vue') }
+        ]
       }, {
         path: 'partners',
         component: () => import('pages/University/Partners.vue'),
@@ -297,6 +300,24 @@ const routes = [
           breadcrumbs: [
             { name: 'Главная', link: '/' },
             { name: 'График консультаций' }
+          ]
+        }
+      }, {
+        path: '/sveden/students/rating-system',
+        component: () => import('src/pages/Student/RatingSystem.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Модульно рейтинговая система' }
+          ]
+        }
+      }, {
+        path: '/sveden/students/qualifying-works',
+        component: () => import('src/pages/Student/QualifyingWorks.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Методические указания по подготовке ВКР' }
           ]
         }
       }, {

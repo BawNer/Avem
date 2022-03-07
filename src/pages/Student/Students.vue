@@ -30,7 +30,7 @@
 export default {
   setup() {
     const linksMap = [
-      { label: 'Работа', icon: 'mdi-briefcase', path: '/p/works', color: 'primary' },
+      { label: 'Работа', icon: 'mdi-briefcase', path: '/sveden/works', color: 'primary' },
       { label: 'График плановых консультаций профессорско-преподавательского состава', icon: 'mdi-account-group', path: '/404', color: 'positive' },
       { label: 'Модульно-рейтинговая система', icon: 'mdi-star', path: '/404', color: 'warning' },
       { label: 'Электронное портфолио студента', icon: 'mdi-head-lightbulb', path: '/404', color: 'deep-orange-10' },

@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-4 col-12">
             <q-img
-              src="/images/extracurricular/01_1.jpg" :img-style="{ borderRadius: '2rem' }"
+              class="rounded-2rem" src="/images/extracurricular/01_1.jpg"
             ></q-img>
           </div>
         </div>
@@ -27,7 +27,7 @@
         <div class="row">
           <div class="col-md-3 col-12 q-my-xl">
             <q-img
-              src="/images/extracurricular/02_2.jpg" width = "300px" :img-style="{ borderRadius: '2rem' }"
+              class="rounded-2rem" src="/images/extracurricular/02_2.jpg" width = "300px"
             ></q-img>
           </div>
           <div class="col-md-8 col-12 text-subtitle1 q-my-xl">
@@ -40,17 +40,17 @@
             Чтобы стать волонтером, необходимо хорошо владеть английским языком, иметь отличные коммуникативные навыки, организаторские способности, уметь работать в команде. Давид успешно прошел все отборочные туры и на Чемпионате работал в команде волонтеров, которая помогала прессе, а также ребята помогали в проведении всех игр, проходивших на стадионе «Ростов-Арена» в г.Ростове-на-Дону.
           </div>
           <div class="col-md-4 col-12">
-            <q-img class = "q-ma-md"
-              src="/images/extracurricular/03_2.jpg" width = "400px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
+            <q-img class = "q-ma-md rounded-2rem"
+              src="/images/extracurricular/03_2.jpg" width = "400px" :ratio="4/3"
             ></q-img>
           </div>
           <div class="col-md-4 col-12">
-            <q-img class = "q-ma-md"
+            <q-img class = "q-ma-md rounded-2rem"
               src="/images/extracurricular/03_1.jpg" width = "400px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
             ></q-img>
           </div>
           <div class="col-md-4 col-12">
-            <q-img class = "q-ma-md"
+            <q-img class = "q-ma-md rounded-2rem"
               src="/images/extracurricular/03_3.jpg" width = "400px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
             ></q-img>
           </div> 
@@ -68,11 +68,11 @@
           </div>
           <div class="col-md-4 col-12 q-mb-xl">
             <q-img
-              src="/images/extracurricular/04_1.jpg" width = "450px" :img-style="{ borderRadius: '2rem' }"
+              class="rounded-2rem" src="/images/extracurricular/04_1.jpg" width = "450px"
             ></q-img>
           </div>
           <div class="col-md-4 col-12 q-pa-md" v-for="pic in prevent" :key="pic">
-            <q-img :src="pic" :ratio="4/3" width="400px" :img-style="{ borderRadius: '2rem' }"></q-img>
+            <q-img class="rounded-2rem" :src="pic" :ratio="4/3" width="400px"></q-img>
           </div>
         </div>
       </div>
@@ -85,18 +85,18 @@
           </div>
       </div>
         <div class="col-md-4 col-12">
-            <q-img class = "q-ma-md"
-              src="/images/extracurricular/05_1.jpg" width = "400px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
+            <q-img class = "q-ma-md rounded-2rem"
+              src="/images/extracurricular/05_1.jpg" width = "400px" :ratio="4/3"
             ></q-img>
         </div>
         <div class="col-md-4 col-12">
-            <q-img class = "q-ma-md"
-              src="/images/extracurricular/05_2.jpg" width = "400px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
+            <q-img class = "q-ma-md rounded-2rem"
+              src="/images/extracurricular/05_2.jpg" width = "400px" :ratio="4/3"
             ></q-img>
         </div>
         <div class="col-md-4 col-12">
-            <q-img class = "q-ma-md"
-              src="/images/extracurricular/05_3.jpg" width = "400px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
+            <q-img class = "q-ma-md rounded-2rem"
+              src="/images/extracurricular/05_3.jpg" width = "400px" :ratio="4/3"
             ></q-img>
         </div>
       <div class="col-12 text-subtitle1 q-my-xl">
@@ -130,13 +130,13 @@
         </div>
       </div>
       <div class="col-md-6 col-12">
-        <q-img class = "q-ma-md"
-            src="/images/extracurricular/06_1.jpg" width = "500px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
+        <q-img class = "q-ma-md rounded-2rem"
+            src="/images/extracurricular/06_1.jpg" width = "500px" :ratio="4/3"
         ></q-img>
       </div>
       <div class="col-md-6 col-12">
-        <q-img class = "q-ma-md"
-            src="/images/extracurricular/06_2.jpg" width = "500px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
+        <q-img class = "q-ma-md rounded-2rem"
+            src="/images/extracurricular/06_2.jpg" width = "500px" :ratio="4/3"
         ></q-img>
       </div>
       <div class="col-12">
@@ -146,8 +146,8 @@
             Не менее важным событием в жизни первокурсников является традиция устраивать в первых числах сентября «Посвящение в студенты» у скульптурной композиции «Связистам Дона» в парке им. Островского. В церемонии посвящения в студенты-связисты принимают участие Министр информационных технологий и связи Ростовской области Герман Анатолиевич Лопаткин и председатель Ростовского областного комитета профсоюза работников связи России Алексей Иванович Машкин, а также другие почетные гости.
           </div>
           <div class="col-md-4 col-12">
-            <q-img class = "q-ma-md"
-                src="/images/extracurricular/06_3.jpg" width = "500px" :ratio="4/3" :img-style="{ borderRadius: '2rem' }"
+            <q-img class = "q-ma-md rounded-2rem"
+                src="/images/extracurricular/06_3.jpg" width = "500px" :ratio="4/3"
             ></q-img>
           </div>
         </div>
@@ -164,7 +164,7 @@
             В 2018г. коллектив художественной самодеятельности СКФ МТУСИ в полном составе выступил на Фестивале творческих коллективов организаций связи Ростовской области. Выступление наших ребят отличалось изяществом и экспрессией, что было оценено строгим жюри. Мы заняли 1 место среди учебных заведений.
           </div>
           <div class="col-md-4 col-12 q-my-xl" v-for="pic in artwork" :key="pic">
-            <q-img :src="pic" :ratio="4/3" width="400px" :img-style="{ borderRadius: '2rem' }"></q-img>
+            <q-img class="rounded-2rem" :src="pic" :ratio="4/3" width="400px"></q-img>
           </div>
         </div>
       </div>
@@ -174,7 +174,7 @@
       <div class="col-md-4 col-12 q-pa-md" v-for="c in club" :key="c.title">
             <q-card class="text-center shadow-10">
               <q-card-section>
-                  <q-icon size="70px" :name="c.icon" color="primary">
+                  <q-icon class="rounded-2rem" size="70px" :name="c.icon" color="primary">
                   </q-icon>
               </q-card-section>
               <q-card-section>
@@ -211,7 +211,7 @@ export default {
       { icon: 'mdi-drama-masks', title: '«СТЭМ» — студенческий театр эстрадных миниатюр', description: 'Организатор и ответственный – студент гр. ДЗ-31 Алиев Мустафа Иссаевич.<br/>Расписание занятий:<br/>Понедельник – 13.00 – 14.30<br/>Пятница – 13.00 – 14.30<br/>Место проведения: Зал репетиций (ауд.115)' },
       { icon: 'mdi-chess-pawn', title: 'Шахматный кружок «На коне»', description: 'Ответственный – студент гр. ДИ-21 Тайсунов Микаил<br/>Расписание занятий:<br/>Понедельник – 13.00. – 14.00.' },
       { icon: 'mdi-guitar-acoustic', title: 'Студия по обучению игре на гитаре', description: 'Руководитель студии — преподаватель по классу струнных инструментов,<br/>Лауреат международных конкурсов Буцаленко Сергей Николаевич<br/>Расписание занятий:<br/>Пятница – 13.00. — 15.00<br/>Суббота – 13.00.- 15.00.<br/>Место проведения: Зал репетиций (ауд.115)' },
-      { icon: 'mdi-gamepad-outline', title: 'Киберспортивный клуб', description: 'Капитан — студент гр. ДС-31 Ухов Павел Эдуардович<br/>Расписание тренировок – по договоренности игроков.' },
+      { icon: 'mdi-gamepad', title: 'Киберспортивный клуб', description: 'Капитан — студент гр. ДС-31 Ухов Павел Эдуардович<br/>Расписание тренировок – по договоренности игроков.' },
     ]
   return {prevent,
           artwork,
