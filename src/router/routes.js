@@ -152,7 +152,52 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Кися' } /* FIX ME! */
+            { name: 'Локальная сетевая академия Cisco' }
+          ]
+        }
+      }, {
+        path: 'qualific_imp',
+        component: () => import('pages/University/Qualify.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Курсы повышения квалификации' }
+          ]
+        }
+      }, {
+        path: 'unify',
+        component: () => import('pages/University/Unify.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Учебный центр Unify Communications' }
+          ]
+        }
+      }, {
+        path: 'comp-courses',
+        component: () => import('pages/University/CompCourses.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Компьютерные курсы' }
+          ]
+        }
+      }, {
+        path: 'prepare-courses',
+        component: () => import('pages/University/PrepareCourses.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Подготовительные курсы' }
+          ]
+        }
+      }, {
+        path: 'dpo',
+        component: () => import('pages/University/DPO.vue'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Программы по ДПО' }
           ]
         }
       }, {

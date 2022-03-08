@@ -9,7 +9,7 @@
           <div class="col-md-8 col-12 text-subtitle1 q-pr-xl">
             <ul>
               <li v-for="(work, index) in works" :key="index">
-                 <span class="text-h6 text-grey-10"><a :href="work.link" class="text-primary">{{work.label}}</a></span>
+                <span class="text-h6 text-grey-10"><a :href="work.link" class="text-primary">{{work.label}}</a></span>
               </li>
             </ul>
           </div>

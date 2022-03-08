@@ -6,7 +6,7 @@
   "author": "BawNer <aleksandr.krasnikov2000@gmail.com>",
   "private": true,
   "scripts": {
-    "start": "yarn quasar dev",
+    "dev": "yarn quasar dev",
     "build": "yarn quasar build"
   },
   "dependencies": {

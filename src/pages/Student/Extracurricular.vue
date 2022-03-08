@@ -172,19 +172,19 @@
           <span class="text-h5 text-grey-10">Расписание работы творческих мастерских и клубов</span>
       </div>
       <div class="col-md-4 col-12 q-pa-md" v-for="c in club" :key="c.title">
-            <q-card class="text-center shadow-10">
-              <q-card-section>
-                  <q-icon class="rounded-2rem" size="70px" :name="c.icon" color="primary">
-                  </q-icon>
-              </q-card-section>
-              <q-card-section>
-                <span class="text-h5">{{c.title}}</span>
-              </q-card-section>
-              <q-card-section>
-                <span v-html="c.description"></span>
-              </q-card-section>
-            </q-card>
-          </div>
+        <q-card class="text-center shadow-10">
+          <q-card-section>
+            <q-icon class="rounded-2rem" size="70px" :name="c.icon" color="primary">
+            </q-icon>
+          </q-card-section>
+          <q-card-section>
+            <span class="text-h5">{{c.title}}</span>
+          </q-card-section>
+          <q-card-section>
+            <span v-html="c.description"></span>
+          </q-card-section>
+        </q-card>
+      </div>
     </div>
   </q-page>
 </template>
