@@ -9,7 +9,7 @@
       <q-list>
         <q-item to="/">
           <q-item-section avatar >
-            <img src="icons/logo_dark.svg" alt="" width="128">
+            <img src="icons/logo_light.svg" alt="" width="64">
           </q-item-section>
         </q-item>
       </q-list>

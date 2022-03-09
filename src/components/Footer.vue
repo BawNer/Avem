@@ -13,7 +13,7 @@
           </div>
           <q-space></q-space>
           <div class="col-md-3 col-7 text-center">
-            <q-img src="icons/logo_light.svg" :width="!$q.screen.lt.sm ? '200px' : '180px' "></q-img>
+            <q-img src="icons/logo_dark.svg" :width="!$q.screen.lt.sm ? '200px' : '180px' "></q-img>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
   <div class="fullscreen text-center q-pa-md flex flex-center">
     <div>
       <q-img
-        src="/icons/logo_dark.svg"
+        src="/icons/logo_light.svg"
       ></q-img>
 
       <div class="text-h4 q-mt-xl" style="opacity:.4">
