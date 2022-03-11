@@ -105,13 +105,13 @@
                 </q-item-section>
                 <q-item-section>Рейтинги абитуриентов</q-item-section>
               </q-item>
-              <q-item clickable to="/p/abiturient">
+              <q-item clickable to="/sveden/abiturient/join">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Порядок приёма документов</q-item-section>
               </q-item>
-              <q-item clickable to="/p/abiturient/openDoor">
+              <q-item clickable to="/sveden/abiturient/openDoor">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
@@ -129,25 +129,25 @@
           </q-card-section>
           <q-card-section>
             <q-list>
-              <q-item clickable to="/p/about">
+              <q-item clickable to="/sveden/common">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>О вузе</q-item-section>
               </q-item>
-              <q-item clickable>
+              <q-item clickable to="/sveden/abiturient">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Вопросы и ответы</q-item-section>
               </q-item>
-              <q-item clickable to="/p/infoeducation">
+              <q-item clickable to="/sveden/common">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
                 <q-item-section>Сведения об образовательной организации</q-item-section>
               </q-item>
-              <q-item clickable>
+              <q-item clickable to="/sveden/education">
                 <q-item-section avatar>
                   <q-icon name="ion-open"></q-icon>
                 </q-item-section>
