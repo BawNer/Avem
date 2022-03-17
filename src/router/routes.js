@@ -31,9 +31,16 @@ const routes = [
   },
   {
     path: '/lk',
-    component: () => import('layouts/lk/LayoutLkDefault'),
+    component: () => import('layouts/lk/LayoutMiddleware'),
     children: [
-      { path: 'admin', component: () => import('pages/lk/Admin/Index') }
+      {
+        path: 'admin', 
+        component: () => import('layouts/lk/LayoutAdmin'),
+        children: [
+          { path: '', component: () => import('pages/lk/Admin/Index') },
+          { path: 'news', component: () => import('pages/lk/Admin/News') }
+        ]
+      }
     ]
   },
   {
