@@ -23,3 +23,19 @@ export const checkUser = ({commit}) => {
     commit('SET_USER', user)
   }
 }
+
+export const publish = async ({commit, getters}, formData) => {
+  try {
+    const user = getters.getUser
+
+    const res = await api.post('/news', formData, {
+      headers: {
+        'Authorization': `Token ${user.accessToken.token}`,
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+    console.log(res.data)
+  } catch (err) {
+    throw err
+  }
+}

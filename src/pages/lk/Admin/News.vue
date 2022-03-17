@@ -49,7 +49,8 @@
           <q-card-section>
             <q-form
               class="q-gutter-md"
-              @submit.prevent=""
+              ref="sendForm"
+              @submit="sendData"
             >
               <div class="row q-gutter-sm">
                 <div class="col-12">
@@ -57,21 +58,35 @@
                     outlined
                     label="Заголовок"
                     v-model="title"
+                    lazy-rules
+                    :rules="[ val => val && val.length > 0 || 'Введите заголовок' ]"
                   ></q-input>
                 </div>
                 <div class="col-12">
-                  <q-editor placeholder="Аннонс" min-height="5rem" v-model="annonce" />
+                  <q-editor 
+                    placeholder="Аннонс" 
+                    min-height="5rem" 
+                    v-model="annonce" 
+                    lazy-rules
+                    :rules="[ val => val && val.length > 0 || 'Введите анонс' ]"
+                  />
                 </div>
                 <div class="col-12">
-                  <q-editor placeholder="Основной текст" min-height="10rem" v-model="content" />
+                  <q-editor 
+                    placeholder="Основной текст"
+                    min-height="10rem" 
+                    v-model="content" 
+                    lazy-rules
+                    :rules="[ val => val && val.length > 0 || 'Введите основной текст' ]"
+                  />
                 </div>
                 <div class="col-12">
                   <q-file
                     label="Превью публикации"
                     filled
-                    multiple
                     append
                     v-model="preview"
+                    accept=".jpg, .jpeg, .png, .bmp"
                   >
                   <template v-slot:prepend>
                     <q-icon name="mdi-upload" />
@@ -84,6 +99,7 @@
                     multiple
                     append
                     v-model="photos"
+                    accept=".jpg, .jpeg, .png, .bmp"
                   >
                   <template v-slot:prepend>
                     <q-icon name="mdi-upload" />
@@ -104,6 +120,8 @@
                     outlined
                     label="Мета"
                     v-model="meta"
+                    lazy-rules
+                    :rules="[ val => val && val.length > 0 || 'Введите мета-теги' ]"
                   ></q-input>
                 </div>
                 <div class="col-12">
@@ -117,7 +135,7 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <q-btn type="submit" color="primary">Опубликовать</q-btn>
+                  <q-btn type="submit" color="primary" :loading="isSending">Опубликовать</q-btn>
                 </div>
               </div>
             </q-form>
@@ -134,10 +152,15 @@
 </template>
 
 <script>
+import { useQuasar } from 'quasar'
+import { useStore } from 'vuex'
 import { ref } from 'vue'
 
 export default {
   setup() {
+    const $store = useStore()
+    const $q = useQuasar()
+
     const title = ref('')
     const annonce = ref('')
     const content = ref('')
@@ -146,6 +169,46 @@ export default {
     const visible = ref(['all'])
     const tags = ref([])
     const meta = ref([])
+    const news = new FormData()
+
+    const sendForm = ref(null)
+    const isSending = ref(false)
+
+    const sendData = async () => {
+      news.append('title', title.value)
+      news.append('annonce', annonce.value)
+      news.append('content', content.value)
+      news.append('visible', visible.value)
+      news.append('tags', tags.value)
+      news.append('meta', meta.value)
+
+      if (preview.value) {
+        news.append('preview', preview.value)
+      }
+
+      if (photos.value) {
+        photos.value.forEach(photo => {
+          news.append('photo', photo)
+        })
+      }
+      
+      isSending.value = true
+
+      await $store.dispatch('publish', news).then(success => {
+        $q.notify({
+          color: 'teal',
+          icon: 'mdi-progress-alert',
+          message: 'Новость успешно опубликована'
+        })
+      }).catch(err => {
+        $q.notify({
+          color: 'red',
+          icon: 'mdi-progress-alert',
+          message: err.message
+        })
+      })
+      isSending.value = false
+    }
 
     return {
       title,
@@ -155,7 +218,10 @@ export default {
       preview,
       visible,
       tags,
-      meta
+      meta,
+      sendData,
+      isSending,
+      sendForm
     }
   },
 }
