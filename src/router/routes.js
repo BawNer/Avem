@@ -26,6 +26,17 @@ const routes = [
     ]
   },
   {
+    path: '/auth',
+    component: () => import('layouts/lk/Index')
+  },
+  {
+    path: '/lk',
+    component: () => import('layouts/lk/LayoutLkDefault'),
+    children: [
+      { path: 'admin', component: () => import('pages/lk/Admin/Index') }
+    ]
+  },
+  {
     path: '/sveden',
     component: () => import('layouts/OtherPagesLayout.vue'),
     children: [

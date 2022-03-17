@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 import news from './news'
 import system from './system'
 import schedule from './schedule'
+import lk from './lk'
 
 // import example from './module-example'
 
@@ -20,7 +21,8 @@ export default store(function (/* { ssrContext } */) {
     modules: {
       news,
       system,
-      schedule
+      schedule,
+      lk
     },
     // enable strict mode (adds overhead!)
     // for dev mode and --debug builds only
