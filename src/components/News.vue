@@ -1,20 +1,13 @@
 <template>
   <div class="row justify-center">
-    <div class="col-md-5 col-lg-4 col-11 q-my-md">
+    <div class="col-md-6 col-lg-5 col-xl-4 col-11 q-my-md">
       <q-card class=" shadow-6">
         <div class="col-12 text-right">
-          <q-badge
-            v-for="t in options.tags"
-            :key="t"
-            :color="t.color"
-            class="q-mx-xs"
-          >
-            {{t.title}}
-          </q-badge>
+
         </div>
         <q-item>
           <q-item-section>
-            <q-item-label caption>{{options.createdBy.name}}, {{ publishedAt }}</q-item-label>
+            <q-item-label caption>{{author.username}}, {{ publishedAt }}</q-item-label>
             <q-item-label class="text-h6"><slot name="title">A title</slot></q-item-label>
           </q-item-section>
         </q-item>
@@ -24,7 +17,7 @@
             height="240px"
             fit="cover"
             v-if="!errorLoadImage"
-            :src="preview"
+            :src="preview.path"
             @error="err => errorLoadImage = true"
           ></q-img>
           <span class="text-grey-14" v-else>Превью не загружено, ошибка сервера</span>
@@ -54,10 +47,11 @@ export default ({
     ImageLayout
   },
   props: {
-    preview: [Boolean, String],
-    images: [Boolean, Array],
-    options: Object,
-    publishedAt: String
+    preview: [Object, null],
+    images: [Array, null],
+    author: Object,
+    publishedAt: String,
+    tags: [Array, null],
   },
   setup() {
     const errorLoadImage = ref(false)

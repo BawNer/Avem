@@ -10,8 +10,8 @@
           :class="!$q.screen.lt.sm ? i > 0 ? 'col-6' : 'col-12' : 'col-12'"
           class="q-pa-sm"
         >
-          <q-img
-            :src="n.preview"
+          <q-img v-if="n.preview"
+            :src="n.preview.path"
             :ratio="16/9"
             fit="cover"
             class="q-mb-lg"
@@ -136,7 +136,7 @@ export default {
 
     const tabs = ref('01')
     
-    const news = computed(() => store.getters.getNews(3))
+    const news = computed(() => store.getters.getNews)
 
     return {
       tabs,

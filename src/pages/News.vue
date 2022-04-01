@@ -1,42 +1,45 @@
 <template>
   <div class="row">
-    <div class="col-12">
-      <news
+    <div class="col-12" v-if="news.length">
+      <news-component
         v-for="n in news"
         :key="n.id"
         :preview="n.preview"
         :images="n.image"
-        :options="n.options"
         :publishedAt="n.publishedAt"
+        :author="n.author"
       >
         <template v-slot:title>{{n.title}}</template>
-        <template v-slot:annotation>{{n.annotation}}</template>
+        <template v-slot:annotation>{{n.annonce}}</template>
         <template v-slot:content>{{n.content}}</template>
-      </news>
+      </news-component>
+    </div>
+    <div v-else>
+      Loading....
     </div>
   </div>
 </template>
 
 <script>
-  import {
-    useStore 
-  } from 'vuex'
-  import { computed, onMounted } from 'vue'
-  import News from '../components/News.vue'
+import {
+  useStore 
+} from 'vuex'
+import { computed, onBeforeMount } from 'vue'
+import NewsComponent from '../components/News.vue'
 
-  export default {
-    components: {
-      News
-    },
-    setup() {
-      const store = useStore()
-      onMounted(() => store.dispatch('fetchAllNews'))
+export default {
+  components: {
+    'news-component': NewsComponent
+  },
+  setup() {
+    const $store = useStore()
+    onBeforeMount(() => $store.dispatch('fetchAllNews'))
 
-      const news = computed(() => store.getters.getNews())
-      return {
-        news
-      }
-    },
+    const news = computed(() => $store.getters.getNews)
+    return {
+      news
+    }
   }
+}
 
 </script>

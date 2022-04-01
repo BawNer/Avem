@@ -1,7 +1,7 @@
 <template>
   <div class="col-12">
     <q-img
-      :src="images[0]"
+      :src="images[0].path"
     ></q-img>
   </div>
 </template>

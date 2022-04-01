@@ -16,6 +16,8 @@
     "crypto": "^1.0.1",
     "quasar": "^2.0.0",
     "tiny-emitter": "^2.1.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0",
     "vuex": "^4.0.1"
   },
   "devDependencies": {
