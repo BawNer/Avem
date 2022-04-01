@@ -15,7 +15,8 @@
         <q-card-section v-if="preview && !isFullContent">
           <q-img
             height="240px"
-            fit="cover"
+            fit="contain"
+            ratio="16/9"
             v-if="!errorLoadImage"
             :src="preview.path"
             @error="err => errorLoadImage = true"

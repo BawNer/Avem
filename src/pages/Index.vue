@@ -136,7 +136,7 @@ export default {
 
     const tabs = ref('01')
     
-    const news = computed(() => store.getters.getNews)
+    const news = computed(() => store.getters.getNews.slice(0, 3))
 
     return {
       tabs,
