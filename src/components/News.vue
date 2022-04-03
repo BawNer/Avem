@@ -19,17 +19,17 @@
           </template>
         </q-item>
         <q-separator></q-separator>
-        <q-card-section v-if="preview && !isFullContent">
+        <template v-if="preview && !isFullContent">
           <q-img
-            height="240px"
-            fit="contain"
+            height="280px"
+            fit="cover"
             ratio="16/9"
             v-if="!errorLoadImage"
             :src="preview.path"
             @error="err => errorLoadImage = true"
           ></q-img>
           <span class="text-grey-14" v-else>Превью не загружено, ошибка сервера</span>
-        </q-card-section>
+        </template>
         <q-card-section class="text-subtitle1" v-if="!isFullContent"><slot name="annotation"/></q-card-section>
         <q-card-section v-else class="text-subtitle1">
           <slot name="content">Дополнительная информация отсутсвует</slot>
