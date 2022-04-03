@@ -183,6 +183,8 @@ export default {
       visible.value = ['all']
       tags.value = []
       meta.value = []
+      news = null
+      news = new FormData()
     }
 
     const sendData = async () => {
