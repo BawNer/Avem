@@ -174,13 +174,24 @@ export default {
     const sendForm = ref(null)
     const isSending = ref(false)
 
+    const clearData = () => {
+      title.value = ''
+      annonce.value = ''
+      content.value = ''
+      photos.value = null
+      preview.value = null
+      visible.value = ['all']
+      tags.value = []
+      meta.value = []
+    }
+
     const sendData = async () => {
       news.append('title', title.value)
       news.append('annonce', annonce.value)
       news.append('content', content.value)
       news.append('visible', visible.value)
       news.append('tags', tags.value)
-      news.append('meta', meta.value)
+      news.append('meta', meta.value.split(','))
 
       if (preview.value) {
         news.append('preview', preview.value)
@@ -200,6 +211,7 @@ export default {
           icon: 'mdi-progress-alert',
           message: 'Новость успешно опубликована'
         })
+        clearData()
       }).catch(err => {
         $q.notify({
           color: 'red',

@@ -6,8 +6,8 @@ export const login = async ({commit}, payload) => {
    const res = await api.post('user/login', {
       user: payload
     })
-    commit('SET_USER', res.data.user)
     cookie.setCookie('user', JSON.stringify(res.data.user))
+    commit('SET_USER', res.data.user)
   } catch (err) {
     const error = err.message.split(' ')
     if (error.includes('422')) {
@@ -24,7 +24,20 @@ export const checkUser = ({commit}) => {
   }
 }
 
-export const publish = async ({commit, getters}, formData) => {
+export const deleteNews = async ({getters}, id) => {
+  try {
+    const token = getters.getUser.accessToken.token
+    await api.delete(`/news/${id}`, {
+      headers: {
+        'Authorization': `Token ${token}`
+      }
+    })
+  } catch (err) {
+    throw err
+  }
+}
+
+export const publish = async ({getters}, formData) => {
   try {
     const user = getters.getUser
 
@@ -34,7 +47,6 @@ export const publish = async ({commit, getters}, formData) => {
         'Content-Type': 'multipart/form-data'
       }
     })
-    console.log(res.data)
   } catch (err) {
     throw err
   }

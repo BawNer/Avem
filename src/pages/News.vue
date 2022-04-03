@@ -4,14 +4,19 @@
       <news-component
         v-for="n in news"
         :key="n.id"
+        :newsId="n.id"
         :preview="n.preview"
         :images="n.image"
         :publishedAt="n.publishedAt"
         :author="n.author"
       >
         <template v-slot:title>{{n.title}}</template>
-        <template v-slot:annotation>{{n.annonce}}</template>
-        <template v-slot:content>{{n.content}}</template>
+        <template v-slot:annotation>
+          <div v-html="n.annonce" />
+        </template>
+        <template v-slot:content>
+          <div v-html="n.content" />
+        </template>
       </news-component>
     </div>
     <div v-else>

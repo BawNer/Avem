@@ -10,6 +10,13 @@
             <q-item-label caption>{{author.username}}, {{ publishedAt }}</q-item-label>
             <q-item-label class="text-h6"><slot name="title">A title</slot></q-item-label>
           </q-item-section>
+          <template v-if="user">
+            <q-item-section avatar v-if="user.roles.includes('r143')">
+              <q-btn flat @click="deleteNews(newsId)">
+                <q-icon name="mdi-trash-can" color="red"  />
+              </q-btn>
+            </q-item-section>
+          </template>
         </q-item>
         <q-separator></q-separator>
         <q-card-section v-if="preview && !isFullContent">
@@ -39,7 +46,9 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useStore } from 'vuex'
+import { useQuasar } from 'quasar'
 import ImageLayout from '../layouts/ImageLayout.vue'
 
 export default ({
@@ -53,14 +62,39 @@ export default ({
     author: Object,
     publishedAt: String,
     tags: [Array, null],
+    newsId: Number
   },
   setup() {
+    const $store = useStore()
+    const $q = useQuasar()
     const errorLoadImage = ref(false)
     const isFullContent = ref(false)
 
+    onMounted(() => $store.dispatch('checkUser'))
+    const user = computed(() => $store.getters.getUser)
+
+    const deleteNews = async id => {
+      $store.dispatch('deleteNews', id).then(() => {
+        $q.notify({
+          color: 'red',
+          icon: 'mdi-trash-empty',
+          message: 'Новость успешно удалена'
+        })
+        $store.dispatch('fetchAllNews')
+      }).catch(err => {
+        $q.notify({
+          color: 'orange',
+          icon: 'mdi-cat',
+          message: `Что то пошло так, ${err}`
+        })
+      })
+    }
+
     return {
       errorLoadImage,
-      isFullContent
+      isFullContent,
+      user,
+      deleteNews
     }
   }
 }) 
