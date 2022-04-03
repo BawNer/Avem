@@ -10,8 +10,8 @@
             <q-item-label caption>{{author.username}}, {{ publishedAt }}</q-item-label>
             <q-item-label class="text-h6"><slot name="title">A title</slot></q-item-label>
           </q-item-section>
-          <template v-if="access.length">
-            <q-item-section avatar v-if="access.access.includes('r143')">
+          <template v-if="access">
+            <q-item-section avatar>
               <q-btn flat @click="deleteNews(newsId)">
                 <q-icon name="mdi-trash-can" color="red"  />
               </q-btn>
@@ -70,16 +70,18 @@ export default ({
     const errorLoadImage = ref(false)
     const isFullContent = ref(false)
 
-    onMounted(() => $store.dispatch('checkUser'))
     const user = computed(() => $store.getters.getUser)
 
-    const access = user.filter(a => a.access.includes('r143'))
+    let access = ref(null)
+    if (user.value) {
+      access.value = user.value.roles.filter(a => a.access.includes('r143'))
+    }
 
     const deleteNews = async id => {
       $store.dispatch('deleteNews', id).then(() => {
         $q.notify({
           color: 'red',
-          icon: 'mdi-trash-empty',
+          icon: 'mdi-delete-empty',
           message: 'Новость успешно удалена'
         })
         $store.dispatch('fetchAllNews')

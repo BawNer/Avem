@@ -24,7 +24,7 @@ export const checkUser = ({commit}) => {
   }
 }
 
-export const deleteNews = async ({getters}, id) => {
+export const deleteNews = async ({commit, getters}, id) => {
   try {
     const token = getters.getUser.accessToken.token
     await api.delete(`/news/${id}`, {
@@ -32,6 +32,7 @@ export const deleteNews = async ({getters}, id) => {
         'Authorization': `Token ${token}`
       }
     })
+    commit('DELETE_NEWS', id)
   } catch (err) {
     throw err
   }

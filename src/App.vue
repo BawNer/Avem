@@ -4,7 +4,8 @@
 </template>
 <script>
 import Notification from './components/system/Notification.vue'
-import {  mapActions } from 'vuex'
+import {  useStore } from 'vuex'
+import { onMounted } from 'vue'
 
 export default ({
   name: 'App',
@@ -12,9 +13,10 @@ export default ({
     Notification
   },
   setup() {
-    return {
-      ...mapActions(['setNotification', 'clearNotification'])
-    }
+    const $store = useStore()
+    onMounted(() => {
+      $store.dispatch('checkUser')
+    })
   },
   mounted() {
     this.$event.$on('clear-notification', props => this.clearNotification(props))
