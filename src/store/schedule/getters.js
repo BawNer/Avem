@@ -1,3 +1,3 @@
-export const getGroupsId = state => state.groupsId
+export const getSchema = state => group => state.schema.filter(a => a.group == group)[0].schema
 
-export const getSchedule = state => state.schedule
+export const getGroups = state => state.groups

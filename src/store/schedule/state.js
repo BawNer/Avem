@@ -1,6 +1,6 @@
 export default () => {
   return {
-    groupsId: [],
-    schedule: []
+    groups: [],
+    schema: []
   }
 }
