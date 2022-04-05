@@ -14,13 +14,13 @@ class News {
 }
 
 export const fetchAllNews = async context => {
-  if (context.getters.getNews.length === 0) {
-    const { data: { news } } = await api.get('news?limit=10')
-    const newsList = news.map(element => {
-      const date = new Date(element.createdAt)
-      element.createdAt = date.toLocaleDateString("ru")
-      return new News(element)
-    })
-    context.commit('SET_NEWS', newsList)
-  }
+
+  const { data: { news } } = await api.get('news?limit=10')
+  const newsList = news.map(element => {
+    const date = new Date(element.createdAt)
+    element.createdAt = date.toLocaleDateString("ru")
+    return new News(element)
+  })
+  context.commit('SET_NEWS', newsList)
+
 }

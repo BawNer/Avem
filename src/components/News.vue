@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, inject } from 'vue'
 import { useStore } from 'vuex'
 import { useQuasar } from 'quasar'
 import ImageLayout from '../layouts/ImageLayout.vue'
@@ -67,6 +67,7 @@ export default ({
   setup() {
     const $store = useStore()
     const $q = useQuasar()
+    const $event = inject('$event')
     const errorLoadImage = ref(false)
     const isFullContent = ref(false)
 
@@ -84,7 +85,7 @@ export default ({
           icon: 'mdi-delete-empty',
           message: 'Новость успешно удалена'
         })
-        $store.dispatch('fetchAllNews')
+        $event.$emit('updateNewsList')
       }).catch(err => {
         $q.notify({
           color: 'orange',

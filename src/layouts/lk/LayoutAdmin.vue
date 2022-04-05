@@ -3,12 +3,12 @@
 
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" behavior="desktop" bordered>
       <q-list bordered separator>
-        <q-item>
+        <q-item to="/lk/admin">
           <q-item-section class="text-center">
-            <div>
-              <span class="text-h4 text-primary">СКФ </span>
-              <span class="text-h4">МТУСИ</span>
-            </div>
+              <div>
+                <span class="text-h4 text-primary">СКФ </span>
+                <span class="text-h4 text-dark">МТУСИ</span>
+              </div>
           </q-item-section>
         </q-item>
         <q-item>
@@ -26,7 +26,12 @@
         </q-item>
       </q-list>
       <q-list>
-        <q-item v-for="app in apps" :key="app.name" clickable v-ripple :to="`/lk/${app.path}`">
+        <q-item 
+          v-for="app in apps" 
+          :key="app.name" 
+          :to="`/lk/${app.path}`"
+          active-class="bg-blue-1"
+        >
           <q-item-section avatar>
             <q-avatar color="primary" text-color="white">
               <q-icon :name="app.icon"></q-icon>
