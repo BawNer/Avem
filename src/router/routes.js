@@ -38,7 +38,8 @@ const routes = [
         component: () => import('layouts/lk/LayoutAdmin'),
         children: [
           { path: '', component: () => import('pages/lk/Admin/Index') },
-          { path: 'news', component: () => import('pages/lk/Admin/News') }
+          { path: 'news', component: () => import('pages/lk/Admin/News') },
+          { path: 'schedule', component: () => import('pages/lk/Admin/Schedule') }
         ]
       }
     ]

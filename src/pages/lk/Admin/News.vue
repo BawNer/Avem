@@ -1,47 +1,5 @@
 <template>
   <q-page padding>
-    <div class="row">
-      <div class="col-3 q-px-sm">
-        <q-card>
-          <q-item >
-            <q-item-section>
-              <q-item-label overline>Публикаций всего</q-item-label>
-              <q-item-label class="text-h3 q-mx-auto">526</q-item-label>
-           </q-item-section>
-          </q-item>
-        </q-card>
-      </div>
-      <div class="col-3 q-px-sm">
-        <q-card>
-          <q-item >
-            <q-item-section>
-              <q-item-label overline>Публикаций за сегодня</q-item-label>
-              <q-item-label class="text-h3 q-mx-auto">1</q-item-label>
-           </q-item-section>
-          </q-item>
-        </q-card>
-      </div>
-      <div class="col-3 q-px-sm">
-        <q-card>
-          <q-item >
-            <q-item-section>
-              <q-item-label overline>Публикаций за неделю</q-item-label>
-              <q-item-label class="text-h3 q-mx-auto">7</q-item-label>
-           </q-item-section>
-          </q-item>
-        </q-card>
-      </div>
-      <div class="col-3 q-px-sm">
-        <q-card>
-          <q-item >
-            <q-item-section>
-              <q-item-label overline>Публикаций за месяц</q-item-label>
-              <q-item-label class="text-h3 q-mx-auto">22</q-item-label>
-           </q-item-section>
-          </q-item>
-        </q-card>
-      </div>
-    </div>
     <div class="row q-mt-md">
 
       <div class="col-6">

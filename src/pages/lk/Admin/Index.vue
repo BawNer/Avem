@@ -1,12 +1,47 @@
 <template>
-  <q-page class="justify-center items-center text-center">
-    <q-img
-      src="icons/logo_light.svg"
-      width="20vw"
-    ></q-img>
-    <div class="row">
-      <div class="col">
-        <span class="text-h2">Выбери приложение для работы</span>
+  <q-page padding>
+    <div class="row q-col-gutter-sm">
+      <div class="col-6 row q-col-gutter-sm">
+        <div class="col-12">
+          <q-card>
+            <q-item >
+              <q-item-section>
+                <q-item-label overline>Публикаций всего</q-item-label>
+                <q-item-label class="text-h3 q-mx-auto">526</q-item-label>
+            </q-item-section>
+            </q-item>
+          </q-card>
+        </div>
+        <div class="col-6">
+          <q-card>
+            <q-item >
+              <q-item-section>
+                  <q-item-label overline>Публикаций за цесяц</q-item-label>
+                  <q-item-label class="text-h3 q-mx-auto">526</q-item-label>
+              </q-item-section>
+            </q-item>
+          </q-card>
+        </div>
+        <div class="col-6">
+          <q-card>
+            <q-item >
+              <q-item-section>
+                <q-item-label overline>Публикаций за неделю</q-item-label>
+                <q-item-label class="text-h3 q-mx-auto">7</q-item-label>
+            </q-item-section>
+            </q-item>
+          </q-card>
+        </div>
+      </div>
+      <div class="col-6">
+        <q-card style="height: 100%" class="row items-center justify-center">
+          <q-item>
+            <q-item-section>
+              <q-item-label overline>Публикаций за сегодня</q-item-label>
+              <q-item-label class="text-h3 q-mx-auto">2</q-item-label>
+           </q-item-section>
+          </q-item>
+        </q-card>
       </div>
     </div>
   </q-page>

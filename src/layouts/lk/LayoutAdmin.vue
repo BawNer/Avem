@@ -20,7 +20,7 @@
           <q-item-section>
             <q-item-label lines="">{{user.username}}</q-item-label>
             <q-item-label caption lines="1">
-              <span v-for="(role, index) in user.roles" :key="index">{{role}}; </span>
+              <span v-for="(role, index) in user.roles" :key="index">{{role.name}}; </span>
             </q-item-label>
           </q-item-section>
         </q-item>
