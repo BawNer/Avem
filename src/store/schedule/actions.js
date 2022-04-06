@@ -1,9 +1,8 @@
 import { api } from 'src/boot/axios'
 
-const getSchedule = async ctx => {
+const getSchedule = async (ctx, params) => {
   try {
-    const { data } = await api.get('/schedule')
-
+    const { data } = await api.get('/schedule', { params })
     ctx.commit('SET_SCHEDULE', data.schedule)
   } catch (error) {
     throw new Error(error)
