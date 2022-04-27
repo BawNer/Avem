@@ -95,7 +95,9 @@
               </q-item>
               <q-item>
                 <q-item-section>
-                  <q-item-label class="text-h5">mаil@skf-mtusi.ru</q-item-label>
+                  <q-item-label class="text-h5">
+                    <a href="mailto:office@digital.gov.ru">office@digital.gov.ru</a>
+                  </q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -110,9 +112,6 @@
                     <q-img width="24px" src="images/tgV.png"></q-img>
                   </q-btn>
                   <q-btn flat>
-                    <q-img width="24px" src="images/instV.png"></q-img>
-                  </q-btn>
-                  <q-btn flat>
                     <q-img width="24px" src="images/vkV.png"></q-img>
                   </q-btn>
               </q-item>
@@ -121,7 +120,7 @@
         </div>
       </div>
       <div class="col-12 q-mb-xl">
-        <q-img src="images/map.png"></q-img>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1223d9a956f48e2f78ac75620a232579fe71f90f0259b0d5d2f2ee68a068a81a&amp;source=constructor" width="100%" height="470" frameborder="0"></iframe>
       </div>
     </div>
   </q-page>
