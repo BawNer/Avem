@@ -48,7 +48,6 @@
     </div>
     <div class="col-md-2 col-12 row q-pa-xl justify-center">
       <q-img src="icons/Telegram.svg" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
-      <q-img src="icons/instagram.svg" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
       <q-img src="icons/vk.svg" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
     </div>
     <div class="col-12 q-my-md q-px-xl">
@@ -82,7 +81,7 @@
 export default {
   name: 'Footer',
   setup() {
-    
+
   },
 }
 </script>
