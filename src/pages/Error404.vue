@@ -2,7 +2,8 @@
   <div class="fullscreen text-center q-pa-md flex flex-center">
     <div>
       <q-img
-        src="/icons/logo_light.svg"
+        width="350px"
+        src="/icons/logo_skf.png"
       ></q-img>
 
       <div class="text-h4 q-mt-xl" style="opacity:.4">

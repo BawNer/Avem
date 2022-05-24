@@ -34,7 +34,7 @@ const routes = [
     component: () => import('layouts/lk/LayoutMiddleware'),
     children: [
       {
-        path: 'admin', 
+        path: 'admin',
         component: () => import('layouts/lk/LayoutAdmin'),
         children: [
           { path: '', component: () => import('pages/lk/Admin/Index') },
@@ -407,7 +407,43 @@ const routes = [
             { name: 'Главная', link: '/' },
             { name: 'События' }
           ]
-        } 
+        }
+      }, {
+        path: 'faculties/infocommunications',
+        component: () => import('pages/University/Faculties/Infocommunications'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Факультет инфокоммуникаций' }
+          ]
+        }
+      }, {
+        path: 'faculties/itss',
+        component: () => import('pages/University/Faculties/Itss'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Кафедра инфокоммуникационных технологий и систем связи' }
+          ]
+        }
+      }, {
+        path: 'faculties/ivt',
+        component: () => import('pages/University/Faculties/Ivt'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Кафедра информатики и вычислительной техники' }
+          ]
+        }
+      }, {
+        path: 'faculties/onp',
+        component: () => import('pages/University/Faculties/Onp'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Кафедра общенаучной подготовки' }
+          ]
+        }
       }
     ]
   },

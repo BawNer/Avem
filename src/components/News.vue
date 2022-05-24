@@ -21,9 +21,9 @@
         <q-separator></q-separator>
         <template v-if="preview && !isFullContent">
           <q-img
-            height="280px"
-            fit="cover"
-            ratio="16/9"
+            height="320px"
+            fit="contain"
+            :ratio="16/9"
             v-if="!errorLoadImage"
             :src="preview.path"
             @error="err => errorLoadImage = true"
@@ -103,6 +103,6 @@ export default ({
       access
     }
   }
-}) 
+})
 
 </script>

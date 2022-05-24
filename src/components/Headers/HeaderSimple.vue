@@ -1,5 +1,5 @@
 <template>
-<!-- <q-header 
+<!-- <q-header
   style="backdrop-filter: blur(7px); background-color: #0000001a;"
   :class="[transparent ? 'transparent' : '', absolute ? 'absolute': '', fixedOnTop ? 'fixed-top': '' ]"
   > -->
@@ -9,14 +9,14 @@
       <q-list>
         <q-item to="/">
           <q-item-section avatar >
-            <img src="icons/logo_light.svg" alt="" width="64">
+            <img src="icons/logo_skf.png" alt="" width="64">
           </q-item-section>
         </q-item>
       </q-list>
 
       <div v-if="!$q.screen.lt.sm">
-        <q-btn 
-          flat 
+        <q-btn
+          flat
           color="dark"
           v-for="link in linkList"
           :key="link.name"
@@ -29,10 +29,11 @@
                 v-for="menu in link.menu"
                 :key="menu.name"
                 :to="menu.route"
-                class="col-sm-12 col-md-4"
+                :class="menu.length  > 2 ? 'col-sm-12 col-md-4' : 'col-sm-12 col-md-6'"
                 :disable="!menu.active"
               >
                 <q-item-section>{{menu.name}}</q-item-section>
+
               </q-item>
             </q-list>
         </q-menu>
@@ -40,8 +41,8 @@
         <q-btn flat color="dark" to="/sveden/contact">Контакты</q-btn>
       </div>
       <q-btn v-else flat color="dark" icon="menu" class="q-gutter-sm" @click="setStateDrawer(true)"></q-btn>
-      <q-btn flat color="dark" icon="search" class="q-gutter-sm" @click="createNotification('Модуль временно недоступен')"></q-btn>
-      <q-btn flat color="dark" icon="visibility" class="q-gutter-sm" @click="createNotification('Модуль временно недоступен')"></q-btn>
+<!--      <q-btn flat color="dark" icon="search" class="q-gutter-sm" @click="createNotification('Модуль временно недоступен')"></q-btn>-->
+<!--      <q-btn flat color="dark" icon="visibility" class="q-gutter-sm" @click="createNotification('Модуль временно недоступен')"></q-btn>-->
     </q-toolbar>
   </q-header>
   <drawer-navigation></drawer-navigation>

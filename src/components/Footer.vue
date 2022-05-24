@@ -1,24 +1,24 @@
 <template>
-  <div class="row" style="background-color: #192F4D">
+<!--  <div class="row" style="background-color: #192F4D">-->
 
-      <div class="col-12">
-        <div class="row" :class="!$q.screen.lt.sm ? 'q-pa-xl' : 'q-py-md' ">
-          <div class="col-md-3 col-5">
-            <q-btn flat color="grey-1">Университет</q-btn>
-            <q-btn flat color="grey-1">Студенту</q-btn>
-            <q-btn flat color="grey-1">Атмосфера</q-btn>
-            <q-btn flat color="grey-1">Абитуриенту</q-btn>
-            <q-btn flat color="grey-1">Медиа</q-btn>
-            <q-btn flat color="grey-1">Контакты</q-btn>
-          </div>
-          <q-space></q-space>
-          <div class="col-md-3 col-7 text-center">
-            <q-img src="icons/logo_dark.svg" :width="!$q.screen.lt.sm ? '200px' : '180px' "></q-img>
-          </div>
-        </div>
-      </div>
+<!--      <div class="col-12">-->
+<!--        <div class="row" :class="!$q.screen.lt.sm ? 'q-pa-xl' : 'q-py-md' ">-->
+<!--          <div class="col-md-3 col-5">-->
+<!--            <q-btn flat color="grey-1">Университет</q-btn>-->
+<!--            <q-btn flat color="grey-1">Студенту</q-btn>-->
+<!--            <q-btn flat color="grey-1">Атмосфера</q-btn>-->
+<!--            <q-btn flat color="grey-1">Абитуриенту</q-btn>-->
+<!--            <q-btn flat color="grey-1">Медиа</q-btn>-->
+<!--            <q-btn flat color="grey-1">Контакты</q-btn>-->
+<!--          </div>-->
+<!--          <q-space></q-space>-->
+<!--          <div class="col-md-3 col-7 text-center">-->
+<!--            <q-img src="icons/logo_skf.png" :width="!$q.screen.lt.sm ? '200px' : '180px' "></q-img>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
-  </div>
+<!--  </div>-->
   <div class="row q-pa-lg" style="background-color: #0D1726">
     <div class="col-md-6 col-7">
       <q-list class="text-white">

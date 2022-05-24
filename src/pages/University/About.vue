@@ -107,7 +107,7 @@
               <span class="text-h6">С понедельника по четверг:  </span>с 09.00 до 11.00 и с 16.00 до 18.00
             </p>
             <p>
-              <span class="text-h6">В пятницу: </span>с 14.00 до 16.00 
+              <span class="text-h6">В пятницу: </span>с 14.00 до 16.00
               <span class="text-h6">Суббота:  </span>с 10.00 до 12.00
             </p>
           </q-card-section>
@@ -151,54 +151,20 @@
           </q-card-section>
         </q-card>
       </div>
-      <div class="col-12"></div>
       <div class="col-12 q-my-xl">
-        <span class="text-h3 text-grey-10">Кампус</span>
-      </div>
-      <div class="col-12">
-        <div class="row items-center">
-          <div class="col-md-6 col-12 q-px-xl">
-            <q-list>
-              <q-img
-                src="images/slider.png"
-                :img-style="{ borderRadius: '2rem' }"
-              ></q-img>
-              <q-item-section class="text-grey-8">Учебный корпус</q-item-section>
-            </q-list>
-          </div>
-          <div class="col-md-6 col-12 q-px-xl">
-            <div class="row">
-              <div class="col-12 q-mb-md">
-                <q-list>
-                  <q-img
-                    src="images/cab401.png"
-                    height="300px"
-                    :img-style="{ borderRadius: '2rem' }"
-                  ></q-img>
-                  <q-item-section class="text-grey-8">Оборудование систем телевещания</q-item-section>
-                </q-list>
-              </div>
-              <div class="col-12">
-                <q-list>
-                  <q-img
-                    src="images/cab402.png"
-                    height="300px"
-                    :img-style="{ borderRadius: '2rem' }"
-                  ></q-img>
-                  <q-item-section class="text-grey-8">Лаборатория Цифровых систем коммутации и сетей связи</q-item-section>
-                </q-list>
-              </div>
-            </div>
-          </div>
-        </div>
+        <contacts-e-d-u></contacts-e-d-u>
       </div>
     </div>
   </q-page>
 </template>
 
 <script>
+import ContactsEDU from "components/ContactsEDU";
   export default {
-    name: 'About'
+    name: 'About',
+    components: {
+      ContactsEDU
+    }
   }
 
 </script>
