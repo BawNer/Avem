@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
+    <div class="row">
       <div class="col-12">
         <div class="row">
           <div class="col-md-3 col-12 q-pa-md" v-for="(document, index) in documents" :key="index">
