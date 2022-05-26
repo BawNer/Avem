@@ -1,24 +1,29 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
+  <q-card>
+    <q-item
+      clickable
+      tag="a"
+      target="_blank"
+      :href="link"
     >
-      <q-icon :name="icon" />
-    </q-item-section>
+      <q-item-section
+        v-if="icon"
+        avatar
+      >
+        <q-icon :name="icon" :color="iconColor" />
+      </q-item-section>
 
-    <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>
-        {{ caption }}
-      </q-item-label>
-    </q-item-section>
-  </q-item>
+      <q-item-section>
+        <q-item-label>{{ title }}</q-item-label>
+        <q-item-label caption v-if="caption">
+          {{ caption }}
+        </q-item-label>
+      </q-item-section>
+      <q-item-section side v-if="sideIcon">
+        <q-icon color="primary" name="mdi-download"></q-icon>
+      </q-item-section>
+    </q-item>
+  </q-card>
 </template>
 
 <script>
@@ -45,6 +50,16 @@ export default defineComponent({
     icon: {
       type: String,
       default: ''
+    },
+
+    iconColor: {
+      type: String,
+      default: 'red'
+    },
+
+    sideIcon: {
+      type: Boolean,
+      default: false
     }
   }
 })
