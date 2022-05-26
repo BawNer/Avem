@@ -1,13 +1,13 @@
 <template>
   <q-page padding>
-    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
+    <div class="row">
       <div class="col-12">
         <span class="text-h3 text-grey-10">Международное сотрудничество</span><br/>
         <span class="text-caption">Информация о заключенных и планируемых к заключению договорах с иностранными и (или) международными организациями по вопросам образования и науки</span>
       </div>
       <div class="col-12 q-my-xl">
-        <div class="row">
-          <div class="col-md-4 col-12 q-pa-md" v-for="(cooperation, index) in cooperations" :key="index">
+        <div class="row q-col-gutter-sm">
+          <div class="col-md-6 col-12" v-for="(cooperation, index) in cooperations" :key="index">
             <q-card>
               <q-item>
                 <q-item-section>
