@@ -83,8 +83,10 @@ module.exports = configure(function (ctx) {
       config: {
         notify: {
           textColor: 'white',
-          textColor: 'white',
           timeout: 3000
+        },
+        screen: {
+          bodyClasses: true
         }
       },
 
