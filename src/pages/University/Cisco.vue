@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
+    <div class="row">
       <div class="col-12">
         <span class="text-h3 text-grey-10">Локальная сетевая академия Cisco</span>
       </div>
@@ -50,7 +50,7 @@
       </div>
       <div class="row">
           <div class="col-12 col-md-9 q-mt-xl">
-            <p class="text-h6 text-grey-9">  
+            <p class="text-h6 text-grey-9">
                 Материалы подготовлены на основе аннотации Cisco Networking Academy Program (CNAP) компании Cisco Systems.<br><br>
                 <span class="text-h4 text-grey-9">О преподавателях</span><br><br>
                 В Локальной Сетевой Академии Cisco «MTUCI — North Caucasian Branch» работает опытный инструктор Бородин Алексей Викторович — признанный эксперт в своей области и талантливый педагог. Его опыт и знания подтверждены престижными международными сертификатами и профессиональными наградами. Учебные программы постоянно дополняются реальными практическими примерами, что делает каждый курс действительно актуальным. Вы получите прочные знания и практические навыки под руководством настоящего профессионала!<br><br>
