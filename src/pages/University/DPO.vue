@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-lg' : ''">
+    <div class="row">
       <div class="col-12">
         <span class="text-h3 text-grey-10">Программы по ДПО</span>
       </div>
@@ -54,7 +54,7 @@
           <div class="col-11"><span class="text-h5">{{p.label}}</span></div>
           <div class="col-11 offset-1">
             <ul>
-              <li v-for="(u,j) in p.list" 
+              <li v-for="(u,j) in p.list"
               :key="j"
               class="q-my-md"
               ><a :href="u.link" target="_blank"><span class="text-primary">{{u.label}}</span></a>
@@ -111,7 +111,7 @@
           <div class="col-11"><span class="text-h5">{{p.label}}</span></div>
           <div class="col-11 offset-1">
             <ul>
-              <li v-for="(u,j) in p.list" 
+              <li v-for="(u,j) in p.list"
               :key="j"
               class="q-my-md"
               ><a :href="u.link" target="_blank"><span class="text-primary">{{u.label}}</span></a>
@@ -167,7 +167,7 @@
           <div class="col-11"><span class="text-h5">{{p.label}}</span></div>
           <div class="col-11 offset-1">
             <ul>
-              <li v-for="(u,j) in p.list" 
+              <li v-for="(u,j) in p.list"
               :key="j"
               class="q-my-md"
               ><a :href="u.link" target="_blank"><span class="text-primary">{{u.label}}</span></a>
@@ -224,7 +224,7 @@
           <div class="col-11"><span class="text-h5">{{p.label}}</span></div>
           <div class="col-11 offset-1">
             <ul>
-              <li v-for="(u,j) in p.list" 
+              <li v-for="(u,j) in p.list"
               :key="j"
               class="q-my-md"
               ><a :href="u.link" target="_blank"><span class="text-primary">{{u.label}}</span></a>
@@ -281,7 +281,7 @@
           <div class="col-11"><span class="text-h5">{{p.label}}</span></div>
           <div class="col-11 offset-1">
             <ul>
-              <li v-for="(u,j) in p.list" 
+              <li v-for="(u,j) in p.list"
               :key="j"
               class="q-my-md"
               ><a :href="u.link" target="_blank"><span class="text-primary">{{u.label}}</span></a>
