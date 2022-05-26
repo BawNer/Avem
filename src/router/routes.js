@@ -54,6 +54,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Студенту', link: '/sveden/students' },
             { name: 'Расписание занятий' }
           ]
         }
@@ -63,6 +64,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Студенту', link: '/sveden/students' },
             { name: 'Работа' }
           ]
         }
@@ -72,7 +74,8 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Структура и органы управления' }
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Структура и органы управления образовательной организацией' }
           ]
         }
       }, {
@@ -90,7 +93,8 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Структура и органы управления' }
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Преподавательский состав' }
           ]
         }
       }, {
@@ -99,6 +103,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Образование' }
           ]
         }
@@ -108,6 +113,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Образовательные стандарты' }
           ]
         }
@@ -117,6 +123,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Документы' }
           ]
         }
@@ -126,7 +133,8 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Руководство' }
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Руководство. Педагогический (научно-педагогический) состав' }
           ]
         }
       }, {
@@ -135,6 +143,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса' }
           ]
         }
@@ -144,6 +153,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Финансово-хозяйственная деятельность' }
           ]
         }
@@ -153,6 +163,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Доступная среда' }
           ]
         }
@@ -162,6 +173,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Платные образовательные услуги' }
           ]
         }
@@ -171,6 +183,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Локальная сетевая академия Cisco' }
           ]
         }
@@ -180,6 +193,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Курсы повышения квалификации' }
           ]
         }
@@ -189,6 +203,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Учебный центр Unify Communications' }
           ]
         }
@@ -198,6 +213,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Компьютерные курсы' }
           ]
         }
@@ -207,6 +223,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Подготовительные курсы' }
           ]
         }
@@ -216,6 +233,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Программы по ДПО' }
           ]
         }
@@ -225,6 +243,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Партнеры' }
           ]
         }
@@ -234,6 +253,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Международное сотрудничество' }
           ]
         }
@@ -243,6 +263,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Противодействие коррупции' }
           ]
         }
@@ -261,6 +282,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Абитуриенту', link: '/abiturient' },
             { name: 'Приемная комиссия' }
           ]
         }
@@ -270,6 +292,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Абитуриенту', link: '/abiturient' },
             { name: 'Формы обучения' }
           ]
         }
@@ -279,6 +302,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Абитуриенту', link: '/abiturient' },
             { name: 'Подготовительные курсы' }
           ]
         }
@@ -288,6 +312,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Абитуриенту', link: '/abiturient' },
             { name: 'День открытых дверей' }
           ]
         }
@@ -297,6 +322,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
+            { name: 'Студенту', link: '/students' },
             { name: 'Электронная образовательная среда' }
           ]
         }
