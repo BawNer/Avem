@@ -1,10 +1,10 @@
 <template>
   <q-page padding>
-    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
+    <div class="row">
       <div class="col-12">
         <span class="text-h3 text-grey-10">Компьютерные курсы</span>
       </div>
-      <div class="row"> 
+      <div class="row">
         <div class="col-12 q-my-xl">
           <q-table
             title="Компьютерные курсы 2019 — 2020 учебный год"
