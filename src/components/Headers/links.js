@@ -1,12 +1,12 @@
 export default [
   { name: 'Сведения об образовательной организации', menu: [
       { name: 'Основные сведения', route: '/sveden/common', active: true },
-      { name: 'Структура и органы управления', route: '/sveden/struct', active: true },
+      { name: 'Структура и органы управления образовательной организацией', route: '/sveden/struct', active: true },
       { name: 'Контакты', route: '/sveden/contact', active: true },
       { name: 'Образование', route: '/sveden/education', active: true },
       { name: 'Доступная среда', route: '/sveden/ovz', active: true },
       { name: 'Документы', route: '/sveden/document', active: true },
-      { name: 'Руководство', route: '/sveden/rulers', active: true },
+      { name: 'Руководство. Педагогический (научно-педагогический) состав', route: '/sveden/rulers', active: true },
       { name: 'Сотрудники', route: '/sveden/employees', active: true },
       { name: 'Партнеры', route: '/sveden/partners', active: true },
       { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', route: '/sveden/objects', active: true },
@@ -20,6 +20,9 @@ export default [
       { name: 'Кафедра инфокоммуникационных технологий и систем связи', route: '/sveden/faculties/itss', active: true },
       { name: 'Кафедра информатики и вычислительной техники', route: '/sveden/faculties/ivt', active: true },
       { name: 'Кафедра общенаучной подготовки', route: '/sveden/faculties/onp', active: true },
+      { name: 'Стипендии и меры поддержки обучающихся', route: '/sveden/grants', active: true },
+      { name: 'Вакантные места для приема (перевода) обучающихся', route: '/sveden/vacant', active: true },
+
     ]},
   { name: 'Абитуриенту', menu: [
     { name: 'Общая информация', route: '/sveden/abiturient', active: true },
@@ -30,7 +33,6 @@ export default [
   ]},
   { name: 'Студенту', menu: [
     { name: 'Студентам', route: '/sveden/students', active: true },
-    { name: 'Стипендии', route: '/sveden/grants', active: true },
     { name: 'График консультаций', route: '/sveden/students/consultations', active: true },
     { name: 'Работа', route: '/sveden/works', active: true },
     { name: 'Модульно-рейтинговая система', route: '/sveden/students/rating-system', active: true },
@@ -38,7 +40,6 @@ export default [
     { name: 'Методические указания по подготовке ВКР', route: '/sveden/students/qualifying-works', active: true },
     { name: 'Расписание занятий', route: '/sveden/schedule', active: true },
     { name: 'Внеучебная деятельность', route: '/sveden/students/extracurricular', active: true },
-    { name: 'Вакантные места для перевода', route: '/sveden/vacant', active: true },
     { name: 'Электронная образовательная среда', route: '/sveden/students/electronic-education', active: true },
     { name: 'Документы', route: '/sveden/students/documents', active: true },
     { name: 'Научная работа', route: '/sveden/students/scientific-work', active: true },
