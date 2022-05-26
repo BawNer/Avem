@@ -1,6 +1,6 @@
 <template>
   <q-page q-page padding>
-    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
+    <div class="row">
       <div class="col-12">
         <q-table
           title="Информация о сроке действия государственной аккредитации образовательной программы, о языках, на которых осуществляется образование (обучение)"
@@ -55,5 +55,5 @@
         programsEducationRow
       }
     }
-  } 
+  }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl' : ''">
+    <div class="row">
       <div class="col-12">
         <span class="text-h3 text-grey-10">Курсы повышения квалификации</span>
       </div>
@@ -50,7 +50,7 @@
           </p>
         </div>
       </div>
-      <div class="row"> 
+      <div class="row">
         <div class="col-12">
           <q-table
             title="Сведения о численности слушателей, обученных по дополнительным профессиональным программам 2020-2021г"
