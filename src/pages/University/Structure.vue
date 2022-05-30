@@ -5,6 +5,12 @@
         <span class="text-h3 text-grey-9">Структура и органы управления</span><br />
         <span class="text-h3 text-grey-9">образовательной организацией</span>
       </div>
+      <div class="col-12">
+        <q-btn color="primary" flat to="/sveden/faculties/infocommunications">Факультет инфокоммуникаций</q-btn>
+        <q-btn color="primary" flat to="/sveden/faculties/itss">Кафедра инфокоммуникационных технологий и систем связи</q-btn>
+        <q-btn color="primary" flat to="/sveden/faculties/ivt">Кафедра информатики и вычислительной техники</q-btn>
+        <q-btn color="primary" flat to="/sveden/faculties/onp">Кафедра общенаучной подготовки</q-btn>
+      </div>
       <div class="col-md-10 col-12 offset-md-1">
         <q-img
           :ratio="16/9"
@@ -69,13 +75,13 @@
               </q-item-section>
             </q-list>
           </div>
-          <div class="col-12 text-right">
-            <q-btn
-              flat
-              tag="a"
-              color="primary"
-              href="http://www.skf-mtusi.ru/files/info/struct/prus_II_21_22.pdf"
-            >План работы Ученого cовета СКФ МТУСИ на II семестр 2021/2022 учебного года</q-btn>
+          <div class="col-12">
+            <essential-link
+              title="План работы Ученого cовета СКФ МТУСИ на II семестр 2021/2022 учебного года"
+              link="http://www.skf-mtusi.ru/files/info/struct/prus_II_21_22.pdf"
+              icon="mdi-pdf-box"
+              side-icon
+            ></essential-link>
           </div>
         </div>
       </div>
@@ -85,6 +91,7 @@
 
 <script>
 // import ATile from '../../components/ATile.vue'
+import EssentialLink from "components/EssentialLink";
 
 const tiles = [
   { name: 'Ученый совет', to: '', state: false },
@@ -290,6 +297,7 @@ export default {
   name: 'Structure',
   components: {
     // ATile
+    EssentialLink
   },
   setup() {
     return {

@@ -1,10 +1,36 @@
 <template>
   <q-page padding>
-    <div class="row">
+    <div class="row q-col-gutter">
       <div class="col-12">
-        <span class="text-h3 text-grey-10">Материально-техническое обеспечение и оснащенность образовательного процесса</span>
+        <span class="text-h3 text-grey-10">Материально-техническое обеспечение и оснащенность <br> образовательного процесса</span>
       </div>
       <div class="col-12 q-my-xl">
+        <q-table
+          title="Места осуществления образовательной деятельности, в том числе не указываемые в приложении к лицензии на осуществление образовательной деятельности"
+          :columns="[
+          {
+            name: 'item',
+            label: '№',
+            field: 'item',
+            align: 'center'
+          },
+          {
+            name: 'address',
+            label: 'Адрес места осуществления образовательной деятельности',
+            field: 'address',
+            align: 'center'
+          }
+        ]"
+          :rows="[
+            {
+              item: 1,
+              address: '344002, Ростовская область, г.Ростов-на-Дону, ул.Серафимовича, 62.'
+            }
+        ]"
+          row-key="name"
+        />
+      </div>
+      <div class="col-12">
         <q-table
           title="Сведения о наличии оборудованных учебных кабинетов"
           :rows="edEquipRow"
@@ -39,6 +65,9 @@
           :columns="objEquipKey"
           row-key="name"
           wrap-cells
+          :pagination="{
+            rowsPerPage: 0
+          }"
         >
           <template v-slot:body="props">
             <q-tr :props="props">
@@ -55,6 +84,78 @@
                 <ul>
                   <li v-for="e in props.row.equipment" :key="e">{{e}}</li>
                 </ul>
+              </q-td>
+            </q-tr>
+          </template>
+        </q-table>
+      </div>
+      <div class="col-12">
+        <q-table
+          title="Сведения о наличии у образовательной организации на праве собственности или ином законном основании зданий, строений, сооружений, территорий, необходимых для осуществления образовательной деятельности"
+          :columns="[
+          {
+            name: 'item',
+            label: '№',
+            field: 'item',
+            align: 'center'
+          },
+          {
+            name: 'objName',
+            label: 'Наименование объекта',
+            field: 'objName',
+            align: 'center'
+          },
+          {
+            name: 'address',
+            label: 'Адрес объекта',
+            field: 'address',
+            align: 'center'
+          },
+          {
+            name: 'objDo',
+            label: 'Назначение объекта',
+            field: 'objDo',
+            align: 'center'
+          },
+          {
+            name: 'objS',
+            label: 'Площадь, м2',
+            field: 'objS',
+            align: 'center'
+          }
+        ]"
+          :rows="[
+            {
+              item: 1,
+              objName: 'Учебный корпус',
+              address: 'г. Ростов-на-Дону, ул Серафимовича, 62',
+              objDo: 'Осуществление образовательной деятельности',
+              objS: '3661,5'
+            }
+        ]"
+          row-key="name"
+        />
+      </div>
+      <div class="col-12 q-mt-sm">
+        <q-table
+          :rows="specDirectionRow"
+          :columns="specDirectionKey"
+        >
+          <template v-slot:body="props">
+            <q-tr :props="props">
+              <q-td key="item" :props="props">
+                {{props.row.item}}
+              </q-td>
+              <q-td key="name" :props="props">
+                {{props.row.name}}
+              </q-td>
+              <q-td key="direction" :props="props">
+                <q-btn
+                  tag="a"
+                  :href="props.row.direction.link"
+                  flat
+                  color="primary"
+                >{{props.row.direction.label}}</q-btn>
               </q-td>
             </q-tr>
           </template>
@@ -262,13 +363,64 @@ const objEquipRow = [
   }
 ]
 
+const specDirectionKey = [
+  { name: 'item', label: '№ п/п', field: 'item', align: 'center' },
+  { name: 'name', label: 'Наименование специальности', field: 'name', align: 'center' },
+  { name: 'direction', label: 'Направления подготовки', field: 'direction', align: 'center' }
+]
+
+const specDirectionRow = [
+  {
+    item: '1',
+    name: '«Информатика и вычислительная техника»',
+    direction: {
+      link: 'http://www.skf-mtusi.ru/files/mto/mto_vmkss.pdf',
+      label: 'Профиль ВМКСС'
+    }
+  },
+  {
+    item: '2',
+    name: '«Информатика и вычислительная техника»',
+    direction: {
+      link: '#!',
+      label: 'Профиль ПОиИС'
+    }
+  },
+  {
+    item: '3',
+    name: '«Инфокоммуникационные технологии и системы связи»',
+    direction: {
+      link: 'http://www.skf-mtusi.ru/files/mto/mto_zss.pdf',
+      label: 'Профиль ЗСС'
+    }
+  },
+  {
+    item: '4',
+    name: '«Инфокоммуникационные технологии и системы связи»',
+    direction: {
+      link: 'http://www.skf-mtusi.ru/files/mto/mto_mts.pdf',
+      label: 'Профиль МТС'
+    }
+  },
+  {
+    item: '5',
+    name: '«Инфокоммуникационные технологии и системы связи»',
+    direction: {
+      link: 'http://www.skf-mtusi.ru/files/mto/mto_sssk.pdf',
+      label: 'Профиль СССК'
+    }
+  }
+]
+
 export default ({
   setup() {
     return {
       edEquipKey,
       edEquipRow,
       objEquipKey,
-      objEquipRow
+      objEquipRow,
+      specDirectionKey,
+      specDirectionRow
     }
   },
 })

@@ -1,6 +1,6 @@
 <template>
   <q-page padding class="dinamic-margin">
-    <div class="row justify-center" :class="!$q.screen.lt.sm ? 'q-mx-xl': 'q-mx-xs'">
+    <div class="row q-col-gutter-sm justify-center" :class="!$q.screen.lt.sm ? 'q-mx-xl': 'q-mx-xs'">
       <div class="col-md-6 col-sm-12 row">
         <div class="col-12 text-h3 q-mb-xl">Новости</div>
 
@@ -26,9 +26,9 @@
         <q-btn flat color="primary" icon-right="arrow_right" class="q-mt-md" to="/news">Все новости</q-btn>
       </div>
 
-      <div class="col-md-3 col-sm-12 row self-start q-pl-md">
+      <div class="col-md-3 col-12 row self-start">
         <div class="col-12 text-h3 q-mb-xl">Мероприятия</div>
-        
+
         <q-card flat class="q-mb-xs" v-for="(event, i) in events" :key="i">
           <q-card-section>
             <div class="text-h5 q-mb-md">{{event.title}}</div>
@@ -69,7 +69,7 @@
             <q-separator></q-separator>
             <q-card>
               <q-tab-panels v-model="tabs" animated>
-                <q-tab-panel 
+                <q-tab-panel
                   v-for="tabContent in tabsContent"
                   :key="tabContent.id"
                   :name="tabContent.id">
@@ -91,7 +91,7 @@
         </div>
       </div>
     </div>
-    
+
   </q-page>
 </template>
 
@@ -135,7 +135,7 @@ export default {
     const createNotification = msg => $event.$emit('set-notification', msg)
 
     const tabs = ref('01')
-    
+
     const news = computed(() => store.getters.getNews.slice(0, 3))
 
     return {

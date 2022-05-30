@@ -2,7 +2,8 @@
   <q-page padding>
     <div class="row">
       <div class="col-12 q-my-xl">
-        <span class="text-h3 text-grey-10">Образовательные страндарты и требования</span>
+        <span class="text-h3 text-grey-10">Образовательные страндарты и требования</span><br>
+        <span class="text-overline">Сведения о самостоятельно устанавливаемых требованиях отсутствуют</span>
       </div>
       <div class="col-12 q-my-xl">
         <div class="row q-col-gutter-sm">

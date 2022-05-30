@@ -14,8 +14,18 @@
                   :rules="[ val => val && val.length > 0 || 'Введите анонс' ]" />
               </div>
               <div class="col-12">
-                <q-editor placeholder="Основной текст" min-height="10rem" v-model="content" lazy-rules
-                  :rules="[ val => val && val.length > 0 || 'Введите основной текст' ]" />
+                <q-editor
+                  placeholder="Основной текст"
+                  min-height="10rem"
+                  v-model="content"
+                  lazy-rules
+                  :rules="[ val => val && val.length > 0 || 'Введите основной текст' ]"
+                  :toolbar="[
+                    ['bold', 'italic', 'strike', 'underline', 'subscript', 'superscript'],
+                    ['token', 'hr', 'link', 'custom_btn'],
+                    ['print', 'fullscreen'],
+                    ]"
+                />
               </div>
               <div class="col-3">
                 <q-file label="Превью публикации" filled append v-model="preview" accept=".jpg, .jpeg, .png, .bmp">
@@ -123,7 +133,7 @@ export default {
           news.append('photo', photo)
         })
       }
-      
+
       isSending.value = true
 
       await $store.dispatch('publish', news).then(success => {
