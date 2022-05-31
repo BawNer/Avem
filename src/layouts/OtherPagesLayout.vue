@@ -4,8 +4,8 @@
 
     <q-page-container>
 
-      <div class="row" :class="!$q.screen.lt.md ? 'q-mx-xl q-mt-xl' : 'q-ma-sm' ">
-        <div class="col-10">
+      <div class="row">
+        <div class="col-10 q-ma-md">
           <q-breadcrumbs separator=">">
             <q-breadcrumbs-el
               tag="a"
@@ -25,7 +25,7 @@
         </transition>
       </router-view>
     </q-page-container>
-    
+
     <Footer />
   </q-layout>
 </template>

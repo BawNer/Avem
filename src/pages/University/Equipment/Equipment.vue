@@ -161,11 +161,189 @@
           </template>
         </q-table>
       </div>
+      <div class="col-12 q-mt-sm">
+        <q-table
+          title="Сведения о наличии библиотек, объектов питания и охраны здоровья обучающихся"
+          :rows="mtoRows"
+          :columns="mtoColumns"
+          :pagination="{
+            rowsPerPage: 0
+          }"
+        ></q-table>
+      </div>
+      <div class="col-12 q-mt-md">
+        <span class="text-grey-10 text-h4">Сведения о наличии средств обучения и воспитания</span>
+      </div>
+      <div class="col-12 q-mt-md">
+        <q-card>
+          <q-card-section class="text-subtitle1">
+            В качестве средств воспитания студентов организована работа секций: Хореографическая студия, Вокальная студия, Театральный кружок. Занятия по каждой секции проводятся два раза в неделю по соответствующему расписанию.
+            <br>
+            В Филиале существует отряд волонтеров, которые принимают участие в различных акция, проводимых администрацией города, района и комитета по молодежной политике. Сформирован студенческий актив ВУЗа, активно принимающий участие в различных мероприятиях: патриотические мероприятия по возложению цветов 14 февраля в день освобождения Ростова, 23 февраля в день Защитника Отечества, мероприятия, посвященные Дню Победы.
+            <br>
+            Проводится индивидуальная и разъяснительная работа со студентами нуждающимися в психологической помощи, студентами, имеющим академические задолженности. Во внеучебное время организуются экскурсионные поездки по Ростовской области.
+          </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-12 q-mt-md">
+        <span class="text-grey-10 text-h4">Сведения об условиях питания и охраны здоровья обучающихся</span>
+      </div>
+      <div class="col-12 q-mt-md">
+        <q-card>
+          <q-card-section class="text-subtitle1">
+            Для питания студентов имеется в наличии буфет на 32 посадочных места с широким ассортиментом вторых блюд, напитков и кондитерских изделий.
+            Для охраны здоровья коллектива, студенты и преподаватели ежегодно проходят медицинские осмотры в прикрепленных медучреждениях согласно графику.
+            В качестве мер по сохранению здоровья, студенты оснащены достаточным числом аудиторий с удобной мебелью и хорошим освещением. Четко соблюдаются перемены между занятиями. Проводятся профилактические беседы о вреде курения, наркомании и употребления алкоголя.
+          </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-12 q-mt-md">
+        <span class="text-grey-10 text-h4">Сведения о доступе к информационным системам и информационно-телекоммуникационным сетям</span>
+      </div>
+      <div class="col-12 q-mt-md">
+        <q-card>
+          <q-card-section class="text-subtitle1">
+            Материально-техническая база СКФ МТУСИ располагает 432 ед. учебно-лабораторной техники, в том числе 289 ед. компьютерной техники, 143 ед. контрольно измерительной техники и 38 ед. техники связи. В СКФ МТУСИ действуют две ЛВС: административная и учебная. Количество персональных компьютеров в сети — 282, количество серверов — 7. Филиал имеет подключение к сети Интернет на общей скорости 30 Мб/c. Студенты филиала имеют доступ к методическим материалам на сайте филиала, а также к необходимой литературе через электронно-библиотечные системы.
+          </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-12 q-mt-md">
+        <q-table
+          title="Размещение информации о наличии электронных образовательных и информационных ресурсов"
+          :columns="[
+            { name: 'name', field: 'name', label: 'Наименование', align: 'center' },
+            { name: 'count', field: 'count', label: 'Количество', align: 'center' }
+          ]"
+          :rows="[
+            {
+              name: 'Наличие собственных электронных образовательных и информационных ресурсов',
+              count: '1'
+            },
+            {
+              name: 'Наличие сторонних электронных образовательных и информационных ресурсов',
+              count: '1'
+            },
+            {
+              name: 'Наличие базы данных электронного каталога',
+              count: '1'
+            }
+          ]"
+        ></q-table>
+      </div>
+      <div class="col-12 q-mt-md">
+        <span class="text-grey-10 text-h4">ССЫЛКИ НА ПЕРЕЧЕНЬ ЭЛЕКТРОННЫХ РЕСУРСОВ, К КОТОРЫМ ОБЕСПЕЧИВАЕТСЯ ДОСТУП ОБУЧАЮЩИХСЯ:</span>
+      </div>
+      <div class="col-12 q-mt-md">
+        <div class="row q-col-gutter-sm">
+          <div class="col-12 col-md-6" v-for="resource in webResources">
+            <essential-link
+              :title="resource.label"
+              :link="resource.link"
+              icon="mdi-share-variant"
+              iconColor="primary"
+              caption="Переход на внешний Веб-ресурс"
+            ></essential-link>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 q-mt-md">
+        <span class="text-grey-10 text-h4">СВЕДЕНИЯ ОБ ЭЛЕКТРОННЫХ ОБРАЗОВАТЕЛЬНЫХ РЕСУРСАХ, В ТОМ ЧИСЛЕ ПРИСПОСОБЛЕННЫХ ДЛЯ ИСПОЛЬЗОВАНИЯ ИНВАЛИДАМИ И ЛИЦАМИ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ ЗДОРОВЬЯ</span>
+      </div>
+      <div class="col-12 q-mt-md">
+        <div class="row q-col-gutter-sm">
+          <div class="col-md-6 col-12">
+            <essential-link
+              title="ЭБС «IPRbooks» режим доступа"
+              link="www.iprbookshop.ru"
+              icon="mdi-share-variant"
+              iconColor="primary"
+              caption="Имеет обязательную для ЭБС версию сайта для слабовидящих общества слепых, полученное по результатам исследования специалистами отдела информационных технологий НУ ИПРПП"
+            ></essential-link>
+          </div>
+          <div class="col-md-6 col-12">
+            <essential-link
+              title="ЭБС « Знаниум.ком» режим доступа"
+              link="znanium.com"
+              icon="mdi-share-variant"
+              iconColor="primary"
+              caption="Имеет обязательную для ЭБС версию сайта для слабовидящих."
+            ></essential-link>
+          </div>
+          <div class="col-md-6 col-12">
+            <essential-link
+              title="СКФ МТУСИ Учебно-методические материалы"
+              link="http://www.skf-mtusi.ru/?page_id=659"
+              icon="mdi-share-variant"
+              iconColor="primary"
+              caption="Имеет обязательную для ЭБС версию сайта для слабовидящих."
+            ></essential-link>
+          </div>
+          <div class="col-md-6 col-12">
+            <essential-link
+              title="СКФ МТУСИ Электронное портфолио студента"
+              link="http://www.skf-mtusi.ru/sveden/(http://www.skf-mtusi.ru/?page_id=3773"
+              icon="mdi-share-variant"
+              iconColor="primary"
+              caption="Имеет обязательную для ЭБС версию сайта для слабовидящих."
+            ></essential-link>
+          </div>
+        </div>
+        <q-card class="q-mt-md">
+          <q-card-section>
+            <span class="text-h5">Лингафонный кабинет ( ауд.101 «А» )</span>
+            <p class="text-subtitle1">
+              Оборудованный комплексом звукотехнической, проекционной аппаратуры Cortex LinguaMatic, позволяющей аудиовизуальным методом создавать оптимальные условия для работы учащихся , в т.ч. для инвалидов и лиц с ограниченными возможностями здоровья.
+            </p>
+            <ul>
+              <li>автоматизированное место преподавателя,</li>
+              <li>16 оборудованных рабочих мест студентов.</li>
+            </ul>
+          </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-12 q-mt-md">
+        <span class="text-grey-10 text-h4">Информация о наличии материально-технических условий,
+обеспечивающих возможность беспрепятственного доступа поступающих с ограниченными возможностями здоровья и (или) инвалидов в аудитории, туалетные и другие помещения, а также их пребывания в Филиале</span>
+      </div>
+      <div class="col-12 q-mt-md">
+        <q-card>
+          <q-card-section>
+            <p class="text-subtitle1">В соответствии с Приказом Министерства образования и науки России №1309 от 09.11.2015 г. к 01.09.2016 г.</p>
+            <p>В Филиале установлены:</p>
+            <ul>
+              <li>подъемники 2 шт.,</li>
+              <li>противоскользящие полоски на ступени,</li>
+              <li>специальные знаки-указатели для лиц с ОВЗ,</li>
+              <li>вывеска-наименование Филиала шрифтом Брайля перед входом.</li>
+            </ul>
+            <p>Проведены работы по расширению дверных проемов и оборудованию туалетных помещений для лиц с ОВЗ (2 шт.).</p>
+          </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-12 q-mt-md">
+        <div class="q-gutter-sm">
+          <ul>
+            <li><q-btn to="/sveden/objects/eduCabinets" flat color="primary" tag="a" icon="mdi-share-variant" label="Учебные кабинеты"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labMainPhysicBZD" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Общей физики и БЖД"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labIVT" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Вычислительной техники и информатики"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labOTS" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Основ теории цепей и линий связи"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labTAC" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Теории электрической связи, метрологии и электроники"></q-btn></li>
+            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Систем радиосвязи и телевещания"></q-btn></li>
+            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Цифровых систем коммутации и сетей связи"></q-btn></li>
+            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Передачи дискретных сообщений и документальной электросвязи"></q-btn></li>
+            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Многоканальных телекоммуникационных систем"></q-btn></li>
+            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Современных методов управления"></q-btn></li>
+            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Сектор библиотечного обслуживания"></q-btn></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </q-page>
 </template>
 
 <script>
+
+import EssentialLink from "components/EssentialLink";
 
 const edEquipKey = [
   { name: 'address', label: 'Адрес', field: 'address', align: 'left' },
@@ -412,7 +590,84 @@ const specDirectionRow = [
   }
 ]
 
+const mtoColumns = [
+  { name: 'type', field: 'type', label: 'Вид помещения', align: 'center' },
+  { name: 'address', field: 'address', label: 'Адрес местонахождения', align: 'center' },
+  { name: 'square', field: 'square', label: 'Площадь, м2', align: 'center' },
+  { name: 'count', field: 'count', label: 'Количество мест', align: 'center' }
+]
+
+const mtoRows = [
+  {
+    type: 'Библиотека',
+    address: 'г. Ростов-на-Дону, ул Серафимовича, 62',
+    square: '99',
+    count: '30'
+  },
+  {
+    type: 'Столовая/Буфет',
+    address: 'г. Ростов-на-Дону, ул Серафимовича, 62',
+    square: '27',
+    count: '32'
+  },
+  {
+    type: 'Студенческая поликлиника',
+    address: 'г. Ростов-на-Дону, ул. Казахская 76',
+    square: '656,8',
+    count: '29 кабинетов'
+  },
+  {
+    type: 'Спортивный зал',
+    address: 'г. Ростов-на-Дону, ул. Текучева, 149',
+    square: '100',
+    count: '-'
+  }
+]
+
+const webResources = [
+  {
+    label: 'Министерство образования и науки Российской Федерации',
+    link: 'http://минобрнауки.рф/'
+  },
+  {
+    label: 'Федеральная служба по надзору в сфере образования и науки',
+    link: 'http://obrnadzor.gov.ru/'
+  },
+  {
+    label: 'Федеральный портал «Российское образование»',
+    link: 'http://www.edu.ru/'
+  },
+  {
+    label: 'Информационная система «Единое окно доступа к образовательным ресурсам»',
+    link: 'http://window.edu.ru/'
+  },
+  {
+    label: 'Федеральный центр информационно-образовательных ресурсов',
+    link: 'http://fcior.edu.ru/'
+  },
+  {
+    label: 'Электронно-библиотечная система «Знаниум.ком»',
+    link: 'http://www.znanium.com/'
+  },
+  {
+    label: 'Электронно- библиотечная система IPRbooks',
+    link: 'http://www.iprbookshop.ru/'
+  },
+  {
+    label: 'СКФ МТУСИ Учебно-методические материалы',
+    link: 'http://www.skf-mtusi.ru/?page_id=659'
+  },
+  {
+    label: 'СКФ МТУСИ Электронное портфолио студента',
+    link: 'http://www.skf-mtusi.ru/?page_id=3773'
+  }
+]
+
+
 export default ({
+  components: {
+    EssentialLink
+  },
   setup() {
     return {
       edEquipKey,
@@ -420,7 +675,10 @@ export default ({
       objEquipKey,
       objEquipRow,
       specDirectionKey,
-      specDirectionRow
+      specDirectionRow,
+      mtoRows,
+      mtoColumns,
+      webResources
     }
   },
 })

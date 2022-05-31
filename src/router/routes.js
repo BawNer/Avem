@@ -89,12 +89,22 @@ const routes = [
         }
       }, {
         path: 'employees',
-        component: () => import('pages/University/Empl.vue'),
+        component: () => import('pages/University/Employees/Empl.vue'),
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
             { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Преподавательский состав' }
+          ]
+        }
+      }, {
+        path: 'employees/about',
+        component: () => import('pages/University/Employees/About'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Преподавательский состав', link: '/sveden/employees' }
           ]
         }
       }, {
@@ -139,12 +149,67 @@ const routes = [
         }
       }, {
         path: 'objects',
-        component: () => import('pages/University/Equipment.vue'),
+        component: () => import('pages/University/Equipment/Equipment.vue'),
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
             { name: 'Сведения об образовательной организации', link: '/sveden/common' },
             { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса' }
+          ]
+        }
+      }, {
+        path: 'objects/eduCabinets',
+        component: () => import('pages/University/Equipment/eduCabinets'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Учебные кабинеты' }
+          ]
+        }
+      }, {
+        path: 'objects/labMainPhysicBZD',
+        component: () => import('pages/University/Equipment/labMainPhysicBZD'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Общей физики и БЖД' }
+          ]
+        }
+      }, {
+        path: 'objects/labIVT',
+        component: () => import('pages/University/Equipment/labIVT'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Вычислительной техники и информатики' }
+          ]
+        }
+      }, {
+        path: 'objects/labOTS',
+        component: () => import('pages/University/Equipment/labOTS'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Основ теории цепей и линий связи' }
+          ]
+        }
+      }, {
+        path: 'objects/labTAC',
+        component: () => import('pages/University/Equipment/labTAC'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Теории электрической связи, метрологии и электроники' }
           ]
         }
       }, {
