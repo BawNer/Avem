@@ -36,19 +36,13 @@
         </q-item>
       </q-list>
     </div>
-    <div class="col-md-4 col-5">
-      <q-list class="text-white">
-        <q-item>
-          <q-item-section class="block">Сведения об образовательной организации</q-item-section>
-        </q-item>
-        <q-item>
-          <q-item-section class="block">Карта сайта</q-item-section>
-        </q-item>
-      </q-list>
-    </div>
-    <div class="col-md-2 col-12 row q-pa-xl justify-center">
-      <q-img src="icons/Telegram.svg" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
-      <q-img src="icons/vk.svg" alt="" width="32px" height="32px" fit="contain" class="q-mx-sm" />
+    <div class="col-md-6 col-12 row q-pa-xl justify-center">
+      <q-btn flat tag="a" href="https://t.me/eais_skf_mtusi_bot">
+        <q-img src="icons/Telegram.svg" alt="" width="32px" height="32px" fit="contain"/>
+      </q-btn>
+      <q-btn flat tag="a" href="https://vk.com/skf_mtusi">
+        <q-img src="icons/vk.svg" alt="" width="32px" height="32px" fit="contain" />
+      </q-btn>
     </div>
     <div class="col-12 q-my-md q-px-xl">
       <div class="row">

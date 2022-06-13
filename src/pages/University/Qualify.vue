@@ -58,6 +58,9 @@
             :columns="studentsKey"
             row-key="name"
             wrap-cells
+            :pagination="{
+              rowsPerPage: 0
+            }"
           ></q-table>
         </div>
       </div>
@@ -119,9 +122,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4 q-my-xl">
+          <div class="col-12 col-md-4 q-my-xl">
             <q-icon name="ion-open"></q-icon>
             <q-btn flat color="primary" type="a" to="/sveden/dpo">Программы по ДПО</q-btn>
+          </div>
+          <div class="col-12 col-md-4 q-my-xl">
+            Заполненную заявку Вы можете отправить по адресу: kurs@skf-mtusi.ru
           </div>
         </div>
       </div>

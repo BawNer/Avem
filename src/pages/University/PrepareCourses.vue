@@ -56,6 +56,18 @@
           </p>
         </div>
       </div>
+      <div class="col-12">
+        <q-card>
+          <q-card-section>
+            Запись и оформление на подготовительные курсы ведется в к. 215 по адресу:
+            <ul>
+              <li>344002, г. Ростов-на-Дону, ул. Серафимовича, д. 62,</li>
+              <li>СКФ МТУСИ, приемная комиссия. Телефон для справок: (863) 310-69-67,</li>
+              <li>Email: <a href="mailto:kurs@skf-mtusi.ru">kurs@skf-mtusi.ru</a></li>
+            </ul>
+          </q-card-section>
+        </q-card>
+      </div>
     </div>
     </q-page>
   </template>

@@ -12,12 +12,14 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="column items-center col-5 q-ml-xl">
-          <q-img class="rounded-2rem" width="400px" src="/images/unify1.jpg"></q-img>
-        </div>
-        <div class="column items-center col-5 q-ml-xl">
-          <q-img class="rounded-2rem" width="400px" src="/images/unify2.jpg"></q-img>
+      <div class="col-12">
+        <div class="row q-col-gutter-sm justify-center">
+          <div class="col-12 col-md-4">
+            <q-img class="rounded-2rem" width="400px" src="/images/unify1.jpg"></q-img>
+          </div>
+          <div class="col-12 col-md-4">
+            <q-img class="rounded-2rem" width="400px" src="/images/unify2.jpg"></q-img>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -221,7 +223,7 @@
             344002, г. Ростов-на-Дону, ул. Серафимович, д. 62, 2 этаж, ком. 215.<br>
             СКФ МТУСИ, тел: (863) 310-69-67, факс: (863) 310-69-68.<br>
             Методист: Романова Наталья Григорьевна.<br>
-            E-mail: kurs@skf-mtusi.ru
+            E-mail: <a href="mailto:kurs@skf-mtusi.ru">kurs@skf-mtusi.ru</a>
           </p>
         </div>
       </div>

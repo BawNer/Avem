@@ -20,7 +20,7 @@ export default [
       { name: 'Сотрудники', route: '/sveden/employees', active: true },
       { name: 'Партнеры', route: '/sveden/partners', active: true },
       { name: 'Работа в СКФ МТУСИ', route: '/sveden/works', active: true },
-      { name: 'Противодействие коррупции', route: '/sveden/anti-corruption', active: true }
+      { name: 'Противодействие коррупции', route: '/sveden/anti-corruption', active: true },
     ]},
   { name: 'Абитуриенту', menu: [
     { name: 'Общая информация', route: '/sveden/abiturient', active: true },

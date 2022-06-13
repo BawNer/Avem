@@ -328,12 +328,12 @@
             <li><q-btn to="/sveden/objects/labIVT" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Вычислительной техники и информатики"></q-btn></li>
             <li><q-btn to="/sveden/objects/labOTS" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Основ теории цепей и линий связи"></q-btn></li>
             <li><q-btn to="/sveden/objects/labTAC" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Теории электрической связи, метрологии и электроники"></q-btn></li>
-            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Систем радиосвязи и телевещания"></q-btn></li>
-            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Цифровых систем коммутации и сетей связи"></q-btn></li>
-            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Передачи дискретных сообщений и документальной электросвязи"></q-btn></li>
-            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Многоканальных телекоммуникационных систем"></q-btn></li>
-            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Современных методов управления"></q-btn></li>
-            <li><q-btn flat color="primary" tag="a" icon="mdi-share-variant" label="Сектор библиотечного обслуживания"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labSRT" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Систем радиосвязи и телевещания"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labSCS" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Цифровых систем коммутации и сетей связи"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labES" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Передачи дискретных сообщений и документальной электросвязи"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labMTS"  flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Многоканальных телекоммуникационных систем"></q-btn></li>
+            <li><q-btn to="/sveden/objects/labSMU" flat color="primary" tag="a" icon="mdi-share-variant" label="Лаборатория Современных методов управления"></q-btn></li>
+            <li><q-btn to="/sveden/objects/biblio" flat color="primary" tag="a" icon="mdi-share-variant" label="Сектор библиотечного обслуживания"></q-btn></li>
           </ul>
         </div>
       </div>

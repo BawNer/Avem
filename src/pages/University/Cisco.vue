@@ -18,6 +18,20 @@
           ></q-img>
         </div>
       </div>
+      <div class="col-12">
+        <div class="row q-col-gutter-sm justify-center">
+          <div class="col-12 col-md-4">
+            <q-img
+              src="http://www.skf-mtusi.ru/fileadmin/page_res/dpo/ACADEMY_YEARS_10_1.jpg"
+            ></q-img>
+          </div>
+          <div class="col-12 col-md-4">
+            <q-img
+              src="http://www.skf-mtusi.ru/fileadmin/page_res/dpo/ACADEMY_YEARS_10_1.jpg"
+            ></q-img>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-12 col-md-10 q-my-xl">
           <span class="text-h4 text-grey-9 q-my-md">
@@ -42,7 +56,7 @@
               Объем курса: 4 семестра (280 часов). Объем каждого семестра – 70 часов. Программа обучения предполагает прослушивание всех 4-х семестров последовательно, но допускает прослушивание семестров по выбору в соответствии с расписанием курсов.<br><br>
             </p>
           </div>
-          <div class="column items-center col-12 q-ml-xl">
+          <div class="row justify-center col-12">
             <q-img
               width="400px" src="/images/cisko2.jpg"
             ></q-img>

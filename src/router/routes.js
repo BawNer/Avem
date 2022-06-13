@@ -213,6 +213,72 @@ const routes = [
           ]
         }
       }, {
+        path: 'objects/labSRT',
+        component: () => import('pages/University/Equipment/labSRT'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Систем радиосвязи и телевещания' }
+          ]
+        }
+      }, {
+        path: 'objects/labSCS',
+        component: () => import('pages/University/Equipment/labSCS'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Цифровых систем коммутации и сетей связи' }
+          ]
+        }
+      }, {
+        path: 'objects/labES',
+        component: () => import('pages/University/Equipment/labES'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Передачи дискретных сообщений и документальной электросвязи' }
+          ]
+        }
+      }, {
+        path: 'objects/labMTS',
+        component: () => import('pages/University/Equipment/labMTS'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Многоканальных телекоммуникационных систем' }
+          ]
+        }
+      }, {
+        path: 'objects/labSMU',
+        component: () => import('pages/University/Equipment/labSMU'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Лаборатория Современных методов управления' }
+          ]
+        }
+      }, {
+        path: 'objects/biblio',
+        component: () => import('pages/University/Equipment/Biblio'),
+        meta: {
+          breadcrumbs: [
+            { name: 'Главная', link: '/' },
+            { name: 'Сведения об образовательной организации', link: '/sveden/common' },
+            { name: 'Материально-техническое обеспечение и оснащённость образовательного процесса', link: '/sveden/objects' },
+            { name: 'Сектор библиотечного обслуживания' }
+          ]
+        }
+      }, {
         path: 'budget',
         component: () => import('pages/University/Finance.vue'),
         meta: {
@@ -424,7 +490,7 @@ const routes = [
         meta: {
           breadcrumbs: [
             { name: 'Главная', link: '/' },
-            { name: 'Вакантные места для перевода' }
+            { name: 'Стипендии и меры поддержки обучающихся' }
           ]
         }
       }, {
