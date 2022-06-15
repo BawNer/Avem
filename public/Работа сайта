@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-15T19:26:38.991Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.160 YaBrowser/22.5.2.615 Yowser/2.5 Safari/537.36" etag="3dBbHe8zBjMzczaMEvny" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-15T19:31:54.564Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.160 YaBrowser/22.5.2.615 Yowser/2.5 Safari/537.36" etag="Sf5iqbBcga8lLPAHC7iZ" version="20.0.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="595" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -31,13 +31,13 @@
         <mxCell id="CSBzeQkt37pQzMZaIgri-3" value="Компонент найден" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1211" y="310" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="CSBzeQkt37pQzMZaIgri-4" value="Отображает страницу 404" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="CSBzeQkt37pQzMZaIgri-4" value="Vue-router отображает страницу 404" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1210" y="430" width="151" height="60" as="geometry" />
         </mxCell>
         <mxCell id="CSBzeQkt37pQzMZaIgri-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="CSBzeQkt37pQzMZaIgri-5" target="CSBzeQkt37pQzMZaIgri-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CSBzeQkt37pQzMZaIgri-5" value="Отображаем компонент" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="CSBzeQkt37pQzMZaIgri-5" value="Vue-router отображает компонент" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1440" y="320" width="151" height="60" as="geometry" />
         </mxCell>
         <mxCell id="CSBzeQkt37pQzMZaIgri-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="CSBzeQkt37pQzMZaIgri-6" target="CSBzeQkt37pQzMZaIgri-7" edge="1">
@@ -76,7 +76,7 @@
         <mxCell id="CSBzeQkt37pQzMZaIgri-10" value="Запись данных в менеджер состояния" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1000" y="535" width="151" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="T_-e2EtLY_gMHy1HdPtv-0" value="Ожидаем действий пользователя" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="T_-e2EtLY_gMHy1HdPtv-0" value="Приложение ожидает действий пользователя" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1210" y="530" width="151" height="60" as="geometry" />
         </mxCell>
         <mxCell id="T_-e2EtLY_gMHy1HdPtv-6" value="Да" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
