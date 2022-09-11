@@ -4,7 +4,7 @@
       <div class="col-12">
         <q-uploader
           style="width: 100%;"
-          url="http://194.58.122.68:3000/schedule"
+          :url="url"
           :headers="[{name: 'Authorization', value: `Token ${user.accessToken.token}`}]"
           label="Только DBF файлы"
           field-name="schedule"
@@ -49,7 +49,8 @@ export default {
       checkFileType,
       onRejected,
       onFail,
-      user
+      user,
+      url: process.env.DEV ? 'http://localhost:3000/schedule' : 'http://194.58.122.68:3000/schedule'
     }
   },
 }

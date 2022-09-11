@@ -40,27 +40,29 @@
         </q-card>
       </div>
       <div class="col-12" v-if="isFilterSelected">
-        <div class="row">
-          <template v-if="currentSchema">
-            <div class="col-12 q-mb-md row justify-center">
-              <q-card style="width: 340px">
-                <q-item  class="bg-primary text-white">
+        <div class="row q-col-gutter-sm">
+          <template v-for="schema in schedule" :key="schema.id">
+            <div class="col-md-3 col-12">
+              <q-card>
+                <q-item>
                   <q-item-section>
-                    <q-item-label class="text-body1">Сегодня, 
-                      {{new Date().toLocaleDateString("ru")}}</q-item-label>
+                    <q-item-label class="text-body1">
+                      {{new Date(schema.date).toLocaleDateString("ru")}},
+                      {{new Date(schema.date).toLocaleDateString("ru", { weekday: 'long' })}}
+                    </q-item-label>
                   </q-item-section>
+                  <q-item-section side>{{schema.group}}</q-item-section>
                 </q-item>
                 <q-card-section>
                   <span class="text-overline">Занятия:</span>
-
-                  <q-list v-for="(classEdu, ic) in currentSchema" :key="ic">
+                  <q-list v-for="(classes, id) in schema.classes" :key="id">
                     <q-item>
                       <q-item-section avatar>
                         <q-icon name="mdi-progress-clock" color="positive"></q-icon>
                       </q-item-section>
                       <q-item-section>
-                        <q-item-label>Пара: {{classEdu.lesson}}</q-item-label>
-                        <q-item-label caption>{{classEdu.subjectType}}</q-item-label>
+                        <q-item-label>Пара: {{classes.lesson}}, {{times[classes.lesson - 1]}}</q-item-label>
+                        <q-item-label caption>{{classes.subjectType}}</q-item-label>
                       </q-item-section>
                     </q-item>
                     <q-item>
@@ -68,7 +70,7 @@
                         <q-icon name="mdi-home-map-marker" color="primary"></q-icon>
                       </q-item-section>
                       <q-item-section>
-                        <q-item-label>Аудитория: {{classEdu.audience}}</q-item-label>
+                        <q-item-label>Аудитория: {{classes.audience}}</q-item-label>
                       </q-item-section>
                     </q-item>
                     <q-item>
@@ -76,7 +78,7 @@
                         <q-icon name="mdi-school" color="orange"></q-icon>
                       </q-item-section>
                       <q-item-section>
-                        <q-item-label>Преподаватель: {{classEdu.lecturer}}</q-item-label>
+                        <q-item-label>Преподаватель: {{classes.lecturer}}</q-item-label>
                       </q-item-section>
                     </q-item>
                     <q-item>
@@ -84,7 +86,7 @@
                         <q-icon name="mdi-book-education" color="negative"></q-icon>
                       </q-item-section>
                       <q-item-section>
-                        <q-item-label>Предмет: {{classEdu.subject}}</q-item-label>
+                        <q-item-label>Предмет: {{classes.subject}}</q-item-label>
                       </q-item-section>
                     </q-item>
                     <q-separator></q-separator>
@@ -92,60 +94,6 @@
                 </q-card-section>
               </q-card>
             </div>
-          </template>
-          <template v-for="(schemas, index) in schedule" :key="index">
-            <template v-for="(schema, index) in schemas.schema" :key="index">
-              <div class="col-md-3 col-12 q-pa-sm">
-                <q-card>
-                  <q-item>
-                    <q-item-section>
-                      <q-item-label class="text-body1">{{new Date(schema.date).toLocaleDateString("ru")}}</q-item-label>
-                    </q-item-section>
-                    <q-item-section>Группа: {{schemas.group}}</q-item-section>
-                  </q-item>
-                  <q-card-section>
-                    <span class="text-overline">Занятия:</span>
-
-                    <q-list v-for="(classEdu, ic) in schema.classes" :key="ic">
-                      <q-item>
-                        <q-item-section avatar>
-                          <q-icon name="mdi-progress-clock" color="positive"></q-icon>
-                        </q-item-section>
-                        <q-item-section>
-                          <q-item-label>Пара: {{classEdu.lesson}}</q-item-label>
-                          <q-item-label caption>{{classEdu.subjectType}}</q-item-label>
-                        </q-item-section>
-                      </q-item>
-                      <q-item>
-                        <q-item-section avatar>
-                          <q-icon name="mdi-home-map-marker" color="primary"></q-icon>
-                        </q-item-section>
-                        <q-item-section>
-                          <q-item-label>Аудитория: {{classEdu.audience}}</q-item-label>
-                        </q-item-section>
-                      </q-item>
-                      <q-item>
-                        <q-item-section avatar>
-                          <q-icon name="mdi-school" color="orange"></q-icon>
-                        </q-item-section>
-                        <q-item-section>
-                          <q-item-label>Преподаватель: {{classEdu.lecturer}}</q-item-label>
-                        </q-item-section>
-                      </q-item>
-                      <q-item>
-                        <q-item-section avatar>
-                          <q-icon name="mdi-book-education" color="negative"></q-icon>
-                        </q-item-section>
-                        <q-item-section>
-                          <q-item-label>Предмет: {{classEdu.subject}}</q-item-label>
-                        </q-item-section>
-                      </q-item>
-                      <q-separator></q-separator>
-                    </q-list>
-                  </q-card-section>
-                </q-card>
-              </div>
-            </template>
           </template>
         </div>
       </div>
@@ -159,6 +107,8 @@
 <script>
 import { onMounted, computed, ref } from 'vue'
 import { useStore} from 'vuex'
+
+const times = ['08.00 - 09.35', '09.45 - 11.20', '11.30 - 13.05', '14.00 - 15.35', '15.45 - 17.20', '17.30 - 19.05']
 
 export default {
   setup() {
@@ -217,7 +167,8 @@ export default {
       filterAudience,
       resetFilters,
       getSchedule,
-      isFilterSelected
+      isFilterSelected,
+      times
     }
   }
 }
